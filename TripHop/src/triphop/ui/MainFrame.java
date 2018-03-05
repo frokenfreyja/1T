@@ -7,6 +7,8 @@ package triphop.ui;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.util.Locale;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -20,7 +22,8 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
-        jScrollPane1.getVerticalScrollBar().setUnitIncrement(18);
+        jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
+       
         
         
         
@@ -39,7 +42,7 @@ public class MainFrame extends javax.swing.JFrame {
         jAdalPanel = new javax.swing.JPanel();
         jNafn = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jTungumal = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -90,9 +93,15 @@ public class MainFrame extends javax.swing.JFrame {
         jNafn.setText("T R I P H O P");
 
         jLabel1.setFont(new java.awt.Font("SignPainter", 1, 34)); // NOI18N
-        jLabel1.setText("F i n n d u   p a k k a   f y r i r   þ i g");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/ui/resources/lang"); // NOI18N
+        jLabel1.setText(bundle.getString("F i n n d u   p a k k a   f y r i r   þ i g")); // NOI18N
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska ", "English" }));
+        jTungumal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska ", "English" }));
+        jTungumal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTungumalActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 225, 255));
         jPanel1.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
@@ -110,16 +119,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 225, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton5.setText("Tilboð");
+        jButton5.setText(bundle.getString("Tilboð")); // NOI18N
         jPanel2.add(jButton5);
 
-        jButton6.setText("Sól");
+        jButton6.setText(bundle.getString("Sól")); // NOI18N
         jPanel2.add(jButton6);
 
-        jButton7.setText("Skíði");
+        jButton7.setText(bundle.getString("Skíði")); // NOI18N
         jPanel2.add(jButton7);
 
-        jButton8.setText("Golf");
+        jButton8.setText(bundle.getString("Golf")); // NOI18N
         jButton8.setToolTipText("");
         jPanel2.add(jButton8);
 
@@ -133,47 +142,47 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 225, 255));
         jPanel4.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton13.setText("Borg");
+        jButton13.setText(bundle.getString("Borg")); // NOI18N
         jPanel4.add(jButton13);
 
-        jButton14.setText("Viðburðir");
+        jButton14.setText(bundle.getString("Viðburðir")); // NOI18N
         jPanel4.add(jButton14);
 
-        jButton15.setText("Útivist");
+        jButton15.setText(bundle.getString("Útivist")); // NOI18N
         jPanel4.add(jButton15);
 
-        jButton16.setText("Fjölskylda");
+        jButton16.setText(bundle.getString("Fjölskylda")); // NOI18N
         jPanel4.add(jButton16);
 
         jPanel6.setBackground(new java.awt.Color(255, 225, 255));
         jPanel6.setLayout(new java.awt.GridLayout(2, 5));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setText("Brottfararstaður");
+        jLabel2.setText(bundle.getString("Brottfararstaður")); // NOI18N
         jPanel6.add(jLabel2);
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel3.setText("Áfangastaður");
+        jLabel3.setText(bundle.getString("Áfangastaður")); // NOI18N
         jPanel6.add(jLabel3);
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel4.setText("Brottfarardagur");
+        jLabel4.setText(bundle.getString("Brottfarardagur")); // NOI18N
         jPanel6.add(jLabel4);
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel5.setText("Heimkomudagur");
+        jLabel5.setText(bundle.getString("Heimkomudagur")); // NOI18N
         jPanel6.add(jLabel5);
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel6.setText("Farþegar");
+        jLabel6.setText(bundle.getString("Farþegar")); // NOI18N
         jPanel6.add(jLabel6);
 
-        jBrott.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jBrott.setText("Reykjavík");
+        jBrott.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jBrott.setText(bundle.getString("Reykjavík")); // NOI18N
         jPanel6.add(jBrott);
 
-        jAfang.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jAfang.setText("Allir áfangastaðir");
+        jAfang.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jAfang.setText(bundle.getString("Allir áfangastaðir")); // NOI18N
         jAfang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jAfangActionPerformed(evt);
@@ -190,7 +199,7 @@ public class MainFrame extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
         jPanel6.add(jComboBox1);
 
-        jLeita.setText("Leita");
+        jLeita.setText(bundle.getString("Leita")); // NOI18N
         jLeita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jLeitaActionPerformed(evt);
@@ -205,7 +214,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jAdalPanelLayout.createSequentialGroup()
                         .addGap(778, 778, 778)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTungumal, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jAdalPanelLayout.createSequentialGroup()
                             .addGap(761, 761, 761)
@@ -233,7 +242,7 @@ public class MainFrame extends javax.swing.JFrame {
             jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jAdalPanelLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTungumal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jNafn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -250,7 +259,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(202, 202, 202))
+                .addGap(148, 148, 148))
         );
 
         jScrollPane1.setViewportView(jAdalPanel);
@@ -282,6 +291,27 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTungumalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTungumalActionPerformed
+        JComboBox cb = (JComboBox)evt.getSource();
+        String tunga = (String)cb.getSelectedItem();
+        if(tunga=="English") {
+            dispose();
+            Locale l = new Locale("en_GB");
+            Locale.setDefault(l);
+            MainFrame h;
+            h = new MainFrame();
+            h.setVisible(true);
+        }
+        else {
+            dispose();
+            Locale l = new Locale("is_IS");
+            Locale.setDefault(l);
+            MainFrame h;
+            h = new MainFrame();
+            h.setVisible(true);
+        }
+    }//GEN-LAST:event_jTungumalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,7 +372,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -357,5 +386,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> jTungumal;
     // End of variables declaration//GEN-END:variables
 }
