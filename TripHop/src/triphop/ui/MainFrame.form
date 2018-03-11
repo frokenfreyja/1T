@@ -58,7 +58,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jAdalPanel">
+        <Container class="javax.swing.JPanel" name="jMainPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="e1" red="ff" type="rgb"/>
@@ -75,12 +75,12 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="778" max="-2" attributes="0"/>
-                              <Component id="jTungumal" min="-2" pref="128" max="-2" attributes="0"/>
+                              <Component id="jLanguage" min="-2" pref="128" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="761" max="-2" attributes="0"/>
-                                  <Component id="jLeita" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jSearch" min="-2" pref="125" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
@@ -100,7 +100,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="331" max="-2" attributes="0"/>
-                              <Component id="jNafn" min="-2" pref="335" max="-2" attributes="0"/>
+                              <Component id="jName" min="-2" pref="335" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="301" max="-2" attributes="0"/>
@@ -115,15 +115,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jTungumal" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="jLanguage" min="-2" pref="43" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jNafn" min="-2" pref="74" max="-2" attributes="0"/>
+                      <Component id="jName" min="-2" pref="74" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel6" min="-2" pref="69" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLeita" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="jSearch" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" pref="225" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -138,7 +138,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jNafn">
+            <Component class="javax.swing.JLabel" name="jName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Rosewood Std" size="58" style="1"/>
@@ -157,7 +157,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jTungumal">
+            <Component class="javax.swing.JComboBox" name="jLanguage">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="e1" red="ff" type="rgb"/>
@@ -171,7 +171,7 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTungumalActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jLanguageActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -439,7 +439,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jBrott">
+                <Component class="javax.swing.JTextField" name="jFrom">
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="2"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -447,7 +447,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jAfang">
+                <Component class="javax.swing.JTextField" name="jTo">
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="2"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -455,12 +455,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jAfangActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="datechooser.beans.DateChooserCombo" name="dateBrottfor">
+                <Component class="datechooser.beans.DateChooserCombo" name="departureDate">
                 </Component>
-                <Component class="datechooser.beans.DateChooserCombo" name="dateHeimkoma">
+                <Component class="datechooser.beans.DateChooserCombo" name="arrivalDate">
                   <Properties>
                     <Property name="dch_combo_dateFormat" type="int" value="0"/>
                   </Properties>
@@ -469,7 +469,7 @@
                     <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
                   </AccessibilityProperties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="jPassengers">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="6">
@@ -488,7 +488,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jLeita">
+            <Component class="javax.swing.JButton" name="jSearch">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="triphop/ui/resources/lang.properties" key="Leita" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -498,7 +498,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jLeitaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jSearchActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

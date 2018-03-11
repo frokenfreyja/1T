@@ -5,12 +5,8 @@
  */
 package triphop.ui;
 
-import java.awt.Color;
-import java.awt.Dimension;
+
 import java.util.Locale;
-import javafx.scene.control.ComboBox;
-import javax.swing.ComboBoxModel;
-import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import triphop.ui.img.StretchIcon;
 
@@ -30,28 +26,28 @@ public class MainFrame extends javax.swing.JFrame {
         String lang = Locale.getDefault().toString();
         String en = new Locale("en_GB").toString();
         if(lang.equals(en)) {
-            jTungumal.setSelectedIndex(1);
+            jLanguage.setSelectedIndex(1);
         }
         flagLang = true;
         
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
        
-        StretchIcon solMynd = buaTilMynd("img/sol.png");
-        jButton2.setIcon(solMynd);
-        StretchIcon skidaMynd = buaTilMynd("img/ski.png");
-        jButton3.setIcon(skidaMynd);
-        StretchIcon golfMynd = buaTilMynd("img/golf.png");
-        jButton4.setIcon(golfMynd);
-        StretchIcon borgMynd = buaTilMynd("img/new.png");
-        jButton9.setIcon(borgMynd);
+        StretchIcon sunImg = makePic("img/sol.png");
+        jButton2.setIcon(sunImg);
+        StretchIcon skiImg = makePic("img/ski.png");
+        jButton3.setIcon(skiImg);
+        StretchIcon golfImg = makePic("img/golf.png");
+        jButton4.setIcon(golfImg);
+        StretchIcon cityImg = makePic("img/new.png");
+        jButton9.setIcon(cityImg);
     }
     
         /**
-     * Aðferð sem sækir mynd og býr hana til með ImageIcon
+     * Aðferð sem sækir mynd og býr hana til með StretchIcon
      * @param path
      * @return 
      */
-    private static StretchIcon buaTilMynd(String path) {
+    private static StretchIcon makePic(String path) {
         java.net.URL imgURL = MainFrame.class.getResource(path);
         if (imgURL != null) {
             return new StretchIcon(imgURL);
@@ -71,10 +67,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jAdalPanel = new javax.swing.JPanel();
-        jNafn = new javax.swing.JLabel();
+        jMainPanel = new javax.swing.JPanel();
+        jName = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTungumal = new javax.swing.JComboBox<>();
+        jLanguage = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -101,12 +97,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jBrott = new javax.swing.JTextField();
-        jAfang = new javax.swing.JTextField();
-        dateBrottfor = new datechooser.beans.DateChooserCombo();
-        dateHeimkoma = new datechooser.beans.DateChooserCombo();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLeita = new javax.swing.JButton();
+        jFrom = new javax.swing.JTextField();
+        jTo = new javax.swing.JTextField();
+        departureDate = new datechooser.beans.DateChooserCombo();
+        arrivalDate = new datechooser.beans.DateChooserCombo();
+        jPassengers = new javax.swing.JComboBox<>();
+        jSearch = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 225, 255));
@@ -117,23 +113,23 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1450, 1000));
 
-        jAdalPanel.setBackground(new java.awt.Color(255, 225, 255));
-        jAdalPanel.setPreferredSize(new java.awt.Dimension(1450, 1000));
+        jMainPanel.setBackground(new java.awt.Color(255, 225, 255));
+        jMainPanel.setPreferredSize(new java.awt.Dimension(1450, 1000));
 
-        jNafn.setFont(new java.awt.Font("Rosewood Std", 1, 58)); // NOI18N
-        jNafn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jNafn.setText("T R I P H O P");
+        jName.setFont(new java.awt.Font("Rosewood Std", 1, 58)); // NOI18N
+        jName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jName.setText("T R I P H O P");
 
         jLabel1.setFont(new java.awt.Font("SignPainter", 1, 34)); // NOI18N
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/ui/resources/lang"); // NOI18N
         jLabel1.setText(bundle.getString("F i n n d u   p a k k a   f y r i r   þ i g")); // NOI18N
 
-        jTungumal.setBackground(new java.awt.Color(255, 225, 255));
-        jTungumal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska", "English" }));
-        jTungumal.setToolTipText("");
-        jTungumal.addActionListener(new java.awt.event.ActionListener() {
+        jLanguage.setBackground(new java.awt.Color(255, 225, 255));
+        jLanguage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska", "English" }));
+        jLanguage.setToolTipText("");
+        jLanguage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTungumalActionPerformed(evt);
+                jLanguageActionPerformed(evt);
             }
         });
 
@@ -234,81 +230,81 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel6.setText(bundle.getString("Farþegar")); // NOI18N
         jPanel6.add(jLabel6);
 
-        jBrott.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jBrott.setText(bundle.getString("Reykjavík")); // NOI18N
-        jPanel6.add(jBrott);
+        jFrom.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jFrom.setText(bundle.getString("Reykjavík")); // NOI18N
+        jPanel6.add(jFrom);
 
-        jAfang.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jAfang.setText(bundle.getString("Allir áfangastaðir")); // NOI18N
-        jAfang.addActionListener(new java.awt.event.ActionListener() {
+        jTo.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTo.setText(bundle.getString("Allir áfangastaðir")); // NOI18N
+        jTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jAfangActionPerformed(evt);
+                jToActionPerformed(evt);
             }
         });
-        jPanel6.add(jAfang);
-        jPanel6.add(dateBrottfor);
+        jPanel6.add(jTo);
+        jPanel6.add(departureDate);
 
-        dateHeimkoma.setFormat(0);
-        jPanel6.add(dateHeimkoma);
-        dateHeimkoma.getAccessibleContext().setAccessibleName("");
-        dateHeimkoma.getAccessibleContext().setAccessibleDescription("");
+        arrivalDate.setFormat(0);
+        jPanel6.add(arrivalDate);
+        arrivalDate.getAccessibleContext().setAccessibleName("");
+        arrivalDate.getAccessibleContext().setAccessibleDescription("");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
-        jPanel6.add(jComboBox1);
+        jPassengers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
+        jPanel6.add(jPassengers);
 
-        jLeita.setText(bundle.getString("Leita")); // NOI18N
-        jLeita.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLeita.addActionListener(new java.awt.event.ActionListener() {
+        jSearch.setText(bundle.getString("Leita")); // NOI18N
+        jSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jLeitaActionPerformed(evt);
+                jSearchActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jAdalPanelLayout = new javax.swing.GroupLayout(jAdalPanel);
-        jAdalPanel.setLayout(jAdalPanelLayout);
-        jAdalPanelLayout.setHorizontalGroup(
-            jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jAdalPanelLayout.createSequentialGroup()
-                .addGroup(jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jAdalPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jMainPanelLayout = new javax.swing.GroupLayout(jMainPanel);
+        jMainPanel.setLayout(jMainPanelLayout);
+        jMainPanelLayout.setHorizontalGroup(
+            jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jMainPanelLayout.createSequentialGroup()
+                .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jMainPanelLayout.createSequentialGroup()
                         .addGap(778, 778, 778)
-                        .addComponent(jTungumal, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jAdalPanelLayout.createSequentialGroup()
+                        .addComponent(jLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jMainPanelLayout.createSequentialGroup()
                             .addGap(761, 761, 761)
-                            .addComponent(jLeita, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jAdalPanelLayout.createSequentialGroup()
+                            .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jMainPanelLayout.createSequentialGroup()
                             .addGap(86, 86, 86)
-                            .addGroup(jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(544, 544, 544))
-            .addGroup(jAdalPanelLayout.createSequentialGroup()
-                .addGroup(jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jAdalPanelLayout.createSequentialGroup()
+            .addGroup(jMainPanelLayout.createSequentialGroup()
+                .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jMainPanelLayout.createSequentialGroup()
                         .addGap(331, 331, 331)
-                        .addComponent(jNafn, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jAdalPanelLayout.createSequentialGroup()
+                        .addComponent(jName, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jMainPanelLayout.createSequentialGroup()
                         .addGap(301, 301, 301)
                         .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jAdalPanelLayout.setVerticalGroup(
-            jAdalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jAdalPanelLayout.createSequentialGroup()
+        jMainPanelLayout.setVerticalGroup(
+            jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jMainPanelLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jTungumal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jNafn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jName, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLeita, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -320,7 +316,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(148, 148, 148))
         );
 
-        jScrollPane1.setViewportView(jAdalPanel);
+        jScrollPane1.setViewportView(jMainPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -338,19 +334,19 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLeitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLeitaActionPerformed
+    private void jSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLeitaActionPerformed
+    }//GEN-LAST:event_jSearchActionPerformed
 
-    private void jAfangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAfangActionPerformed
+    private void jToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jAfangActionPerformed
+    }//GEN-LAST:event_jToActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTungumalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTungumalActionPerformed
+    private void jLanguageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLanguageActionPerformed
         if(flagLang) {    
             JComboBox cb = (JComboBox)evt.getSource();
             String tunga = (String)cb.getSelectedItem();
@@ -372,7 +368,7 @@ public class MainFrame extends javax.swing.JFrame {
                 h.setVisible(true);
             }
         }
-    }//GEN-LAST:event_jTungumalActionPerformed
+    }//GEN-LAST:event_jLanguageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -411,11 +407,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private datechooser.beans.DateChooserCombo dateBrottfor;
-    private datechooser.beans.DateChooserCombo dateHeimkoma;
-    private javax.swing.JPanel jAdalPanel;
-    private javax.swing.JTextField jAfang;
-    private javax.swing.JTextField jBrott;
+    private datechooser.beans.DateChooserCombo arrivalDate;
+    private datechooser.beans.DateChooserCombo departureDate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -432,21 +425,24 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField jFrom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JButton jLeita;
-    private javax.swing.JLabel jNafn;
+    private javax.swing.JComboBox<String> jLanguage;
+    private javax.swing.JPanel jMainPanel;
+    private javax.swing.JLabel jName;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JComboBox<String> jPassengers;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox<String> jTungumal;
+    private javax.swing.JButton jSearch;
+    private javax.swing.JTextField jTo;
     // End of variables declaration//GEN-END:variables
 }
