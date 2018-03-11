@@ -36,13 +36,13 @@ public class MainFrame extends javax.swing.JFrame {
         
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
        
-        StretchIcon solMynd = buaTilMynd("myndir/sol.png");
+        StretchIcon solMynd = buaTilMynd("img/sol.png");
         jButton2.setIcon(solMynd);
-        StretchIcon skidaMynd = buaTilMynd("myndir/ski3.png");
+        StretchIcon skidaMynd = buaTilMynd("img/ski.png");
         jButton3.setIcon(skidaMynd);
-        StretchIcon golfMynd = buaTilMynd("myndir/golf3.png");
+        StretchIcon golfMynd = buaTilMynd("img/golf.png");
         jButton4.setIcon(golfMynd);
-        StretchIcon borgMynd = buaTilMynd("myndir/new.png");
+        StretchIcon borgMynd = buaTilMynd("img/new.png");
         jButton9.setIcon(borgMynd);
     }
     
