@@ -8,7 +8,11 @@ package triphop.ui;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.util.Locale;
+import javafx.scene.control.ComboBox;
+import javax.swing.ComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
+import triphop.ui.img.StretchIcon;
 
 /**
  *
@@ -16,17 +20,45 @@ import javax.swing.JComboBox;
  * @author Henrietta Þóra Magnúsdóttir, hthm6@hi.is
  */
 public class MainFrame extends javax.swing.JFrame {
+    private Boolean flagLang = false;
 
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
+        String lang = Locale.getDefault().toString();
+        String en = new Locale("en_GB").toString();
+        if(lang.equals(en)) {
+            jTungumal.setSelectedIndex(1);
+        }
+        flagLang = true;
+        
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
        
-        
-        
-        
+        StretchIcon solMynd = buaTilMynd("myndir/sol.png");
+        jButton2.setIcon(solMynd);
+        StretchIcon skidaMynd = buaTilMynd("myndir/ski3.png");
+        jButton3.setIcon(skidaMynd);
+        StretchIcon golfMynd = buaTilMynd("myndir/golf3.png");
+        jButton4.setIcon(golfMynd);
+        StretchIcon borgMynd = buaTilMynd("myndir/new.png");
+        jButton9.setIcon(borgMynd);
+    }
+    
+        /**
+     * Aðferð sem sækir mynd og býr hana til með ImageIcon
+     * @param path
+     * @return 
+     */
+    private static StretchIcon buaTilMynd(String path) {
+        java.net.URL imgURL = MainFrame.class.getResource(path);
+        if (imgURL != null) {
+            return new StretchIcon(imgURL);
+        } else {
+            System.err.println("Fann ekki skrána " + path);
+            return null;
+        }
     }
 
     /**
@@ -96,7 +128,9 @@ public class MainFrame extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/ui/resources/lang"); // NOI18N
         jLabel1.setText(bundle.getString("F i n n d u   p a k k a   f y r i r   þ i g")); // NOI18N
 
-        jTungumal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska ", "English" }));
+        jTungumal.setBackground(new java.awt.Color(255, 225, 255));
+        jTungumal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska", "English" }));
+        jTungumal.setToolTipText("");
         jTungumal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTungumalActionPerformed(evt);
@@ -106,52 +140,75 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 225, 255));
         jPanel1.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
+
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jButton2);
+
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jButton3);
+
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jButton4);
 
         jPanel2.setBackground(new java.awt.Color(255, 225, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton5.setText(bundle.getString("Tilboð")); // NOI18N
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton5);
 
         jButton6.setText(bundle.getString("Sól")); // NOI18N
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton6);
 
         jButton7.setText(bundle.getString("Skíði")); // NOI18N
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton7);
 
         jButton8.setText(bundle.getString("Golf")); // NOI18N
         jButton8.setToolTipText("");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton8);
 
         jPanel3.setBackground(new java.awt.Color(255, 225, 255));
         jPanel3.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
+
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jButton9);
+
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jButton10);
+
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jButton11);
+
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jButton12);
 
         jPanel4.setBackground(new java.awt.Color(255, 225, 255));
         jPanel4.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton13.setText(bundle.getString("Borg")); // NOI18N
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.add(jButton13);
 
         jButton14.setText(bundle.getString("Viðburðir")); // NOI18N
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.add(jButton14);
 
         jButton15.setText(bundle.getString("Útivist")); // NOI18N
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.add(jButton15);
 
         jButton16.setText(bundle.getString("Fjölskylda")); // NOI18N
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.add(jButton16);
 
         jPanel6.setBackground(new java.awt.Color(255, 225, 255));
@@ -200,6 +257,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel6.add(jComboBox1);
 
         jLeita.setText(bundle.getString("Leita")); // NOI18N
+        jLeita.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLeita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jLeitaActionPerformed(evt);
@@ -293,23 +351,26 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTungumalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTungumalActionPerformed
-        JComboBox cb = (JComboBox)evt.getSource();
-        String tunga = (String)cb.getSelectedItem();
-        if(tunga=="English") {
-            dispose();
-            Locale l = new Locale("en_GB");
-            Locale.setDefault(l);
-            MainFrame h;
-            h = new MainFrame();
-            h.setVisible(true);
-        }
-        else {
-            dispose();
-            Locale l = new Locale("is_IS");
-            Locale.setDefault(l);
-            MainFrame h;
-            h = new MainFrame();
-            h.setVisible(true);
+        if(flagLang) {    
+            JComboBox cb = (JComboBox)evt.getSource();
+            String tunga = (String)cb.getSelectedItem();
+
+            if("English".equals(tunga)) {
+                dispose();
+                Locale l = new Locale("en_GB");
+                Locale.setDefault(l); 
+                MainFrame h;
+                h = new MainFrame();
+                h.setVisible(true);
+            }
+            else {
+                dispose();
+                Locale l = new Locale("is_IS");
+                Locale.setDefault(l);
+                MainFrame h;
+                h = new MainFrame();
+                h.setVisible(true);
+            }
         }
     }//GEN-LAST:event_jTungumalActionPerformed
 
