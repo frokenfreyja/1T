@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/Users/freyja/GitHub/1T/TripHop/src/triphop/ui/MainFrame.java</file>
+=======
+            <file>file:/C:/Users/User/Desktop/Programming/Environments/Git/Skóli/HBV401G/1T/TripHop/src/triphop/testAPI/FlightAPI.java</file>
+            <file>file:/C:/Users/User/Desktop/Programming/Environments/Git/Skóli/HBV401G/1T/TripHop/src/triphop/testAPI/HotelAPI.java</file>
+            <file>file:/C:/Users/User/Desktop/Programming/Environments/Git/Skóli/HBV401G/1T/TripHop/src/triphop/testAPI/TourAPI.java</file>
+            <file>file:/C:/Users/User/Desktop/Programming/Environments/Git/Skóli/HBV401G/1T/TripHop/src/triphop/ui/MainFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/Programming/Environments/Git/Skóli/HBV401G/1T/TripHop/src/triphop/control/PackageManager.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
