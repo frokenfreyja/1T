@@ -6,7 +6,10 @@
 package triphop.ui;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Locale;
+import java.util.Scanner;
 import javax.swing.JComboBox;
 import triphop.ui.img.StretchIcon;
 
@@ -32,14 +35,20 @@ public class MainFrame extends javax.swing.JFrame {
         
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
        
-        StretchIcon sunImg = makePic("img/sol.png");
+        StretchIcon sunImg = createImg("img/sun.png");
         jButton2.setIcon(sunImg);
-        StretchIcon skiImg = makePic("img/ski.png");
+        StretchIcon skiImg = createImg("img/ski.png");
         jButton3.setIcon(skiImg);
-        StretchIcon golfImg = makePic("img/golf.png");
+        StretchIcon golfImg = createImg("img/golf.png");
         jButton4.setIcon(golfImg);
-        StretchIcon cityImg = makePic("img/new.png");
+        StretchIcon cityImg = createImg("img/city.png");
         jButton9.setIcon(cityImg);
+        StretchIcon crowdImg = createImg("img/crowd.png");
+        jButton10.setIcon(crowdImg);
+        StretchIcon hikeImg = createImg("img/hike.png");
+        jButton11.setIcon(hikeImg);
+        StretchIcon familyImg = createImg("img/family.png");
+        jButton12.setIcon(familyImg);
     }
     
         /**
@@ -47,7 +56,7 @@ public class MainFrame extends javax.swing.JFrame {
      * @param path
      * @return 
      */
-    private static StretchIcon makePic(String path) {
+    private static StretchIcon createImg(String path) {
         java.net.URL imgURL = MainFrame.class.getResource(path);
         if (imgURL != null) {
             return new StretchIcon(imgURL);
@@ -99,8 +108,8 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jFrom = new javax.swing.JTextField();
         jTo = new javax.swing.JTextField();
-        departureDate = new datechooser.beans.DateChooserCombo();
-        arrivalDate = new datechooser.beans.DateChooserCombo();
+        departureDate = new com.github.lgooddatepicker.components.DatePicker();
+        arrivalDate = new com.github.lgooddatepicker.components.DatePicker();
         jPassengers = new javax.swing.JComboBox<>();
         jSearch = new javax.swing.JButton();
 
@@ -137,11 +146,6 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton1);
 
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -242,12 +246,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel6.add(jTo);
-        jPanel6.add(departureDate);
 
-        arrivalDate.setFormat(0);
+        departureDate.setPreferredSize(new java.awt.Dimension(200, 29));
+        jPanel6.add(departureDate);
         jPanel6.add(arrivalDate);
-        arrivalDate.getAccessibleContext().setAccessibleName("");
-        arrivalDate.getAccessibleContext().setAccessibleDescription("");
 
         jPassengers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
         jPanel6.add(jPassengers);
@@ -265,22 +267,12 @@ public class MainFrame extends javax.swing.JFrame {
         jMainPanelLayout.setHorizontalGroup(
             jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jMainPanelLayout.createSequentialGroup()
-                .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jMainPanelLayout.createSequentialGroup()
-                        .addGap(778, 778, 778)
-                        .addComponent(jLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jMainPanelLayout.createSequentialGroup()
-                            .addGap(761, 761, 761)
-                            .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jMainPanelLayout.createSequentialGroup()
-                            .addGap(86, 86, 86)
-                            .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addGap(86, 86, 86)
+                .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(544, 544, 544))
             .addGroup(jMainPanelLayout.createSequentialGroup()
                 .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,6 +283,13 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(301, 301, 301)
                         .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jMainPanelLayout.createSequentialGroup()
+                .addGap(0, 36, Short.MAX_VALUE)
+                .addGroup(jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 942, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(472, 472, 472))
         );
         jMainPanelLayout.setVerticalGroup(
             jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,16 +341,12 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jToActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jLanguageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLanguageActionPerformed
         if(flagLang) {    
             JComboBox cb = (JComboBox)evt.getSource();
-            String tunga = (String)cb.getSelectedItem();
+            String lang = (String)cb.getSelectedItem();
 
-            if("English".equals(tunga)) {
+            if("English".equals(lang)) {
                 dispose();
                 Locale l = new Locale("en_GB");
                 Locale.setDefault(l); 
@@ -407,8 +402,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private datechooser.beans.DateChooserCombo arrivalDate;
-    private datechooser.beans.DateChooserCombo departureDate;
+    private com.github.lgooddatepicker.components.DatePicker arrivalDate;
+    private com.github.lgooddatepicker.components.DatePicker departureDate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
