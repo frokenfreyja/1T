@@ -7,7 +7,8 @@ package triphop.ui;
 
 /**
  *
- * @author Freyja Sigurgísladóttir, Háskóli Íslands, frs24@hi.is
+ * @author Freyja Sigurgísladóttir, frs24@hi.is
+ * @author Henrietta Þóra Magnúsdóttir, hthm6@hi.is
  */
 public class RegistrationFrame extends javax.swing.JFrame {
 
@@ -27,45 +28,51 @@ public class RegistrationFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlfornafn = new javax.swing.JLabel();
-        jleftirnafn = new javax.swing.JLabel();
-        jlheimilisfang = new javax.swing.JLabel();
-        jlborg = new javax.swing.JLabel();
-        jlpostnumer = new javax.swing.JLabel();
-        jlland = new javax.swing.JLabel();
-        jlsimanumer = new javax.swing.JLabel();
-        tffornafn = new javax.swing.JTextField();
-        tfeftirnafn = new javax.swing.JTextField();
-        tfheimilisfang = new javax.swing.JTextField();
-        tfborg = new javax.swing.JTextField();
-        tfpostnumer = new javax.swing.JTextField();
-        tfland = new javax.swing.JTextField();
-        tfsimanumer = new javax.swing.JTextField();
-        jbhreinsa = new javax.swing.JButton();
-        jbstadfesta = new javax.swing.JButton();
+        JLabel1 = new javax.swing.JLabel();
+        JLabel2 = new javax.swing.JLabel();
+        JLabel3 = new javax.swing.JLabel();
+        JLabel4 = new javax.swing.JLabel();
+        JLabel5 = new javax.swing.JLabel();
+        JLabel6 = new javax.swing.JLabel();
+        JLabel7 = new javax.swing.JLabel();
+        jFirstName = new javax.swing.JTextField();
+        jLastName = new javax.swing.JTextField();
+        jAddress = new javax.swing.JTextField();
+        jCity = new javax.swing.JTextField();
+        jZip = new javax.swing.JTextField();
+        jCountry = new javax.swing.JTextField();
+        jPhone = new javax.swing.JTextField();
+        jClear = new javax.swing.JButton();
+        jOk = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlfornafn.setText("Fornafn:");
+        JLabel1.setText("Fornafn:");
 
-        jleftirnafn.setText("Eftirnafn:");
+        JLabel2.setText("Eftirnafn:");
 
-        jlheimilisfang.setText("Heimilisfang:");
+        JLabel3.setText("Heimilisfang:");
 
-        jlborg.setText("Borg:");
+        JLabel4.setText("Borg:");
 
-        jlpostnumer.setText("Póstnúmer:");
+        JLabel5.setText("Póstnúmer:");
 
-        jlland.setText("Land: ");
+        JLabel6.setText("Land: ");
 
-        jlsimanumer.setText("Símanúmer: ");
+        JLabel7.setText("Símanúmer: ");
 
-        jbhreinsa.setText("Hreinsa");
-
-        jbstadfesta.setText("Staðfesta");
-        jbstadfesta.addActionListener(new java.awt.event.ActionListener() {
+        jFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbstadfestaActionPerformed(evt);
+                jFirstNameActionPerformed(evt);
+            }
+        });
+
+        jClear.setText("Hreinsa");
+
+        jOk.setText("Staðfesta");
+        jOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jOkActionPerformed(evt);
             }
         });
 
@@ -77,29 +84,29 @@ public class RegistrationFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(313, Short.MAX_VALUE)
-                        .addComponent(jbhreinsa, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jClear, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbstadfesta, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jOk, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jleftirnafn, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                .addComponent(jlfornafn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jlheimilisfang)
-                            .addComponent(jlborg)
-                            .addComponent(jlpostnumer)
-                            .addComponent(jlland)
-                            .addComponent(jlsimanumer))
+                                .addComponent(JLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                .addComponent(JLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(JLabel3)
+                            .addComponent(JLabel4)
+                            .addComponent(JLabel5)
+                            .addComponent(JLabel6)
+                            .addComponent(JLabel7))
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tffornafn)
-                            .addComponent(tfeftirnafn)
-                            .addComponent(tfheimilisfang)
-                            .addComponent(tfborg)
-                            .addComponent(tfpostnumer)
-                            .addComponent(tfland)
-                            .addComponent(tfsimanumer, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE))))
+                            .addComponent(jFirstName)
+                            .addComponent(jLastName)
+                            .addComponent(jAddress)
+                            .addComponent(jCity)
+                            .addComponent(jZip)
+                            .addComponent(jCountry)
+                            .addComponent(jPhone, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE))))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -107,45 +114,49 @@ public class RegistrationFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlfornafn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tffornafn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jleftirnafn, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfeftirnafn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlheimilisfang)
-                    .addComponent(tfheimilisfang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel3)
+                    .addComponent(jAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfborg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlborg))
+                    .addComponent(jCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlpostnumer)
-                    .addComponent(tfpostnumer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel5)
+                    .addComponent(jZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlland)
-                    .addComponent(tfland, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel6)
+                    .addComponent(jCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlsimanumer)
-                    .addComponent(tfsimanumer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel7)
+                    .addComponent(jPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbhreinsa)
-                    .addComponent(jbstadfesta))
+                    .addComponent(jClear)
+                    .addComponent(jOk))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbstadfestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbstadfestaActionPerformed
+    private void jOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOkActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbstadfestaActionPerformed
+    }//GEN-LAST:event_jOkActionPerformed
+
+    private void jFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFirstNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFirstNameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,21 +194,21 @@ public class RegistrationFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jbhreinsa;
-    private javax.swing.JButton jbstadfesta;
-    private javax.swing.JLabel jlborg;
-    private javax.swing.JLabel jleftirnafn;
-    private javax.swing.JLabel jlfornafn;
-    private javax.swing.JLabel jlheimilisfang;
-    private javax.swing.JLabel jlland;
-    private javax.swing.JLabel jlpostnumer;
-    private javax.swing.JLabel jlsimanumer;
-    private javax.swing.JTextField tfborg;
-    private javax.swing.JTextField tfeftirnafn;
-    private javax.swing.JTextField tffornafn;
-    private javax.swing.JTextField tfheimilisfang;
-    private javax.swing.JTextField tfland;
-    private javax.swing.JTextField tfpostnumer;
-    private javax.swing.JTextField tfsimanumer;
+    private javax.swing.JLabel JLabel1;
+    private javax.swing.JLabel JLabel2;
+    private javax.swing.JLabel JLabel3;
+    private javax.swing.JLabel JLabel4;
+    private javax.swing.JLabel JLabel5;
+    private javax.swing.JLabel JLabel6;
+    private javax.swing.JLabel JLabel7;
+    private javax.swing.JTextField jAddress;
+    private javax.swing.JTextField jCity;
+    private javax.swing.JButton jClear;
+    private javax.swing.JTextField jCountry;
+    private javax.swing.JTextField jFirstName;
+    private javax.swing.JTextField jLastName;
+    private javax.swing.JButton jOk;
+    private javax.swing.JTextField jPhone;
+    private javax.swing.JTextField jZip;
     // End of variables declaration//GEN-END:variables
 }

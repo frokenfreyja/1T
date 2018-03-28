@@ -27,32 +27,32 @@
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="313" max="32767" attributes="0"/>
-                      <Component id="jbhreinsa" min="-2" pref="81" max="-2" attributes="0"/>
+                      <Component id="jClear" min="-2" pref="81" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jbstadfesta" min="-2" pref="82" max="-2" attributes="0"/>
+                      <Component id="jOk" min="-2" pref="82" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jleftirnafn" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jlfornafn" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel2" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="JLabel1" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jlheimilisfang" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlborg" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlpostnumer" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlland" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlsimanumer" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="tffornafn" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfeftirnafn" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfheimilisfang" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfborg" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfpostnumer" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfland" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfsimanumer" alignment="0" pref="298" max="32767" attributes="0"/>
+                          <Component id="jFirstName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLastName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jAddress" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jCity" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jZip" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jCountry" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPhone" alignment="0" pref="298" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -65,43 +65,43 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlfornafn" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="tffornafn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jleftirnafn" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="tfeftirnafn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jLastName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlheimilisfang" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfheimilisfang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jAddress" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tfborg" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlborg" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlpostnumer" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfpostnumer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jZip" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlland" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfland" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCountry" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlsimanumer" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfsimanumer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPhone" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="136" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jbhreinsa" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jbstadfesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jOk" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -109,66 +109,69 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jlfornafn">
+    <Component class="javax.swing.JLabel" name="JLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fornafn:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jleftirnafn">
+    <Component class="javax.swing.JLabel" name="JLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eftirnafn:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlheimilisfang">
+    <Component class="javax.swing.JLabel" name="JLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Heimilisfang:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlborg">
+    <Component class="javax.swing.JLabel" name="JLabel4">
       <Properties>
         <Property name="text" type="java.lang.String" value="Borg:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlpostnumer">
+    <Component class="javax.swing.JLabel" name="JLabel5">
       <Properties>
         <Property name="text" type="java.lang.String" value="P&#xf3;stn&#xfa;mer:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlland">
+    <Component class="javax.swing.JLabel" name="JLabel6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Land: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlsimanumer">
+    <Component class="javax.swing.JLabel" name="JLabel7">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;man&#xfa;mer: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tffornafn">
+    <Component class="javax.swing.JTextField" name="jFirstName">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFirstNameActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfeftirnafn">
+    <Component class="javax.swing.JTextField" name="jLastName">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfheimilisfang">
+    <Component class="javax.swing.JTextField" name="jAddress">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfborg">
+    <Component class="javax.swing.JTextField" name="jCity">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfpostnumer">
+    <Component class="javax.swing.JTextField" name="jZip">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfland">
+    <Component class="javax.swing.JTextField" name="jCountry">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfsimanumer">
+    <Component class="javax.swing.JTextField" name="jPhone">
     </Component>
-    <Component class="javax.swing.JButton" name="jbhreinsa">
+    <Component class="javax.swing.JButton" name="jClear">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hreinsa"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbstadfesta">
+    <Component class="javax.swing.JButton" name="jOk">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sta&#xf0;festa"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbstadfestaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jOkActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

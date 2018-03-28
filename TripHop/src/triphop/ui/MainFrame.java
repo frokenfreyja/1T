@@ -125,16 +125,16 @@ public class MainFrame extends javax.swing.JFrame {
         jMainPanel.setBackground(new java.awt.Color(255, 225, 255));
         jMainPanel.setPreferredSize(new java.awt.Dimension(1450, 1000));
 
-        jName.setFont(new java.awt.Font("Rosewood Std", 1, 58)); // NOI18N
         jName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jName.setText("T R I P H O P");
+        jName.setFont(new java.awt.Font("Rosewood Std", 1, 58)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("SignPainter", 1, 34)); // NOI18N
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/ui/resources/lang"); // NOI18N
         jLabel1.setText(bundle.getString("F i n n d u   p a k k a   f y r i r   þ i g")); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SignPainter", 1, 34)); // NOI18N
 
-        jLanguage.setBackground(new java.awt.Color(255, 225, 255));
         jLanguage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Íslenska", "English" }));
+        jLanguage.setBackground(new java.awt.Color(255, 225, 255));
         jLanguage.setToolTipText("");
         jLanguage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,8 +247,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jPanel6.add(jTo);
 
+        departureDate.setBackground(new java.awt.Color(255, 225, 255));
         departureDate.setPreferredSize(new java.awt.Dimension(200, 29));
         jPanel6.add(departureDate);
+
+        arrivalDate.setBackground(new java.awt.Color(255, 225, 255));
         jPanel6.add(arrivalDate);
 
         jPassengers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
@@ -334,7 +337,9 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchActionPerformed
-
+        setVisible(false);
+        RegistrationFrame rf = new RegistrationFrame();
+        rf.setVisible(true);
     }//GEN-LAST:event_jSearchActionPerformed
 
     private void jToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToActionPerformed
