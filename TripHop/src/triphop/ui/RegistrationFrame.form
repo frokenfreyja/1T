@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[954, 797]"/>
-    </Property>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -24,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="289" max="32767" attributes="0"/>
+                      <EmptySpace pref="313" max="32767" attributes="0"/>
                       <Component id="jbhreinsa" min="-2" pref="81" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jbstadfesta" min="-2" pref="82" max="-2" attributes="0"/>
@@ -33,8 +35,8 @@
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jleftirnafn" pref="51" max="32767" attributes="0"/>
-                              <Component id="jlfornafn" max="32767" attributes="0"/>
+                              <Component id="jleftirnafn" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jlfornafn" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jlheimilisfang" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jlborg" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -44,17 +46,17 @@
                       </Group>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="tffornafn" max="32767" attributes="0"/>
-                          <Component id="tfeftirnafn" max="32767" attributes="0"/>
-                          <Component id="tfheimilisfang" max="32767" attributes="0"/>
-                          <Component id="tfborg" max="32767" attributes="0"/>
-                          <Component id="tfpostnumer" max="32767" attributes="0"/>
-                          <Component id="tfland" max="32767" attributes="0"/>
-                          <Component id="tfsimanumer" pref="298" max="32767" attributes="0"/>
+                          <Component id="tffornafn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfeftirnafn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfheimilisfang" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfborg" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfpostnumer" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfland" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfsimanumer" alignment="0" pref="298" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="62" max="32767" attributes="0"/>
+              <EmptySpace pref="58" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -96,7 +98,7 @@
                   <Component id="jlsimanumer" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfsimanumer" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="10" max="32767" attributes="0"/>
+              <EmptySpace pref="136" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jbhreinsa" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jbstadfesta" alignment="3" min="-2" max="-2" attributes="0"/>
