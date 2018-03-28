@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[954, 797]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="289" max="32767" attributes="0"/>
+                      <Component id="jbhreinsa" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jbstadfesta" min="-2" pref="82" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jleftirnafn" pref="51" max="32767" attributes="0"/>
+                              <Component id="jlfornafn" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jlheimilisfang" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlborg" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlpostnumer" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlland" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlsimanumer" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="tffornafn" max="32767" attributes="0"/>
+                          <Component id="tfeftirnafn" max="32767" attributes="0"/>
+                          <Component id="tfheimilisfang" max="32767" attributes="0"/>
+                          <Component id="tfborg" max="32767" attributes="0"/>
+                          <Component id="tfpostnumer" max="32767" attributes="0"/>
+                          <Component id="tfland" max="32767" attributes="0"/>
+                          <Component id="tfsimanumer" pref="298" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlfornafn" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="tffornafn" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jleftirnafn" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="tfeftirnafn" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlheimilisfang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfheimilisfang" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tfborg" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlborg" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlpostnumer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfpostnumer" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlland" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfland" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlsimanumer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfsimanumer" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="10" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jbhreinsa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbstadfesta" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jlfornafn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fornafn:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jleftirnafn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eftirnafn:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlheimilisfang">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Heimilisfang:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlborg">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Borg:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlpostnumer">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="P&#xf3;stn&#xfa;mer:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlland">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Land: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlsimanumer">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;man&#xfa;mer: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tffornafn">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfeftirnafn">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfheimilisfang">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfborg">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfpostnumer">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfland">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfsimanumer">
+    </Component>
+    <Component class="javax.swing.JButton" name="jbhreinsa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hreinsa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbstadfesta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sta&#xf0;festa"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbstadfestaActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
