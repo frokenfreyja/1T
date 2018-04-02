@@ -27,7 +27,7 @@
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="313" max="32767" attributes="0"/>
-                      <Component id="jClear" min="-2" pref="81" max="-2" attributes="0"/>
+                      <Component id="jReset" min="-2" pref="81" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jOk" min="-2" pref="82" max="-2" attributes="0"/>
                   </Group>
@@ -100,7 +100,7 @@
               </Group>
               <EmptySpace pref="136" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jReset" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jOk" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -161,7 +161,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jPhone">
     </Component>
-    <Component class="javax.swing.JButton" name="jClear">
+    <Component class="javax.swing.JButton" name="jReset">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hreinsa"/>
       </Properties>
