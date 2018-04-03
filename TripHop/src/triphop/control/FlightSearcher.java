@@ -7,10 +7,11 @@ package triphop.control;
 
 import java.util.ArrayList;
 import java.util.Date;
+import triphop.model.*;
 
 /**
  *
- * @author User
+ * @author Elvar Árni Sturluson
  */
 public interface FlightSearcher {
     public ArrayList<Flight> searchFlights(
@@ -19,9 +20,5 @@ public interface FlightSearcher {
             ,Date depDate
             ,Date arrDate
             ,Integer passengerCount
-    );
-    public void bookFlight(
-            Flight f
-            ,String s
     );
 }

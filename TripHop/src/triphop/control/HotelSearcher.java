@@ -5,10 +5,18 @@
  */
 package triphop.control;
 
+import java.util.ArrayList;
+import java.util.Date;
+import triphop.model.*;
+
 /**
  *
- * @author User
+ * @author Elvar Árni Sturluson
  */
 public interface HotelSearcher {
-    public void eat();
+    public ArrayList<Hotel> searchHotels(
+            String location
+            ,Date checkInDate
+            ,Date checkOutDate
+    );
 }

@@ -5,12 +5,13 @@
  */
 package triphop.control;
 
+import triphop.model.Package;
 import java.util.*;
 
 /**
  *
  * @author Elvar Árni
- */
+ *//*
 public class PackageManager {
     
     // Controllerar fyrir hinar þrjár leitarvélarnar
@@ -121,3 +122,4 @@ public class PackageManager {
         // Ekkert enn.
     }
 }
+*/
