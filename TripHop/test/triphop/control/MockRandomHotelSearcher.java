@@ -13,7 +13,7 @@ import triphop.model.Hotel;
 
 /**
  *
- * @author User
+ * @author Elvar Árni Sturluson
  */
 public class MockRandomHotelSearcher implements HotelSearcher {
     public ArrayList<Hotel> searchHotels(

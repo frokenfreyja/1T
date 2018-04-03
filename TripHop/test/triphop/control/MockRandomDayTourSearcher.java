@@ -12,7 +12,7 @@ import triphop.model.DayTour;
 
 /**
  *
- * @author User
+ * @author Elvar Árni Sturluson
  */
 public class MockRandomDayTourSearcher implements DayTourSearcher {
     public ArrayList<DayTour> searchDayTours(
