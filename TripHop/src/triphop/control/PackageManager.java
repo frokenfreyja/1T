@@ -6,6 +6,7 @@
 package triphop.control;
 
 import triphop.model.*;
+import triphop.model.Package;
 import java.util.*;
 
 /**
@@ -48,37 +49,14 @@ public class PackageManager {
         ArrayList<Hotel> hotels = this.hotelSearch.searchHotels(dest, depDate, retDate);
         ArrayList<DayTour> dayTours = this.dayTourSearch.searchDayTours(dest, tourDate);
         // Kallað á leitir fyrir flug fram og til baka.
-        ArrayList<Flight> outboundFlights = this.flightSearch.searchFlights(orig, dest, depDate, depDate, paxCount);
-        ArrayList<Flight> returnFlights = this.flightSearch.searchFlights(dest, orig, retDate, retDate, paxCount);
-        // Gáð hvort nokkur listi sé tómur áður en lengra er haldið
-        // Ef eitthvað vantar er ekki hægt að búa til neina pakka og því tómum
-        // lista af pökkum skilað.
-        if(hotels.get(0) == null || dayTours.get(0) == null ||
-                outboundFlights.get(0) == null || returnFlights.get(0) == null)
-        {
-            return new ArrayList<Package>(0);
-        }
+        ArrayList<Flight[]> flights = this.flightSearch.searchFlights(orig, dest, depDate, depDate, paxCount);
         
-        // outbound og return flug sameinuð.
-        ArrayList<Flight[]> flights = new ArrayList<Flight[]>(outboundFlights.size()*returnFlights.size());
-        // Par af flugum fram og til baka sem verður bætt við listan að ofan.
-        Flight[] addFlights = new Flight[2];
-        // Fjöldi fluga sem fara á áfangastað.
-        int numOutbound = outboundFlights.size();
-        // Fjöldi fluga sem fara heim.
-        int numReturn = returnFlights.size();
-        int flightIndex = 0;
-        for(int i = 0; i < numOutbound; i++) {
-            if(null == outboundFlights.get(i)) break;
-            addFlights[0] = outboundFlights.get(i);
-            for(int j = 0; j < numReturn; j++) {
-                if(null == returnFlights.get(j)) break;
-                addFlights[1] = returnFlights.get(j);
-                // Númer þess pars sem er verið að setja inn, talið frá 0.
-                flightIndex = numOutbound*i - 1 + j;
-                flights.add(flightIndex, addFlights);
-            }
-        }
+        if(hotels == null || dayTours == null ||
+                flights == null)
+        {
+            return null;
+        } 
+        
         // Listarnir hér að ofan mataðir í assemblePackages fallið þar sem þeir verða settir saman.
         return assemblePackages(flights, hotels, dayTours);
     }
