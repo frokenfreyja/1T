@@ -1,3 +1,4 @@
 /TripHop/dist/
+/TripHop/build/
 *.class
 .DS_Store

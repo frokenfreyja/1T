@@ -42,7 +42,7 @@ public class RegistrationFrame extends javax.swing.JFrame {
         jZip = new javax.swing.JTextField();
         jCountry = new javax.swing.JTextField();
         jPhone = new javax.swing.JTextField();
-        jClear = new javax.swing.JButton();
+        jReset = new javax.swing.JButton();
         jOk = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,7 +67,7 @@ public class RegistrationFrame extends javax.swing.JFrame {
             }
         });
 
-        jClear.setText("Hreinsa");
+        jReset.setText("Hreinsa");
 
         jOk.setText("Staðfesta");
         jOk.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +84,7 @@ public class RegistrationFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(313, Short.MAX_VALUE)
-                        .addComponent(jClear, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jReset, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jOk, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -142,7 +142,7 @@ public class RegistrationFrame extends javax.swing.JFrame {
                     .addComponent(jPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jClear)
+                    .addComponent(jReset)
                     .addComponent(jOk))
                 .addContainerGap())
         );
@@ -203,12 +203,12 @@ public class RegistrationFrame extends javax.swing.JFrame {
     private javax.swing.JLabel JLabel7;
     private javax.swing.JTextField jAddress;
     private javax.swing.JTextField jCity;
-    private javax.swing.JButton jClear;
     private javax.swing.JTextField jCountry;
     private javax.swing.JTextField jFirstName;
     private javax.swing.JTextField jLastName;
     private javax.swing.JButton jOk;
     private javax.swing.JTextField jPhone;
+    private javax.swing.JButton jReset;
     private javax.swing.JTextField jZip;
     // End of variables declaration//GEN-END:variables
 }
