@@ -50,6 +50,15 @@ public class PackageManager {
         // Kallað á leitir fyrir flug fram og til baka.
         ArrayList<Flight> outboundFlights = this.flightSearch.searchFlights(orig, dest, depDate, depDate, paxCount);
         ArrayList<Flight> returnFlights = this.flightSearch.searchFlights(dest, orig, retDate, retDate, paxCount);
+        // Gáð hvort nokkur listi sé tómur áður en lengra er haldið
+        // Ef eitthvað vantar er ekki hægt að búa til neina pakka og því tómum
+        // lista af pökkum skilað.
+        if(hotels.get(0) == null || dayTours.get(0) == null ||
+                outboundFlights.get(0) == null || returnFlights.get(0) == null)
+        {
+            return new ArrayList<Package>(0);
+        }
+        
         // outbound og return flug sameinuð.
         ArrayList<Flight[]> flights = new ArrayList<Flight[]>(outboundFlights.size()*returnFlights.size());
         // Par af flugum fram og til baka sem verður bætt við listan að ofan.
@@ -60,8 +69,10 @@ public class PackageManager {
         int numReturn = returnFlights.size();
         int flightIndex = 0;
         for(int i = 0; i < numOutbound; i++) {
+            if(null == outboundFlights.get(i)) break;
             addFlights[0] = outboundFlights.get(i);
             for(int j = 0; j < numReturn; j++) {
+                if(null == returnFlights.get(j)) break;
                 addFlights[1] = returnFlights.get(j);
                 // Númer þess pars sem er verið að setja inn, talið frá 0.
                 flightIndex = numOutbound*i - 1 + j;
