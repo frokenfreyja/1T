@@ -1,4 +1,5 @@
 /TripHop/dist/
 /TripHop/build/
+/TripHop/nbproject/private/
 *.class
 .DS_Store
