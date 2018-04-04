@@ -83,7 +83,7 @@ public class PackageManagerTest {
       
         assertNotNull(packages);
         for(Package pack : packages ) {
-            assertTrue(pack.getFlight()[0].getDeparture().equals(pack.getHotel().getLocation()));
+            assertTrue(pack.getFlight()[0].getArrival().equals(pack.getHotel().getLocation()));
             assertTrue(pack.getHotel().getLocation().equals(pack.getDayTour().getLocation()));
         }
     };
