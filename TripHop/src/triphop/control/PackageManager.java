@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  *
- * @author Elvar Árni
+ * @author Elvar Árni Sturluson
  */
 public class PackageManager {
     
