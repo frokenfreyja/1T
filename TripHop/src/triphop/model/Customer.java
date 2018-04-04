@@ -1,4 +1,4 @@
-package triphop.control;
+package triphop.model;
 import java.util.Date;
 
 /**
