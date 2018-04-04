@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package triphop.ui;
+package triphop.view;
 
 
 import java.awt.CardLayout;
@@ -13,7 +13,6 @@ import java.util.Locale;
 import java.util.Scanner;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
-import triphop.ui.img.StretchIcon;
 
 /**
  *
@@ -177,7 +176,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 225, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/ui/resources/lang"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/view/resources/lang"); // NOI18N
         jButton5.setText(bundle.getString("Tilboð")); // NOI18N
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton5);
