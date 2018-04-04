@@ -76,7 +76,7 @@ public class PackageManagerTest {
         pManager = new PackageManager(
             customer
             ,new MockRandomFlightSearcher()
-            ,new MockEmptyHotelSearcher()
+            ,new MockRandomHotelSearcher()
             ,new MockRandomDayTourSearcher()
         );
         ArrayList<Package> packages = pManager.searchPackages();
