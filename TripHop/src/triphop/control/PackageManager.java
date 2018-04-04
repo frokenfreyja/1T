@@ -19,8 +19,12 @@ public class PackageManager {
     // Object sem verður listi af pökkunum
     private ArrayList<Package> packages;
 	
-    public PackageManager(Customer customerInfo, FlightSearcher inFlightSearcher,
-                          HotelSearcher inHotelSearcher, DayTourSearcher inDayTourSearcher) {
+    public PackageManager(
+            Customer customerInfo
+            ,FlightSearcher inFlightSearcher
+            ,HotelSearcher inHotelSearcher
+            ,DayTourSearcher inDayTourSearcher
+    ) {
         this.customer = customerInfo;
         this.flightSearch = inFlightSearcher;
         this.hotelSearch = inHotelSearcher;
