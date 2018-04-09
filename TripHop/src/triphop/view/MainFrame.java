@@ -9,10 +9,19 @@ package triphop.view;
 import java.awt.CardLayout;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
+import triphop.control.FlightSearcher;
+import triphop.control.PackageManager;
+import triphop.model.Flight;
 
 /**
  *
@@ -132,6 +141,9 @@ public class MainFrame extends javax.swing.JFrame {
         jOk = new javax.swing.JButton();
         JLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jResultPanel = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jTop = new javax.swing.JPanel();
         jName = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -286,47 +298,43 @@ public class MainFrame extends javax.swing.JFrame {
         jFrontPanel.setLayout(jFrontPanelLayout);
         jFrontPanelLayout.setHorizontalGroup(
             jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1120, Short.MAX_VALUE)
-            .addGroup(jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jFrontPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jFrontPanelLayout.createSequentialGroup()
-                            .addGap(850, 850, 850)
-                            .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jFrontPanelLayout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jFrontPanelLayout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jFrontPanelLayout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jFrontPanelLayout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jFrontPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jFrontPanelLayout.createSequentialGroup()
+                        .addGap(850, 850, 850)
+                        .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrontPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrontPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrontPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrontPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jFrontPanelLayout.setVerticalGroup(
             jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 788, Short.MAX_VALUE)
-            .addGroup(jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jFrontPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(11, 11, 11)
-                    .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(46, 46, 46)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(5, 5, 5)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(21, 21, 21)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(5, 5, 5)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jFrontPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jBottom.add(jFrontPanel, "card2");
@@ -362,9 +370,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         JLabel6.setText("Land: ");
 
-        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Skráningarform");
+        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jRegistrationPanelLayout = new javax.swing.GroupLayout(jRegistrationPanel);
         jRegistrationPanel.setLayout(jRegistrationPanelLayout);
@@ -444,6 +452,40 @@ public class MainFrame extends javax.swing.JFrame {
 
         jBottom.add(jRegistrationPanel, "card3");
 
+        jResultPanel.setBackground(new java.awt.Color(255, 225, 255));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jResultPanelLayout = new javax.swing.GroupLayout(jResultPanel);
+        jResultPanel.setLayout(jResultPanelLayout);
+        jResultPanelLayout.setHorizontalGroup(
+            jResultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jResultPanelLayout.createSequentialGroup()
+                .addGap(326, 326, 326)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(340, Short.MAX_VALUE))
+        );
+        jResultPanelLayout.setVerticalGroup(
+            jResultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jResultPanelLayout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(448, Short.MAX_VALUE))
+        );
+
+        jBottom.add(jResultPanel, "card4");
+
         jTop.setBackground(new java.awt.Color(255, 225, 255));
         jTop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -513,8 +555,29 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchActionPerformed
+        String from = jFrom.getText();
+        String to = jTo.getText();
+        
+        LocalDate d1 = departureDate.getDate();
+        Date date1  = Date.from(d1.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+        String strDepDate = DateFormat.getDateInstance().format(date1);
+        
+        LocalDate d2 = arrivalDate.getDate();
+        Date date2  = Date.from(d2.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+        String strArrDate = DateFormat.getDateInstance().format(date2);
+        
+        int passCount = jPassengers.getSelectedIndex();
+        
+        System.out.println("Heimaland: "+ from);
+        System.out.println("Komuland: "+ to);
+        System.out.println("Brottför-dagsetning: " +strDepDate);
+        System.out.println("Koma-dagsetning: " + strArrDate);
+        System.out.println("Fjöldi farþega: " + passCount);
+        
+        //FlightSearcher flights = new FlightSearcher(from,to,date1,date2,passCount);
+                
         jFrontPanel.setVisible(false); 
-        jRegistrationPanel.setVisible(true);
+        jResultPanel.setVisible(true);
     }//GEN-LAST:event_jSearchActionPerformed
 
     private void jToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToActionPerformed
@@ -652,8 +715,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jPhone;
     private javax.swing.JPanel jRegistrationPanel;
     private javax.swing.JButton jReset;
+    private javax.swing.JPanel jResultPanel;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jSearch;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTo;
     private javax.swing.JPanel jTop;
     private javax.swing.JTextField jZip;
