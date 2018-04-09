@@ -114,7 +114,8 @@ public class PackageManager {
         // Ekkert enn.
     }
 	
-    private void showPackages() {
+    public ArrayList<String[]> showPackages() {
         // Ekkert enn.
+        return null;
     }
 }

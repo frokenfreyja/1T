@@ -6,23 +6,18 @@
 package triphop.view;
 
 
-import java.awt.CardLayout;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Scanner;
 import javax.swing.JComboBox;
-import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import triphop.control.*;
 import triphop.model.*;
+
 
 /**
  *
@@ -31,6 +26,7 @@ import triphop.model.*;
  */
 public class MainFrame extends javax.swing.JFrame {
     private Boolean flagLang = false;
+
 
     /**
      * Creates new form MainFrame
@@ -63,6 +59,8 @@ public class MainFrame extends javax.swing.JFrame {
         jButton11.setIcon(hikeImg);
         StretchIcon familyImg = createImg("img/family.png");
         jButton12.setIcon(familyImg);
+
+      
     }
     
         /**
@@ -345,12 +343,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         JLabel7.setText("Símanúmer: ");
 
-        jFirstName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFirstNameActionPerformed(evt);
-            }
-        });
-
         JLabel1.setText("Fornafn:");
 
         JLabel2.setText("Eftirnafn:");
@@ -591,6 +583,7 @@ public class MainFrame extends javax.swing.JFrame {
         model.addColumn("Number of passengers");
         
         model.addRow(new Object[]{from,to,strDepDate,strArrDate,passCount});
+        
         jResultTable.setModel(model);
         
         jFrontPanel.setVisible(false); 
@@ -625,10 +618,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLanguageActionPerformed
 
-    private void jFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFirstNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFirstNameActionPerformed
-
     private void jOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOkActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jOkActionPerformed
@@ -646,8 +635,20 @@ public class MainFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jBackButtonMouseClicked
 
+    /**
+     * Kallar á showPackages í PackageManager og birtir niðurstöður
+     * @param packages 
+     */
     public void showPackage(ArrayList<String[]> packages) {
+            
+        //pManager = new PackageManager(
+        //    customer
+        //    ,new MockRandomFlightSearcher()
+        //    ,new MockNullHotelSearcher()
+        //    ,new MockRandomDayTourSearcher()
+        //);
         
+        //packages = pManager.showPackages();
     }
     /**
      * @param args the command line arguments
