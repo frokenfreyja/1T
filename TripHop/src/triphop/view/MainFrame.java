@@ -19,9 +19,10 @@ import java.util.Locale;
 import java.util.Scanner;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
-import triphop.control.FlightSearcher;
-import triphop.control.PackageManager;
-import triphop.model.Flight;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import triphop.control.*;
+import triphop.model.*;
 
 /**
  *
@@ -41,6 +42,7 @@ public class MainFrame extends javax.swing.JFrame {
         if(lang.equals(en)) {
             jLanguage.setSelectedIndex(1);
         }
+        JTable jResultTable = new JTable();
         flagLang = true;
         
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
@@ -143,7 +145,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jResultPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jResultTable = new javax.swing.JTable();
         jTop = new javax.swing.JPanel();
         jName = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -454,7 +456,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jResultPanel.setBackground(new java.awt.Color(255, 225, 255));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jResultTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -465,16 +467,16 @@ public class MainFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jResultTable);
 
         javax.swing.GroupLayout jResultPanelLayout = new javax.swing.GroupLayout(jResultPanel);
         jResultPanel.setLayout(jResultPanelLayout);
         jResultPanelLayout.setHorizontalGroup(
             jResultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jResultPanelLayout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addGap(169, 169, 169)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 855, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         jResultPanelLayout.setVerticalGroup(
             jResultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -574,8 +576,23 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Koma-dagsetning: " + strArrDate);
         System.out.println("Fjöldi farþega: " + passCount);
         
+        //Customer customer = new Customer(date1,date2,from,to,passCount,2,"Ski");
         //FlightSearcher flights = new FlightSearcher(from,to,date1,date2,passCount);
-                
+        //DayTourSearcher dayTours = new DayTourSearcher(to,date1);
+        //HotelSearcher hotels = new HotelSearcher(to,date1,date2);
+        //PackageManager pMan = new PackageManager(customer,flights,hotels,dayTours);
+         
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Origin");
+        model.addColumn("Destination");
+        model.addColumn("Departure date");
+        model.addColumn("Return date");
+        model.addColumn("Number of passengers");
+        
+        model.addRow(new Object[]{from,to,strDepDate,strArrDate,passCount});
+        jResultTable.setModel(model);
+        
         jFrontPanel.setVisible(false); 
         jResultPanel.setVisible(true);
     }//GEN-LAST:event_jSearchActionPerformed
@@ -618,12 +635,20 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jBackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBackButtonMouseClicked
        
+        if(jResultPanel.isVisible()==true) {
+            jResultPanel.setVisible(false);
+            jFrontPanel.setVisible(true);
+        }
         if(jRegistrationPanel.isVisible()==true) {
             jRegistrationPanel.setVisible(false);
             jFrontPanel.setVisible(true);
         }
+        
     }//GEN-LAST:event_jBackButtonMouseClicked
 
+    public void showPackage(ArrayList<String[]> packages) {
+        
+    }
     /**
      * @param args the command line arguments
      */
@@ -716,10 +741,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jRegistrationPanel;
     private javax.swing.JButton jReset;
     private javax.swing.JPanel jResultPanel;
+    private javax.swing.JTable jResultTable;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jSearch;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTo;
     private javax.swing.JPanel jTop;
     private javax.swing.JTextField jZip;
