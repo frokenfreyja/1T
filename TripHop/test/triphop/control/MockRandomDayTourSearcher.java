@@ -20,7 +20,7 @@ public class MockRandomDayTourSearcher implements DayTourSearcher {
         };
         ArrayList<DayTour> arr = new ArrayList<>();
         Random rand = new Random();
-        for( int i = 0; i < 50; i++ ) {
+        for( int i = 0; i < 5000; i++ ) {
             int x = rand.nextInt( locations.length );
 
             DayTour daytour = new DayTour( locations[x] );

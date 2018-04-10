@@ -22,7 +22,7 @@ public class MockRandomHotelSearcher implements HotelSearcher {
         };
         ArrayList<Hotel> arr = new ArrayList<>();
         Random rand = new Random();
-        for( int i = 0; i < 50; i++ ) {
+        for( int i = 0; i < 5000; i++ ) {
             int x = rand.nextInt( locations.length );
 
             Hotel hotel = new Hotel( locations[x] );

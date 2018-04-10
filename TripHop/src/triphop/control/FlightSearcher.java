@@ -9,7 +9,7 @@ import triphop.model.*;
  * @author Elvar Árni Sturluson
  */
 public interface FlightSearcher {
-    public ArrayList<Flight[]> searchFlights(
+    public ArrayList<Flight> searchFlights(
             String departure 
             ,String arrival
             ,Date depDate

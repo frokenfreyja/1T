@@ -49,62 +49,20 @@ public class PackageManager {
         ArrayList<Hotel> hotels = this.hotelSearch.searchHotels(dest, depDate, retDate);
         ArrayList<DayTour> dayTours = this.dayTourSearch.searchDayTours(dest, tourDate);
         // Kallað á leitir fyrir flug fram og til baka.
-        ArrayList<Flight[]> flights = this.flightSearch.searchFlights(orig, dest, depDate, depDate, paxCount);
+        ArrayList<Flight> outboundFlights = this.flightSearch.searchFlights(orig, dest, depDate, depDate, paxCount);
+        ArrayList<Flight> returnFlights = this.flightSearch.searchFlights(dest, orig, depDate, depDate, paxCount);
         
-        if(hotels == null || dayTours == null ||
-                flights == null)
-        {
+
+        if(
+            hotels == null || dayTours == null ||
+            outboundFlights == null ||
+            returnFlights == null    
+        ) {
             return null;
         } 
         
         // Listarnir hér að ofan mataðir í assemblePackages fallið þar sem þeir verða settir saman.
-        return assemblePackages(flights, hotels, dayTours);
-    }
-	
-    public ArrayList<Package> assemblePackages(ArrayList<Flight[]> flights, 
-                                                ArrayList<Hotel> hotels,
-                                                ArrayList<DayTour> dayTours) {
-        // Fjöldi dagsferða, á ekki að vera 0 (ekki hægt að velja 0 dagsferðir sem notandi).
-        int numOfDayTours = this.customer.getNumOfDayTours();
-        // Fjöldi samsetninga af pökkum sem búinn verður til.
-        int numOfPackages = flights.size() * hotels.size() * dayTours.size();
-        // Númer pakka, notað til að setja inn í packages arraylista.
-        int packageNumber;
-        // Listinn af pökkunum, sem verið er að búa til.
-        ArrayList<Package> packages = new ArrayList<Package>();
-
-        for(int i = 0; i < flights.size(); i++) {
-            // Breyta notuð til að staðfesta að um sama stað sé að ræða þegar 
-            // pakka er púslað saman.
-            String flightLoc = flights.get(i)[0].getArrival();
-           
-            for(int j = 0; j < hotels.size(); j++) {
-                // Eins og flightLoc
-                String hotelLoc = hotels.get(j).getLocation();
-                for(int k = 0; k < dayTours.size(); k++) {
-                    // Eins og flightLoc
-                    String dayTourLoc = dayTours.get(k).getLocation();
-                    // Gáð hvort flug fer á sama stað og hótel er bókað
-                    // Ef ekki er næsta hótel skoðað
-                    if(!flightLoc.equals(hotelLoc)) break;
-                    // Gáð hvort dagsferð sé frá sama stað og hótelið.
-                    // Ef ekki er kíkt á næstu dagsferð.
-                    while(!hotelLoc.equals(dayTourLoc)) {
-                        k++;
-                        dayTourLoc = dayTours.get(k).getLocation();
-                    }
-                    
-                    // Ath. hvort komið sé út á enda á einhverjum listanum, ef svo er þá hætt.
-                    if(flights.get(i) == null || hotels.get(j) == null || dayTours.get(k) == null) break;
-                    packageNumber = (i * j) + k;
-                    // Nýr pakki búinn til og honum bætt í listann.
-                    Package pack = new Package(flights.get(i), hotels.get(j), dayTours.get(k));
-                    packages.add(packageNumber, pack);
-                }
-            }
-        }
-		
-        return packages;
+        return Assembler.assemblePackages( outboundFlights, returnFlights, hotels, dayTours );
     }
     
     public void sortPackages(String field, String orderBy) {

@@ -10,7 +10,7 @@ import triphop.model.Package;
  * @author Elvar Árni Sturluson
  */
 public class Assembler {
-    public ArrayList<Flight[]> assembleFlights(
+    private static ArrayList<Flight[]> assembleFlights(
             ArrayList<Flight> outboundFlights
             ,ArrayList<Flight> returnFlights
     ) {
@@ -28,15 +28,31 @@ public class Assembler {
         }
         return flights;
     }
-    public ArrayList<Package> assemblePackages( 
-            ArrayList<Flight[]> flights
+    public static ArrayList<Package> assemblePackages(
+            ArrayList<Flight> outboundFlights
+            ,ArrayList<Flight> returnFlights
             ,ArrayList<Hotel> hotels
             ,ArrayList<DayTour> daytours
     ) {
         ArrayList<Package> packages = new ArrayList<Package>();
+        ArrayList<Flight[]> flights = assembleFlights( outboundFlights, returnFlights );
         
-        
-        
+        out:
+        for( Flight[] flight : flights ) {
+            for( Hotel hotel : hotels ) {
+                for( DayTour daytour : daytours ) {
+                    if( 
+                        flight[0].getArrival().equals( hotel.getLocation() ) &&
+                        hotel.getLocation().equals( daytour.getLocation() )    
+                    ) {
+                        packages.add( new Package( flight, hotel, daytour ) );
+                        if( packages.size() > 100 ) {
+                            break out;
+                        }
+                    }
+                }
+            }
+        }
         return packages;
     }
     

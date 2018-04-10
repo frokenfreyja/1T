@@ -11,7 +11,7 @@ import java.util.Random;
  * @author Elvar Árni Sturluson
  */
 public class MockRandomFlightSearcher implements FlightSearcher {
-    public ArrayList<Flight[]> searchFlights(
+    public ArrayList<Flight> searchFlights(
             String departure 
             ,String arrival
             ,Date depDate
@@ -22,15 +22,13 @@ public class MockRandomFlightSearcher implements FlightSearcher {
             "Reykjavík", "Akureyri", "New York", "Milano", "Alicante", "Tokyo", 
             "París", "Madrid", "Berlin"
         };
-        ArrayList<Flight[]> arr = new ArrayList<>();
+        ArrayList<Flight> arr = new ArrayList<>();
         Random rand = new Random();
         for( int loc = 0; loc < locations.length; loc++ ) {
-            for( int i = 0; i < 10; i++ ) {
+            for( int i = 0; i < 1000; i++ ) {
                 int x = rand.nextInt( locations.length );
                 if( x != loc ) {
-                    Flight[] flight = new Flight[2];
-                    flight[0] = new Flight( locations[loc], locations[x] );
-                    flight[1] = new Flight( locations[x], locations[loc] );
+                    Flight flight = new Flight( locations[loc], locations[x] );
                     arr.add( flight );
                 }
             }
@@ -42,12 +40,10 @@ public class MockRandomFlightSearcher implements FlightSearcher {
     
     public static void main(String[] args) {
         FlightSearcher s = new MockRandomFlightSearcher();
-        ArrayList<Flight[]> flights = s.searchFlights( "", "", new Date(), new Date(), 2);
-        for( Flight[] flight : flights) {
-            System.out.println( flight[0].getDeparture() );
-            System.out.println( flight[0].getArrival() );
-            System.out.println( flight[1].getDeparture() );
-            System.out.println( flight[1].getArrival() );
+        ArrayList<Flight> flights = s.searchFlights( "", "", new Date(), new Date(), 2);
+        for( Flight flight : flights) {
+            System.out.println( flight.getDeparture() );
+            System.out.println( flight.getArrival() );
             System.out.println( "-------------------");
         }
     }
