@@ -28,6 +28,7 @@ import triphop.model.*;
  */
 public class MainFrame extends javax.swing.JFrame {
     private Boolean flagLang = false;
+    private JPanel[] panelar;
 
 
     /**
@@ -63,6 +64,13 @@ public class MainFrame extends javax.swing.JFrame {
         jButton12.setIcon(familyImg);
         StretchIcon austriaImg = createImg("img/family.png");
         jButton17.setIcon(familyImg);
+
+        
+        
+        panelar = new JPanel[]{jFrontPanel,jRegistrationPanel,
+            jResultPanel,jSkiPanel,jOfferPanel,jGolfPanel,jSunPanel,
+            jEventPanel,jFamilyPanel,jOutdoorPanel};
+    
 
       
     }
@@ -1628,20 +1636,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jBackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBackButtonMouseClicked
         
-        if(jResultPanel.isVisible()==true) {
-            jResultPanel.setVisible(false);
-            jFrontPanel.setVisible(true);
-        }
-        if(jRegistrationPanel.isVisible()==true) {
-            jRegistrationPanel.setVisible(false);
-            jFrontPanel.setVisible(true);
-        }
-        if(jSkiPanel.isVisible()==true) {
-            jSkiPanel.setVisible(false);
-            jFrontPanel.setVisible(true);
-        }
-        
-        
+        for(int i=0; i<panelar.length;i++) {
+            if(panelar[i].isVisible()==true) {
+                panelar[i].setVisible(false);
+                jFrontPanel.setVisible(true);
+            }
+        }    
     }//GEN-LAST:event_jBackButtonMouseClicked
 
     private void jOfferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOfferActionPerformed
