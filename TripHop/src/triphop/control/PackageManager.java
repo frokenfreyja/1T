@@ -115,8 +115,13 @@ public class PackageManager {
         // Ekkert enn.
     }
 	
+<<<<<<< HEAD
     public void showPackages() {
+=======
+    public ArrayList<String[]> showPackages() {
+>>>>>>> 5bd5006cdabd7fcdfd9e0c1603f2b02fcc570c27
         // Ekkert enn.
+        return null;
     }
     
 }
