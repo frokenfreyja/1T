@@ -69,7 +69,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         panelar = new JPanel[]{jFrontPanel,jRegistrationPanel,
             jResultPanel,jSkiPanel,jOfferPanel,jGolfPanel,jSunPanel,
-            jEventPanel,jFamilyPanel,jOutdoorPanel};
+            jEventPanel,jFamilyPanel,jOutdoorPanel,jCityPanel};
     
 
       
@@ -109,10 +109,10 @@ public class MainFrame extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jButton145 = new javax.swing.JButton();
+        jButton146 = new javax.swing.JButton();
+        jButton147 = new javax.swing.JButton();
+        jButton148 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
@@ -389,42 +389,37 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("triphop/view/resources/lang"); // NOI18N
-        jButton5.setText(bundle.getString("Tilboð")); // NOI18N
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton145.setText(bundle.getString("Tilboð")); // NOI18N
+        jButton145.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jOfferActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5);
+        jPanel2.add(jButton145);
 
-        jButton6.setText(bundle.getString("Sól")); // NOI18N
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButton146.setText(bundle.getString("Sól")); // NOI18N
+        jButton146.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jSunActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6);
+        jPanel2.add(jButton146);
 
-        jButton7.setText(bundle.getString("Skíði")); // NOI18N
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jButton147.setText(bundle.getString("Skíði")); // NOI18N
+        jButton147.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jSkiActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton7);
+        jPanel2.add(jButton147);
 
-        jButton8.setText(bundle.getString("Golf")); // NOI18N
-        jButton8.setToolTipText("");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jButton148.setText(bundle.getString("Golf")); // NOI18N
+        jButton148.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jGolfActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton8);
+        jPanel2.add(jButton148);
 
         jPanel3.setBackground(new java.awt.Color(255, 225, 255));
         jPanel3.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
@@ -740,8 +735,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel8.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton17.setBackground(new java.awt.Color(255, 255, 255));
-        jButton17.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton17.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel8.add(jButton17);
 
         jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -756,24 +751,24 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 225, 255));
         jPanel7.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton81.setText("Austurríki");
+        jButton81.setText(bundle.getString("Austurríki")); // NOI18N
         jPanel7.add(jButton81);
 
-        jButton21.setText("Frakkland");
+        jButton21.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel7.add(jButton21);
 
-        jButton22.setText("Ítalía");
+        jButton22.setText(bundle.getString("Ítalía")); // NOI18N
         jPanel7.add(jButton22);
 
-        jButton23.setText("Sviss");
+        jButton23.setText(bundle.getString("Sviss")); // NOI18N
         jPanel7.add(jButton23);
 
         jPanel23.setBackground(new java.awt.Color(255, 225, 255));
         jPanel23.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton29.setBackground(new java.awt.Color(255, 255, 255));
-        jButton29.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton29.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel23.add(jButton29);
 
         jButton30.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -788,10 +783,10 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel24.setBackground(new java.awt.Color(255, 225, 255));
         jPanel24.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton109.setText("Svíþjóð");
+        jButton109.setText(bundle.getString("Svíþjóð")); // NOI18N
         jPanel24.add(jButton109);
 
-        jButton37.setText("Noregur");
+        jButton37.setText(bundle.getString("Noregur")); // NOI18N
         jPanel24.add(jButton37);
 
         jButton38.setText("Bla");
@@ -835,8 +830,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel9.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton25.setBackground(new java.awt.Color(255, 255, 255));
-        jButton25.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton25.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel9.add(jButton25);
 
         jButton26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -851,24 +846,24 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(255, 225, 255));
         jPanel10.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton24.setText("Grikkland");
+        jButton24.setText(bundle.getString("Grikkland")); // NOI18N
         jPanel10.add(jButton24);
 
-        jButton82.setText("Ítalía");
+        jButton82.setText(bundle.getString("Ítalía")); // NOI18N
         jPanel10.add(jButton82);
 
-        jButton83.setText("Portúgal");
+        jButton83.setText(bundle.getString("Portúgal")); // NOI18N
         jPanel10.add(jButton83);
 
-        jButton84.setText("Spánn");
+        jButton84.setText(bundle.getString("Spánn")); // NOI18N
         jPanel10.add(jButton84);
 
         jPanel25.setBackground(new java.awt.Color(255, 225, 255));
         jPanel25.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton40.setBackground(new java.awt.Color(255, 255, 255));
-        jButton40.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton40.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel25.add(jButton40);
 
         jButton45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -930,8 +925,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel11.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton33.setBackground(new java.awt.Color(255, 255, 255));
-        jButton33.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton33.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel11.add(jButton33);
 
         jButton34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -946,24 +941,24 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(255, 225, 255));
         jPanel12.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton85.setText("Austurríki");
+        jButton85.setText(bundle.getString("Austurríki")); // NOI18N
         jPanel12.add(jButton85);
 
-        jButton86.setText("Frakkland");
+        jButton86.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel12.add(jButton86);
 
-        jButton87.setText("Ítalía");
+        jButton87.setText(bundle.getString("Ítalía")); // NOI18N
         jPanel12.add(jButton87);
 
-        jButton88.setText("Sviss");
+        jButton88.setText(bundle.getString("Sviss")); // NOI18N
         jPanel12.add(jButton88);
 
         jPanel27.setBackground(new java.awt.Color(255, 225, 255));
         jPanel27.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton53.setBackground(new java.awt.Color(255, 255, 255));
-        jButton53.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton53.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton53.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel27.add(jButton53);
 
         jButton54.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1026,8 +1021,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel13.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton41.setBackground(new java.awt.Color(255, 255, 255));
-        jButton41.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton41.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton41.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel13.add(jButton41);
 
         jButton42.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1042,24 +1037,24 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(255, 225, 255));
         jPanel14.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton89.setText("Bandaríkin");
+        jButton89.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel14.add(jButton89);
 
-        jButton90.setText("Bretland");
+        jButton90.setText(bundle.getString("England")); // NOI18N
         jPanel14.add(jButton90);
 
-        jButton91.setText("Skotland");
+        jButton91.setText(bundle.getString("Skotland")); // NOI18N
         jPanel14.add(jButton91);
 
-        jButton92.setText("Spánn");
+        jButton92.setText(bundle.getString("Spánn")); // NOI18N
         jPanel14.add(jButton92);
 
         jPanel29.setBackground(new java.awt.Color(255, 225, 255));
         jPanel29.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton61.setBackground(new java.awt.Color(255, 255, 255));
-        jButton61.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton61.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton61.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel29.add(jButton61);
 
         jButton62.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1121,8 +1116,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel15.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton49.setBackground(new java.awt.Color(255, 255, 255));
-        jButton49.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton49.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton49.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel15.add(jButton49);
 
         jButton50.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1137,24 +1132,24 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(255, 225, 255));
         jPanel16.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton93.setText("Bandaríkin");
+        jButton93.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel16.add(jButton93);
 
-        jButton94.setText("Danmörk");
+        jButton94.setText(bundle.getString("Danmörk")); // NOI18N
         jPanel16.add(jButton94);
 
-        jButton95.setText("Skotland");
+        jButton95.setText(bundle.getString("Skotland")); // NOI18N
         jPanel16.add(jButton95);
 
-        jButton96.setText("Svíþjóð");
+        jButton96.setText(bundle.getString("Svíþjóð")); // NOI18N
         jPanel16.add(jButton96);
 
         jPanel31.setBackground(new java.awt.Color(255, 225, 255));
         jPanel31.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton69.setBackground(new java.awt.Color(255, 255, 255));
-        jButton69.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton69.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton69.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel31.add(jButton69);
 
         jButton70.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1216,8 +1211,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel17.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton57.setBackground(new java.awt.Color(255, 255, 255));
-        jButton57.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton57.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton57.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel17.add(jButton57);
 
         jButton58.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1232,24 +1227,24 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel18.setBackground(new java.awt.Color(255, 225, 255));
         jPanel18.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton97.setText("Bandaríkin");
+        jButton97.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel18.add(jButton97);
 
-        jButton98.setText("Bretland ");
+        jButton98.setText(bundle.getString("England")); // NOI18N
         jPanel18.add(jButton98);
 
-        jButton99.setText("Danmörk");
+        jButton99.setText(bundle.getString("Danmörk")); // NOI18N
         jPanel18.add(jButton99);
 
-        jButton100.setText("Frakkland");
+        jButton100.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel18.add(jButton100);
 
         jPanel33.setBackground(new java.awt.Color(255, 225, 255));
         jPanel33.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton77.setBackground(new java.awt.Color(255, 255, 255));
-        jButton77.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton77.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton77.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel33.add(jButton77);
 
         jButton78.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1311,8 +1306,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel19.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton65.setBackground(new java.awt.Color(255, 255, 255));
-        jButton65.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton65.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton65.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel19.add(jButton65);
 
         jButton66.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1343,8 +1338,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel35.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton129.setBackground(new java.awt.Color(255, 255, 255));
-        jButton129.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton129.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton129.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel35.add(jButton129);
 
         jButton130.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1406,8 +1401,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel21.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton73.setBackground(new java.awt.Color(255, 255, 255));
-        jButton73.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton73.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton73.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel21.add(jButton73);
 
         jButton74.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1438,8 +1433,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel37.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton137.setBackground(new java.awt.Color(255, 255, 255));
-        jButton137.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jButton137.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton137.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
         jPanel37.add(jButton137);
 
         jButton138.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1799,6 +1794,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton142;
     private javax.swing.JButton jButton143;
     private javax.swing.JButton jButton144;
+    private javax.swing.JButton jButton145;
+    private javax.swing.JButton jButton146;
+    private javax.swing.JButton jButton147;
+    private javax.swing.JButton jButton148;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
@@ -1837,7 +1836,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton49;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton50;
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;
@@ -1848,7 +1846,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton57;
     private javax.swing.JButton jButton58;
     private javax.swing.JButton jButton59;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton60;
     private javax.swing.JButton jButton61;
     private javax.swing.JButton jButton62;
@@ -1859,7 +1856,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton67;
     private javax.swing.JButton jButton68;
     private javax.swing.JButton jButton69;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton70;
     private javax.swing.JButton jButton71;
     private javax.swing.JButton jButton72;
@@ -1870,7 +1866,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton77;
     private javax.swing.JButton jButton78;
     private javax.swing.JButton jButton79;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton80;
     private javax.swing.JButton jButton81;
     private javax.swing.JButton jButton82;
