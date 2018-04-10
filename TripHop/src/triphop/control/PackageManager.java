@@ -1,8 +1,9 @@
 package triphop.control;
 
+import java.util.*;
+
 import triphop.model.*;
 import triphop.model.Package;
-import java.util.*;
 
 /**
  *
@@ -105,16 +106,17 @@ public class PackageManager {
 		
         return packages;
     }
-	
+    
     public void sortPackages(String field, String orderBy) {
         // Ekkert enn.
     }
 	
-    public void bookPackage(int index) {
+    public void bookPackage(Package pack) {
         // Ekkert enn.
     }
 	
-    private void showPackages() {
+    public void showPackages() {
         // Ekkert enn.
     }
+    
 }

@@ -1,6 +1,7 @@
 package triphop.control;
 
 import java.util.ArrayList;
+
 import triphop.model.*;
 import triphop.model.Package;
 
@@ -14,11 +15,12 @@ public class Assembler {
             ,ArrayList<Flight> returnFlights
     ) {
         ArrayList<Flight[]> flights = new ArrayList<Flight[]>();
+        
         for( Flight outboundFlight : outboundFlights ) {
             for( Flight returnFlight : returnFlights ) {
                 if( 
-                        outboundFlight.getDeparture().equals(returnFlight.getArrival()) &&
-                        outboundFlight.getArrival().equals(returnFlight.getDeparture())
+                        outboundFlight.getDeparture().equals( returnFlight.getArrival() ) &&
+                        outboundFlight.getArrival().equals( returnFlight.getDeparture() )
                 ) {
                     flights.add( new Flight[]{ outboundFlight, returnFlight }  );
                 }
@@ -32,11 +34,6 @@ public class Assembler {
             ,ArrayList<DayTour> daytours
     ) {
         ArrayList<Package> packages = new ArrayList<Package>();
-        
-        
-        
-        
-        
         
         
         
