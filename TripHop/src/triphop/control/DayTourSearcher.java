@@ -13,4 +13,5 @@ public interface DayTourSearcher {
             String location
             ,Date date
     );
+    public void bookDayTour( DayTour daytour );
 }

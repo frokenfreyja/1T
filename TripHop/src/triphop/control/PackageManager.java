@@ -12,11 +12,13 @@ import triphop.model.Package;
 public class PackageManager {
     
     // Controllerar fyrir hinar þrjár leitarvélarnar
-    private FlightSearcher flightSearch;
-    private HotelSearcher hotelSearch;
-    private DayTourSearcher dayTourSearch;
+    private FlightSearcher flightSearcher;
+    private HotelSearcher hotelSearcher;
+    private DayTourSearcher dayTourSearcher;
+    
     // Object sem mun innihalda leitarupplýsingar
     private Customer customer;
+    
     // Object sem verður listi af pökkunum
     private ArrayList<Package> packages;
 	
@@ -26,33 +28,42 @@ public class PackageManager {
             ,HotelSearcher inHotelSearcher
             ,DayTourSearcher inDayTourSearcher
     ) {
-        this.customer = customerInfo;
-        this.flightSearch = inFlightSearcher;
-        this.hotelSearch = inHotelSearcher;
-        this.dayTourSearch = inDayTourSearcher;
+        customer = customerInfo;
+        flightSearcher = inFlightSearcher;
+        hotelSearcher = inHotelSearcher;
+        dayTourSearcher = inDayTourSearcher;
     }
 	
+    /* Leitar af pökkunum og skilar þeim */
     public ArrayList<Package> searchPackages() {
         // Upplýsingum sem notaðar eru gefnar sér breytur til að minnka clutter.
-        String orig = this.customer.getOrigin();
-        String dest = this.customer.getDestination();
-        Date depDate = this.customer.getDepartureDate();
-        Date retDate = this.customer.getReturnDate();
-        int paxCount = this.customer.getNumOfTravelers();
+        String orig = customer.getOrigin();
+        String dest = customer.getDestination();
+        Date depDate = customer.getDepartureDate();
+        Date retDate = customer.getReturnDate();
+        int paxCount = customer.getNumOfTravelers();
+       
+        
+        // Kallað á leitir fyrir flug fram og til baka.
+        ArrayList<Flight> outboundFlights = flightSearcher.searchFlights( orig, dest, depDate, depDate, paxCount );
+        ArrayList<Flight> returnFlights = flightSearcher.searchFlights( dest, orig, depDate, depDate, paxCount );
+        
+        
+        // Kallað á leitir fyrir hótel.
+        ArrayList<Hotel> hotels = hotelSearcher.searchHotels( dest, depDate, retDate );
+       
+        
         // Calendar notað til að bæta einum degi við til að finna ferð
         // daginn eftir að farþegi er kominn.
         Calendar c = Calendar.getInstance();
-        c.setTime(depDate);
-        c.add(Calendar.DATE, 1);
+        c.setTime( depDate );
+        c.add( Calendar.DATE, 1 );
         Date tourDate = c.getTime();
-        // Kallað á leitir fyrir hótel og dagsferðir.
-        ArrayList<Hotel> hotels = this.hotelSearch.searchHotels(dest, depDate, retDate);
-        ArrayList<DayTour> dayTours = this.dayTourSearch.searchDayTours(dest, tourDate);
-        // Kallað á leitir fyrir flug fram og til baka.
-        ArrayList<Flight> outboundFlights = this.flightSearch.searchFlights(orig, dest, depDate, depDate, paxCount);
-        ArrayList<Flight> returnFlights = this.flightSearch.searchFlights(dest, orig, depDate, depDate, paxCount);
         
+        // Kallað á leitir fyrir dagsferðir.  
+        ArrayList<DayTour> dayTours = dayTourSearcher.searchDayTours( dest, tourDate );
 
+        // Kom í veg fyrir að eitthvað sé null
         if(
             hotels == null || dayTours == null ||
             outboundFlights == null ||
@@ -65,17 +76,26 @@ public class PackageManager {
         return Assembler.assemblePackages( outboundFlights, returnFlights, hotels, dayTours );
     }
     
+    /* Nota Sorter til að raða pökkunum */
     public void sortPackages(String field, String orderBy) {
         // Ekkert enn.
     }
 	
+   /* Fall til að bóka pakka */
     public void bookPackage(Package pack) {
-        // Ekkert enn.
+        flightSearcher.bookFlight( pack.getFlight()[0] );
+        flightSearcher.bookFlight( pack.getFlight()[1] );
+        hotelSearcher.bookHotel( pack.getHotel() );
+        dayTourSearcher.bookDayTour( pack.getDayTour() );
+    }
+    
+    public ArrayList<Package> getPackages() {
+        return packages;
     }
 	
+    /* Eyða */
     public ArrayList<String[]> showPackages() {
         // Ekkert enn.
         return new ArrayList<String[]>();
     }
-    
 }

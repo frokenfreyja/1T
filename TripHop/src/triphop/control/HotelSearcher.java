@@ -14,4 +14,5 @@ public interface HotelSearcher {
             ,Date checkInDate
             ,Date checkOutDate
     );
+    public void bookHotel( Hotel hotel );
 }

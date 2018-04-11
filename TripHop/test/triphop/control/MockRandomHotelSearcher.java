@@ -32,11 +32,7 @@ public class MockRandomHotelSearcher implements HotelSearcher {
         return arr;
     };
     
-    public static void main(String[] args) {
-        HotelSearcher s = new MockRandomHotelSearcher();
-        ArrayList<Hotel> hotels = s.searchHotels( "", new Date(), new Date());
-        for( Hotel hotel : hotels ) {
-            System.out.println( hotel.getLocation() );
-        }
-    }
+    public void bookHotel( Hotel hotel ) {
+        
+    };
 }

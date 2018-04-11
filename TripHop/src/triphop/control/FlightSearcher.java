@@ -16,4 +16,5 @@ public interface FlightSearcher {
             ,Date arrDate
             ,Integer passengerCount
     );
+    public void bookFlight( Flight flight ); 
 }

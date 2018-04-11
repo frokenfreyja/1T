@@ -16,4 +16,7 @@ public class MockNullHotelSearcher implements HotelSearcher {
     ) {
       return null;  
     };
+    public void bookHotel( Hotel hotel ) {
+        
+    };
 }

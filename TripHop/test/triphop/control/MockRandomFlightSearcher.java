@@ -38,13 +38,7 @@ public class MockRandomFlightSearcher implements FlightSearcher {
         return arr;
     };
     
-    public static void main(String[] args) {
-        FlightSearcher s = new MockRandomFlightSearcher();
-        ArrayList<Flight> flights = s.searchFlights( "", "", new Date(), new Date(), 2);
-        for( Flight flight : flights) {
-            System.out.println( flight.getDeparture() );
-            System.out.println( flight.getArrival() );
-            System.out.println( "-------------------");
-        }
-    }
+    public void bookFlight( Flight flight ) {
+        
+    };
 }

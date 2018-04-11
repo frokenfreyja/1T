@@ -16,4 +16,7 @@ public class MockEmptyHotelSearcher implements HotelSearcher {
     ) {
       return new ArrayList<Hotel>();  
     };
+    public void bookHotel( Hotel hotel ) {
+        
+    };
 }

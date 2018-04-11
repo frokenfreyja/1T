@@ -30,11 +30,7 @@ public class MockRandomDayTourSearcher implements DayTourSearcher {
         return arr;
     };
     
-    public static void main(String[] args) {
-        DayTourSearcher s = new MockRandomDayTourSearcher();
-        ArrayList<DayTour> daytours = s.searchDayTours( "", new Date());
-        for( DayTour daytour : daytours ) {
-            System.out.println( daytour.getLocation() );
-        }
-    }
+    public void bookDayTour( DayTour daytour ) {
+        
+    };
 }
