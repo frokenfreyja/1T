@@ -26,4 +26,10 @@ public class Package {
     public DayTour getDayTour() {
         return daytour;
     }; 
+    
+    public int getPrice() {
+        int price = 0;
+        // Hér vantar aðferðir þar sem verð eru lögð saman
+        return price;
+    }
 }
