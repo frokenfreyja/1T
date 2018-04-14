@@ -1,5 +1,6 @@
 package triphop.control;
 
+import triphop.model.CompPackage;
 import java.util.*;
 
 import triphop.model.*;
@@ -77,9 +78,24 @@ public class PackageManager {
         return Assembler.assemblePackages( outboundFlights, returnFlights, hotels, dayTours );
     }
     
-    /* Nota Sorter til að raða pökkunum */
-    public ArrayList<Package> sortPackages(ArrayList<Package> packages, String orderBy) {
-        return Sorter.sortPackages(packages, orderBy);
+    /* Nota sort fall í Collections og Comparator frá CompPackage til að raða pökkunum */
+    public void sortPackages(ArrayList<Package> packages, String orderBy) {
+        Collections.sort(packages, CompPackage.compPackages(orderBy));
+    }
+    
+    // Þrengir niðurstöður eftir verði
+    public void filterByPrice(int min, int max) {
+        if(max < min) return;
+        for(int i = 0; i < packages.size(); i++) {
+            if(min > 0 && packages.get(i).getPrice() < min) {
+                packages.remove(i);
+                i--;
+            }
+            else if(max > 0 && packages.get(i).getPrice() > max) {
+                packages.remove(i);
+                i--;
+            }
+        }
     }
 	
    /* Fall til að bóka pakka */
