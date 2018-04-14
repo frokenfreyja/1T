@@ -78,8 +78,8 @@ public class PackageManager {
     }
     
     /* Nota Sorter til að raða pökkunum */
-    public void sortPackages(String field, String orderBy) {
-        // Ekkert enn.
+    public ArrayList<Package> sortPackages(ArrayList<Package> packages, String orderBy) {
+        return Sorter.sortPackages(packages, orderBy);
     }
 	
    /* Fall til að bóka pakka */
