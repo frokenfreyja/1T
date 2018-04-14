@@ -1,6 +1,5 @@
 package triphop.control;
 
-import triphop.model.CompPackage;
 import java.util.*;
 
 import triphop.model.*;
