@@ -346,6 +346,7 @@ public class MainFrame extends javax.swing.JFrame {
         jBackToListButton = new javax.swing.JButton();
         jBookButton = new javax.swing.JButton();
         jMynd = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jRegResultsPanel = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jFirstLastNameX = new javax.swing.JTextField();
@@ -777,9 +778,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jCheckBox1.setText("Verði");
 
-        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Raða eftir");
+        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
 
         javax.swing.GroupLayout jResultPanelLayout = new javax.swing.GroupLayout(jResultPanel);
         jResultPanel.setLayout(jResultPanelLayout);
@@ -1604,15 +1604,19 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMynd.setText("Hér kemur mynd");
 
+        jButton7.setText("Skoða nánar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMoreInformationActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jOpenPackagePanelLayout = new javax.swing.GroupLayout(jOpenPackagePanel);
         jOpenPackagePanel.setLayout(jOpenPackagePanelLayout);
         jOpenPackagePanelLayout.setHorizontalGroup(
             jOpenPackagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jOpenPackagePanelLayout.createSequentialGroup()
                 .addGroup(jOpenPackagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jOpenPackagePanelLayout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jOpenPackagePanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jOpenPackagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1620,7 +1624,12 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jBackToListButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jMynd, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jMynd, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jOpenPackagePanelLayout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addGroup(jOpenPackagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton7)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(234, Short.MAX_VALUE))
         );
         jOpenPackagePanelLayout.setVerticalGroup(
@@ -1630,20 +1639,21 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jMynd, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jOpenPackagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBookButton)
                     .addComponent(jBackToListButton)
-                    .addComponent(jBookButton))
-                .addContainerGap(268, Short.MAX_VALUE))
+                    .addComponent(jButton7))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
 
         jBottom.add(jOpenPackagePanel, "card13");
 
         jRegResultsPanel.setBackground(new java.awt.Color(255, 225, 255));
 
-        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Upplýsingar um viðskiptavin:");
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
 
         jFirstLastNameX.setBackground(new java.awt.Color(255, 225, 255));
 
@@ -1928,6 +1938,11 @@ public class MainFrame extends javax.swing.JFrame {
         jOpenPackagePanel.setVisible(true);
     }//GEN-LAST:event_jOpenPackageActionPerformed
 
+    private void jMoreInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMoreInformationActionPerformed
+        InformationDialog info = new InformationDialog(this,false);
+        info.setVisible(true);
+    }//GEN-LAST:event_jMoreInformationActionPerformed
+
     /**
      * Kallar á showPackages í PackageManager og birtir niðurstöður
      * @param packages 
@@ -2104,6 +2119,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton67;
     private javax.swing.JButton jButton68;
     private javax.swing.JButton jButton69;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton70;
     private javax.swing.JButton jButton71;
     private javax.swing.JButton jButton72;
