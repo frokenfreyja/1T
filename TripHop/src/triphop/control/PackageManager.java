@@ -22,6 +22,7 @@ public class PackageManager {
     // Object sem verður listi af pökkunum
     private ArrayList<Package> packages;
 	
+    /* Smiðurinn fyrir PackageManager */
     public PackageManager(
             Customer customerInfo
             ,FlightSearcher inFlightSearcher

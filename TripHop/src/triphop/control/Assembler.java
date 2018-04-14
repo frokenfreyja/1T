@@ -10,6 +10,7 @@ import triphop.model.Package;
  * @author Elvar Árni Sturluson
  */
 public class Assembler {
+    /* Sameinar 2 flug, eitt út, eitt aftur heim. */
     private static ArrayList<Flight[]> assembleFlights(
             ArrayList<Flight> outboundFlights
             ,ArrayList<Flight> returnFlights
@@ -28,6 +29,8 @@ public class Assembler {
         }
         return flights;
     }
+    
+    /* Býr til pakka út frá inntaki, býr til max n pakka */
     public static ArrayList<Package> assemblePackages(
             ArrayList<Flight> outboundFlights
             ,ArrayList<Flight> returnFlights
@@ -36,7 +39,7 @@ public class Assembler {
     ) {
         ArrayList<Package> packages = new ArrayList<Package>();
         ArrayList<Flight[]> flights = assembleFlights( outboundFlights, returnFlights );
-        
+        int n = 200;
         out:
         for( Flight[] flight : flights ) {
             for( Hotel hotel : hotels ) {
@@ -46,7 +49,7 @@ public class Assembler {
                         hotel.getLocation().equals( daytour.getLocation() )    
                     ) {
                         packages.add( new Package( flight, hotel, daytour ) );
-                        if( packages.size() > 100 ) {
+                        if( packages.size() > n ) {
                             break out;
                         }
                     }
