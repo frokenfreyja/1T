@@ -718,6 +718,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTo.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTo.setText(bundle.getString("Allir áfangastaðir")); // NOI18N
+        jTo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jToFocusGained(evt);
+            }
+        });
         jPanel6.add(jTo);
 
         departureDate.setBackground(new java.awt.Color(255, 225, 255));
@@ -813,7 +818,7 @@ public class MainFrame extends javax.swing.JFrame {
         JLabel6.setText(bundle.getString("Land:")); // NOI18N
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Skráningarform");
+        jLabel7.setText(bundle.getString("Skráningarform")); // NOI18N
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
 
         JLabel8.setText(bundle.getString("Netfang:")); // NOI18N
@@ -939,9 +944,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText("Verði");
+        jCheckBox1.setText(bundle.getString("Verði")); // NOI18N
 
-        jLabel10.setText("Raða eftir");
+        jLabel10.setText(bundle.getString("Raða eftir")); // NOI18N
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
 
         javax.swing.GroupLayout jResultPanelLayout = new javax.swing.GroupLayout(jResultPanel);
@@ -1042,14 +1047,14 @@ public class MainFrame extends javax.swing.JFrame {
         jButton37.setText(bundle.getString("Noregur")); // NOI18N
         jPanel24.add(jButton37);
 
-        jButton38.setText("Ísland");
+        jButton38.setText(bundle.getString("Ísland")); // NOI18N
         jPanel24.add(jButton38);
 
-        jButton39.setText("Bandaríkin");
+        jButton39.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel24.add(jButton39);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Skíði");
+        jLabel9.setText(bundle.getString("Skíði")); // NOI18N
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jSkiPanelLayout = new javax.swing.GroupLayout(jSkiPanel);
@@ -1138,20 +1143,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel26.setBackground(new java.awt.Color(255, 225, 255));
         jPanel26.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton48.setText("Bandaríkin");
+        jButton48.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel26.add(jButton48);
 
-        jButton110.setText("Mexico");
+        jButton110.setText(bundle.getString("Mexico")); // NOI18N
         jPanel26.add(jButton110);
 
-        jButton111.setText("Tyrkland");
+        jButton111.setText(bundle.getString("Tyrkland")); // NOI18N
         jPanel26.add(jButton111);
 
-        jButton112.setText("Indonesía");
+        jButton112.setText(bundle.getString("Indonesía")); // NOI18N
         jPanel26.add(jButton112);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Sól");
+        jLabel11.setText(bundle.getString("Sól")); // NOI18N
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jSunPanelLayout = new javax.swing.GroupLayout(jSunPanel);
@@ -1240,21 +1245,21 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel28.setBackground(new java.awt.Color(255, 225, 255));
         jPanel28.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton113.setText("Mexico");
+        jButton113.setText(bundle.getString("Mexico")); // NOI18N
         jPanel28.add(jButton113);
 
-        jButton114.setText("Frakkland");
+        jButton114.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel28.add(jButton114);
 
-        jButton115.setText("Tyrkland");
+        jButton115.setText(bundle.getString("Tyrkland")); // NOI18N
         jButton115.setToolTipText("");
         jPanel28.add(jButton115);
 
-        jButton116.setText("Bandaríkin");
+        jButton116.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel28.add(jButton116);
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Útivist");
+        jLabel12.setText(bundle.getString("Útivist")); // NOI18N
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jOutdoorPanelLayout = new javax.swing.GroupLayout(jOutdoorPanel);
@@ -1343,20 +1348,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel30.setBackground(new java.awt.Color(255, 225, 255));
         jPanel30.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton117.setText("Frakkland");
+        jButton117.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel30.add(jButton117);
 
-        jButton118.setText("Svíþjóð");
+        jButton118.setText(bundle.getString("Svíþjóð")); // NOI18N
         jPanel30.add(jButton118);
 
-        jButton119.setText("Grikkland");
+        jButton119.setText(bundle.getString("Grikkland")); // NOI18N
         jPanel30.add(jButton119);
 
-        jButton120.setText("Portúgal");
+        jButton120.setText(bundle.getString("Portúgal")); // NOI18N
         jPanel30.add(jButton120);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Golf");
+        jLabel13.setText(bundle.getString("Golf")); // NOI18N
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jGolfPanelLayout = new javax.swing.GroupLayout(jGolfPanel);
@@ -1445,20 +1450,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel32.setBackground(new java.awt.Color(255, 225, 255));
         jPanel32.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton121.setText("Noregur");
+        jButton121.setText(bundle.getString("Noregur")); // NOI18N
         jPanel32.add(jButton121);
 
-        jButton122.setText("Spánn");
+        jButton122.setText(bundle.getString("Spánn")); // NOI18N
         jPanel32.add(jButton122);
 
-        jButton123.setText("England");
+        jButton123.setText(bundle.getString("England")); // NOI18N
         jPanel32.add(jButton123);
 
-        jButton124.setText("Frakkland");
+        jButton124.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel32.add(jButton124);
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Borg");
+        jLabel14.setText(bundle.getString("Borg")); // NOI18N
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jCityPanelLayout = new javax.swing.GroupLayout(jCityPanel);
@@ -1552,20 +1557,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel34.setBackground(new java.awt.Color(255, 225, 255));
         jPanel34.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton125.setText("Svíþjóð");
+        jButton125.setText(bundle.getString("Svíþjóð")); // NOI18N
         jPanel34.add(jButton125);
 
-        jButton126.setText("Portúgal");
+        jButton126.setText(bundle.getString("Portúgal")); // NOI18N
         jPanel34.add(jButton126);
 
-        jButton127.setText("Spánn");
+        jButton127.setText(bundle.getString("Spánn")); // NOI18N
         jPanel34.add(jButton127);
 
-        jButton128.setText("Austurríki");
+        jButton128.setText(bundle.getString("Austurríki")); // NOI18N
         jPanel34.add(jButton128);
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Viðburðir");
+        jLabel15.setText(bundle.getString("Viðburðir")); // NOI18N
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jEventPanelLayout = new javax.swing.GroupLayout(jEventPanel);
@@ -1622,16 +1627,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel20.setBackground(new java.awt.Color(255, 225, 255));
         jPanel20.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton101.setText("Bandaríkin");
+        jButton101.setText(bundle.getString("Bandaríkin")); // NOI18N
         jPanel20.add(jButton101);
 
-        jButton102.setText("Danmörk");
+        jButton102.setText(bundle.getString("Danmörk")); // NOI18N
         jPanel20.add(jButton102);
 
-        jButton103.setText("Ítalía");
+        jButton103.setText(bundle.getString("Ítalía")); // NOI18N
         jPanel20.add(jButton103);
 
-        jButton104.setText("Frakkland");
+        jButton104.setText(bundle.getString("Frakkland")); // NOI18N
         jPanel20.add(jButton104);
 
         jPanel35.setBackground(new java.awt.Color(255, 225, 255));
@@ -1654,20 +1659,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel36.setBackground(new java.awt.Color(255, 225, 255));
         jPanel36.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton133.setText("England");
+        jButton133.setText(bundle.getString("England")); // NOI18N
         jPanel36.add(jButton133);
 
-        jButton134.setText("Eitthvað2");
+        jButton134.setText(bundle.getString("Tyrkland")); // NOI18N
         jPanel36.add(jButton134);
 
-        jButton135.setText("Grikkland");
+        jButton135.setText(bundle.getString("Grikkland")); // NOI18N
         jPanel36.add(jButton135);
 
-        jButton136.setText("Spain");
+        jButton136.setText(bundle.getString("Spánn")); // NOI18N
         jPanel36.add(jButton136);
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Fjölskylda");
+        jLabel16.setText(bundle.getString("Fjölskylda")); // NOI18N
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jFamilyPanelLayout = new javax.swing.GroupLayout(jFamilyPanel);
@@ -1770,7 +1775,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel38.add(jButton144);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Tilboð");
+        jLabel17.setText(bundle.getString("Tilboð")); // NOI18N
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jOfferPanelLayout = new javax.swing.GroupLayout(jOfferPanel);
@@ -1812,21 +1817,21 @@ public class MainFrame extends javax.swing.JFrame {
         jTextArea1.setText("Hér verður texti fyrir pakkann\n");
         jScrollPane3.setViewportView(jTextArea1);
 
-        jBackToListButton.setText("Tilbaka");
+        jBackToListButton.setText(bundle.getString("Tilbaka")); // NOI18N
         jBackToListButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBackToListButtonActionPerformed(evt);
             }
         });
 
-        jBookButton.setText("Bóka");
+        jBookButton.setText(bundle.getString("Bóka")); // NOI18N
         jBookButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPackageChosenActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Skoða nánar");
+        jButton7.setText(bundle.getString("Skoða nánar")); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMoreInformationActionPerformed(evt);
@@ -1930,7 +1935,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Upplýsingar um pakka:");
+        jLabel18.setText(bundle.getString("Upplýsingar um pakka:")); // NOI18N
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
 
         jPanel39.setBackground(new java.awt.Color(255, 255, 255));
@@ -1947,14 +1952,14 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton8.setText("Staðfesta");
+        jButton8.setText(bundle.getString("Staðfesta")); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jConfirmBookActionPerformed(evt);
             }
         });
 
-        jButton149.setText("Tilbaka");
+        jButton149.setText(bundle.getString("Tilbaka")); // NOI18N
         jButton149.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBackToReg(evt);
@@ -2298,6 +2303,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton100ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton100ActionPerformed
+
+    private void jToFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jToFocusGained
+        jTo.setText("");// TODO add your handling code here:
+    }//GEN-LAST:event_jToFocusGained
 
     /**
      * Kallar á showPackages í PackageManager og birtir niðurstöður
