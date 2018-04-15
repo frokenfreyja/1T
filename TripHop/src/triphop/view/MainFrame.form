@@ -1553,23 +1553,23 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton113">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Bla1"/>
+                            <Property name="text" type="java.lang.String" value="Mexico"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton114">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Bla2"/>
+                            <Property name="text" type="java.lang.String" value="Frakkland"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton115">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Bla3"/>
+                            <Property name="text" type="java.lang.String" value="Tyrkland"/>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton116">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Bla4"/>
+                            <Property name="text" type="java.lang.String" value="Bandar&#xed;kin"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1788,22 +1788,22 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton117">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;"/>
+                            <Property name="text" type="java.lang.String" value="Frakkland"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton118">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;2"/>
+                            <Property name="text" type="java.lang.String" value="Sv&#xed;&#xfe;j&#xf3;&#xf0;"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton119">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;3"/>
+                            <Property name="text" type="java.lang.String" value="Grikkland"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton120">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;4"/>
+                            <Property name="text" type="java.lang.String" value="Port&#xfa;gal"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2022,22 +2022,22 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton121">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="La"/>
+                            <Property name="text" type="java.lang.String" value="Noregur"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton122">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Lala"/>
+                            <Property name="text" type="java.lang.String" value="Sp&#xe1;nn"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton123">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Lalala"/>
+                            <Property name="text" type="java.lang.String" value="England"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton124">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Lalalala"/>
+                            <Property name="text" type="java.lang.String" value="Frakkland"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2189,6 +2189,9 @@
                               <ResourceString bundle="triphop/view/resources/lang.properties" key="Frakkland" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton100ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -2256,22 +2259,22 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton125">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Bla"/>
+                            <Property name="text" type="java.lang.String" value="Sv&#xed;&#xfe;j&#xf3;&#xf0;"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton126">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Blabla "/>
+                            <Property name="text" type="java.lang.String" value="Port&#xfa;gal"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton127">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Blabla2"/>
+                            <Property name="text" type="java.lang.String" value="Sp&#xe1;nn"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton128">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Blabla3"/>
+                            <Property name="text" type="java.lang.String" value="Austurr&#xed;ki"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2408,12 +2411,12 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton103">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Noregur"/>
+                            <Property name="text" type="java.lang.String" value="&#xcd;tal&#xed;a"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton104">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Sv&#xed;&#xfe;j&#xf3;&#xf0;"/>
+                            <Property name="text" type="java.lang.String" value="Frakkland"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2482,7 +2485,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton133">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;"/>
+                            <Property name="text" type="java.lang.String" value="England"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton134">
@@ -2492,12 +2495,12 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton135">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;3"/>
+                            <Property name="text" type="java.lang.String" value="Grikkland"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton136">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;4"/>
+                            <Property name="text" type="java.lang.String" value="Spain"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2624,22 +2627,22 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton105">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Bretland"/>
+                            <Property name="text" type="java.lang.String" value="Danm&#xf6;rk"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton106">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Danm&#xf6;rk"/>
+                            <Property name="text" type="java.lang.String" value="Frakkland"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton107">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Skotland"/>
+                            <Property name="text" type="java.lang.String" value="Tyrkland"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton108">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Sv&#xed;&#xfe;j&#xf3;&#xf0;"/>
+                            <Property name="text" type="java.lang.String" value="Grikkland"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2708,23 +2711,23 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton141">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;1"/>
+                            <Property name="text" type="java.lang.String" value="England"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton142">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;2"/>
+                            <Property name="text" type="java.lang.String" value="Austurr&#xed;ki"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton143">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;3"/>
+                            <Property name="text" type="java.lang.String" value="Bandar&#xed;kin"/>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton144">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Eitthva&#xf0;4"/>
+                            <Property name="text" type="java.lang.String" value="Noregur"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -2870,7 +2873,7 @@
                                       <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jPanel5" max="32767" attributes="0"/>
-                                          <Component id="jLabel8" pref="292" max="32767" attributes="0"/>
+                                          <Component id="jLabel8" pref="296" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -3018,11 +3021,11 @@
                     </Container>
                     <Component class="javax.swing.JLabel" name="jLabel18">
                       <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="Uppl&#xfd;singar um pakka:"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Lucida Grande" size="18" style="0"/>
                         </Property>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Uppl&#xfd;singar um pakka:"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel39">
@@ -3120,12 +3123,12 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel19">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="SignPainter" size="48" style="0"/>
-                        </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Takk fyrir vi&#xf0;skiptin og g&#xf3;&#xf0;a fer&#xf0;!" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="SignPainter" size="48" style="0"/>
                         </Property>
                       </Properties>
                     </Component>

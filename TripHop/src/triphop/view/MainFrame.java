@@ -78,6 +78,40 @@ public class MainFrame extends javax.swing.JFrame {
         StretchIcon familyImg = createImg("img/family.png");
         jButton12.setIcon(familyImg);
         
+        StretchIcon offdenmarkImg = createImg("img/flagdenmark.png");
+        jButton73.setIcon(offdenmarkImg);
+        StretchIcon offfranceImg = createImg("img/flagfrance.png");
+        jButton74.setIcon(offfranceImg);
+        StretchIcon offturkeyImg = createImg("img/flagturkey.png");
+        jButton75.setIcon(offturkeyImg);
+        StretchIcon offgreeceImg = createImg("img/flaggreece.png");
+        jButton76.setIcon(offgreeceImg);
+        StretchIcon offukImg = createImg("img/flaguk.png");
+        jButton137.setIcon(offukImg);
+        StretchIcon offaustriaImg = createImg("img/flagaustria.png");
+        jButton138.setIcon(offaustriaImg);
+        StretchIcon offusaImg = createImg("img/flagusa.png");
+        jButton139.setIcon(offusaImg);
+        StretchIcon offnorwayImg = createImg("img/flagnorway.png");
+        jButton140.setIcon(offnorwayImg);
+        
+        StretchIcon golfusaImg = createImg("img/golfusa.png");
+        jButton41.setIcon(golfusaImg);
+        StretchIcon golfukImg = createImg("img/golfuk.png");
+        jButton42.setIcon(golfukImg);
+        StretchIcon golfscotlandImg = createImg("img/golfscotland.png");
+        jButton43.setIcon(golfscotlandImg);
+        StretchIcon golfspainImg = createImg("img/golfspain.png");
+        jButton44.setIcon(golfspainImg);
+        StretchIcon golffranceImg = createImg("img/golffrance.png");
+        jButton61.setIcon(golffranceImg);
+        StretchIcon golfswedenImg = createImg("img/golfsweden.png");
+        jButton62.setIcon(golfswedenImg);
+        StretchIcon golfgreeceImg = createImg("img/golfgreece.png");
+        jButton63.setIcon(golfgreeceImg);
+        StretchIcon golfportugalImg = createImg("img/golfportugal.png");
+        jButton64.setIcon(golfportugalImg);
+        
         StretchIcon greeceImg = createImg("img/greece.png");
         jButton25.setIcon(greeceImg);
         StretchIcon italysunImg = createImg("img/sunvacitaly.png");
@@ -111,6 +145,74 @@ public class MainFrame extends javax.swing.JFrame {
         jButton31.setIcon(icelandskiImg);
         StretchIcon usaskiImg = createImg("img/skiingusa.png");
         jButton32.setIcon(usaskiImg);
+        
+        StretchIcon cityusaImg = createImg("img/cityusa.png");
+        jButton49.setIcon(cityusaImg);
+        StretchIcon citydenmarkImg = createImg("img/citydenmark.png");
+        jButton50.setIcon(citydenmarkImg);
+        StretchIcon cityitalyImg = createImg("img/cityitaly.png");
+        jButton51.setIcon(cityitalyImg);
+        StretchIcon cityswedenImg = createImg("img/citysweden.png");
+        jButton52.setIcon(cityswedenImg);
+        StretchIcon citynorwayImg = createImg("img/citynorway.png");
+        jButton69.setIcon(citynorwayImg);
+        StretchIcon cityspainImg = createImg("img/cityspain.png");
+        jButton70.setIcon(cityspainImg);
+        StretchIcon cityukImg = createImg("img/cityuk.png");
+        jButton71.setIcon(cityukImg);
+        StretchIcon cityfranceImg = createImg("img/cityfrance.png");
+        jButton72.setIcon(cityfranceImg);
+        
+        StretchIcon eventusaImg = createImg("img/eventusa.png");
+        jButton57.setIcon(eventusaImg);
+        StretchIcon event2ukImg = createImg("img/event2uk.png");
+        jButton58.setIcon(event2ukImg);
+        StretchIcon eventdenmarkImg = createImg("img/eventdenmark.png");
+        jButton59.setIcon(eventdenmarkImg);
+        StretchIcon eventfranceImg = createImg("img/eventfrance.png");
+        jButton60.setIcon(eventfranceImg);
+        StretchIcon eventswedenImg = createImg("img/eventsweden.png");
+        jButton77.setIcon(eventswedenImg);
+        StretchIcon eventportugalImg = createImg("img/eventportugal.png");
+        jButton78.setIcon(eventportugalImg);
+        StretchIcon eventspainImg = createImg("img/eventspain.png");
+        jButton79.setIcon(eventspainImg);
+        StretchIcon eventaustriaImg = createImg("img/eventaustria.png");
+        jButton80.setIcon(eventaustriaImg);
+        
+        StretchIcon outaustriaImg = createImg("img/outaustria.png");
+        jButton33.setIcon(outaustriaImg);
+        StretchIcon outicelandImg = createImg("img/outiceland.png");
+        jButton34.setIcon(outicelandImg);
+        StretchIcon outitalyImg = createImg("img/outitaly.png");
+        jButton35.setIcon(outitalyImg);
+        StretchIcon outswissImg = createImg("img/outswiss.png");
+        jButton36.setIcon(outswissImg);
+        StretchIcon outmexicoImg = createImg("img/outmexico.png");
+        jButton53.setIcon(outmexicoImg);
+        StretchIcon outfranceImg = createImg("img/outfrance.png");
+        jButton54.setIcon(outfranceImg);
+        StretchIcon outturkeyImg = createImg("img/outturkey.png");
+        jButton55.setIcon(outturkeyImg);
+        StretchIcon outusaImg = createImg("img/outusa.png");
+        jButton56.setIcon(outusaImg);
+        
+        StretchIcon famusaImg = createImg("img/famusa.png");
+        jButton65.setIcon(famusaImg);
+        StretchIcon famdenmarkImg = createImg("img/famdenmark.png");
+        jButton66.setIcon(famdenmarkImg);
+        StretchIcon famitalyImg = createImg("img/famitaly.png");
+        jButton67.setIcon(famitalyImg);
+        StretchIcon famfranceImg = createImg("img/famfrance.png");
+        jButton68.setIcon(famfranceImg);
+        StretchIcon famukImg = createImg("img/famuk.png");
+        jButton129.setIcon(famukImg);
+        StretchIcon famturkeyImg = createImg("img/famturkey.png");
+        jButton130.setIcon(famturkeyImg);
+        StretchIcon famgreeceImg = createImg("img/famgreece.png");
+        jButton131.setIcon(famgreeceImg);
+        StretchIcon famspainImg = createImg("img/famspain.png");
+        jButton132.setIcon(famspainImg);
         
         StretchIcon barcelonaBanner = createImg("img/barcelona.png");
         jBannerImg.setIcon(barcelonaBanner);
@@ -1138,17 +1240,17 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel28.setBackground(new java.awt.Color(255, 225, 255));
         jPanel28.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton113.setText("Bla1");
+        jButton113.setText("Mexico");
         jPanel28.add(jButton113);
 
-        jButton114.setText("Bla2");
+        jButton114.setText("Frakkland");
         jPanel28.add(jButton114);
 
-        jButton115.setText("Bla3");
+        jButton115.setText("Tyrkland");
         jButton115.setToolTipText("");
         jPanel28.add(jButton115);
 
-        jButton116.setText("Bla4");
+        jButton116.setText("Bandaríkin");
         jPanel28.add(jButton116);
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1241,16 +1343,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel30.setBackground(new java.awt.Color(255, 225, 255));
         jPanel30.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton117.setText("Eitthvað");
+        jButton117.setText("Frakkland");
         jPanel30.add(jButton117);
 
-        jButton118.setText("Eitthvað2");
+        jButton118.setText("Svíþjóð");
         jPanel30.add(jButton118);
 
-        jButton119.setText("Eitthvað3");
+        jButton119.setText("Grikkland");
         jPanel30.add(jButton119);
 
-        jButton120.setText("Eitthvað4");
+        jButton120.setText("Portúgal");
         jPanel30.add(jButton120);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1343,16 +1445,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel32.setBackground(new java.awt.Color(255, 225, 255));
         jPanel32.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton121.setText("La");
+        jButton121.setText("Noregur");
         jPanel32.add(jButton121);
 
-        jButton122.setText("Lala");
+        jButton122.setText("Spánn");
         jPanel32.add(jButton122);
 
-        jButton123.setText("Lalala");
+        jButton123.setText("England");
         jPanel32.add(jButton123);
 
-        jButton124.setText("Lalalala");
+        jButton124.setText("Frakkland");
         jPanel32.add(jButton124);
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1423,6 +1525,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel18.add(jButton99);
 
         jButton100.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton100ActionPerformed(evt);
+            }
+        });
         jPanel18.add(jButton100);
 
         jPanel33.setBackground(new java.awt.Color(255, 225, 255));
@@ -1445,16 +1552,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel34.setBackground(new java.awt.Color(255, 225, 255));
         jPanel34.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton125.setText("Bla");
+        jButton125.setText("Svíþjóð");
         jPanel34.add(jButton125);
 
-        jButton126.setText("Blabla ");
+        jButton126.setText("Portúgal");
         jPanel34.add(jButton126);
 
-        jButton127.setText("Blabla2");
+        jButton127.setText("Spánn");
         jPanel34.add(jButton127);
 
-        jButton128.setText("Blabla3");
+        jButton128.setText("Austurríki");
         jPanel34.add(jButton128);
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1521,10 +1628,10 @@ public class MainFrame extends javax.swing.JFrame {
         jButton102.setText("Danmörk");
         jPanel20.add(jButton102);
 
-        jButton103.setText("Noregur");
+        jButton103.setText("Ítalía");
         jPanel20.add(jButton103);
 
-        jButton104.setText("Svíþjóð");
+        jButton104.setText("Frakkland");
         jPanel20.add(jButton104);
 
         jPanel35.setBackground(new java.awt.Color(255, 225, 255));
@@ -1547,16 +1654,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel36.setBackground(new java.awt.Color(255, 225, 255));
         jPanel36.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton133.setText("Eitthvað");
+        jButton133.setText("England");
         jPanel36.add(jButton133);
 
         jButton134.setText("Eitthvað2");
         jPanel36.add(jButton134);
 
-        jButton135.setText("Eitthvað3");
+        jButton135.setText("Grikkland");
         jPanel36.add(jButton135);
 
-        jButton136.setText("Eitthvað4");
+        jButton136.setText("Spain");
         jPanel36.add(jButton136);
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1617,16 +1724,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel22.setBackground(new java.awt.Color(255, 225, 255));
         jPanel22.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton105.setText("Bretland");
+        jButton105.setText("Danmörk");
         jPanel22.add(jButton105);
 
-        jButton106.setText("Danmörk");
+        jButton106.setText("Frakkland");
         jPanel22.add(jButton106);
 
-        jButton107.setText("Skotland");
+        jButton107.setText("Tyrkland");
         jPanel22.add(jButton107);
 
-        jButton108.setText("Svíþjóð");
+        jButton108.setText("Grikkland");
         jPanel22.add(jButton108);
 
         jPanel37.setBackground(new java.awt.Color(255, 225, 255));
@@ -1649,17 +1756,17 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel38.setBackground(new java.awt.Color(255, 225, 255));
         jPanel38.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
-        jButton141.setText("Eitthvað1");
+        jButton141.setText("England");
         jPanel38.add(jButton141);
 
-        jButton142.setText("Eitthvað2");
+        jButton142.setText("Austurríki");
         jPanel38.add(jButton142);
 
-        jButton143.setText("Eitthvað3");
+        jButton143.setText("Bandaríkin");
         jButton143.setToolTipText("");
         jPanel38.add(jButton143);
 
-        jButton144.setText("Eitthvað4");
+        jButton144.setText("Noregur");
         jPanel38.add(jButton144);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1822,9 +1929,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(69, Short.MAX_VALUE))
         );
 
-        jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Upplýsingar um pakka:");
+        jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
 
         jPanel39.setBackground(new java.awt.Color(255, 255, 255));
         jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1869,7 +1976,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(213, 213, 213)
                         .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE))
                         .addGap(65, 65, 65)
                         .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1898,9 +2005,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         jFinalPanel.setBackground(new java.awt.Color(255, 225, 255));
 
-        jLabel19.setFont(new java.awt.Font("SignPainter", 0, 48)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText(bundle.getString("Takk fyrir viðskiptin og góða ferð!")); // NOI18N
+        jLabel19.setFont(new java.awt.Font("SignPainter", 0, 48)); // NOI18N
 
         jButton150.setText(bundle.getString("Aftur á forsíðu")); // NOI18N
         jButton150.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2187,6 +2294,10 @@ public class MainFrame extends javax.swing.JFrame {
             jFinalPanel.setVisible(true);
         } 
     }//GEN-LAST:event_jConfirmBookActionPerformed
+
+    private void jButton100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton100ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton100ActionPerformed
 
     /**
      * Kallar á showPackages í PackageManager og birtir niðurstöður
