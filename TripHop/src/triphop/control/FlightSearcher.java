@@ -1,7 +1,7 @@
 package triphop.control;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import triphop.model.*;
 
 /**
@@ -12,8 +12,8 @@ public interface FlightSearcher {
     public ArrayList<Flight> searchFlights(
             String departure 
             ,String arrival
-            ,Date depDate
-            ,Date arrDate
+            ,Calendar depDate
+            ,Calendar arrDate
             ,Integer passengerCount
     );
     public void bookFlight( Flight flight ); 

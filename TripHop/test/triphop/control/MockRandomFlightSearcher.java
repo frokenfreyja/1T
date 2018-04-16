@@ -1,8 +1,8 @@
 package triphop.control;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
 import triphop.model.Flight;
 import java.util.Random;
 
@@ -14,8 +14,8 @@ public class MockRandomFlightSearcher implements FlightSearcher {
     public ArrayList<Flight> searchFlights(
             String departure 
             ,String arrival
-            ,Date depDate
-            ,Date arrDate
+            ,Calendar depDate
+            ,Calendar arrDate
             ,Integer passengerCount
     ) {
         String[] locations = new String[]{
@@ -28,7 +28,7 @@ public class MockRandomFlightSearcher implements FlightSearcher {
             for( int i = 0; i < 1000; i++ ) {
                 int x = rand.nextInt( locations.length );
                 if( x != loc ) {
-                    Flight flight = new Flight( locations[loc], locations[x] );
+                    Flight flight = new Flight( null, 1 );
                     arr.add( flight );
                 }
             }

@@ -1,20 +1,20 @@
 package triphop.model;
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  *
  * @author Ragnar
  */
 public class Customer {
-    private Date departureDate;
-    private Date returnDate;
+    private Calendar departureDate;
+    private Calendar returnDate;
     private String origin;
     private String destination;
     private int numOfTravelers;
     private int numOfDayTours;
     private String theme;
     
-    public Customer(Date depDate, Date retDate, String orig, String dest,
+    public Customer(Calendar depDate, Calendar retDate, String orig, String dest,
                     int numOfPax, int numOfTours, String theme) {
         this.departureDate = depDate;
         this.returnDate = retDate;
@@ -25,11 +25,11 @@ public class Customer {
         this.theme = theme;        
     }
     
-    public Date getDepartureDate() {
+    public Calendar getDepartureDate() {
         return this.departureDate;
     }
     
-    public Date getReturnDate() {
+    public Calendar getReturnDate() {
         return this.returnDate;
     }
     

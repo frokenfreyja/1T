@@ -1,7 +1,7 @@
 package triphop.control;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import triphop.model.*;
 
 /**
@@ -11,8 +11,8 @@ import triphop.model.*;
 public interface HotelSearcher {
     public ArrayList<Hotel> searchHotels(
             String location
-            ,Date checkInDate
-            ,Date checkOutDate
+            ,Calendar checkInDate
+            ,Calendar checkOutDate
     );
     public void bookHotel( Hotel hotel );
 }

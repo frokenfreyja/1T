@@ -1,7 +1,7 @@
 package triphop.control;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -27,7 +27,7 @@ public class PackageManagerTest {
     
     @Before
     public void setUp() {
-      customer = new Customer(new Date(), new Date(), "Reykjavík", "Milano", 4, 2, "City");
+      customer = new Customer( Calendar.getInstance(), Calendar.getInstance(), "Reykjavík", "Milano", 4, 2, "City");
       
     }
     

@@ -40,8 +40,8 @@ public class PackageManager {
         // Upplýsingum sem notaðar eru gefnar sér breytur til að minnka clutter.
         String orig = customer.getOrigin();
         String dest = customer.getDestination();
-        Date depDate = customer.getDepartureDate();
-        Date retDate = customer.getReturnDate();
+        Calendar depDate = customer.getDepartureDate();
+        Calendar retDate = customer.getReturnDate();
         int paxCount = customer.getNumOfTravelers();
        
         
@@ -56,13 +56,12 @@ public class PackageManager {
         
         // Calendar notað til að bæta einum degi við til að finna ferð
         // daginn eftir að farþegi er kominn.
-        Calendar c = Calendar.getInstance();
-        c.setTime( depDate );
+        Calendar c = (Calendar) depDate.clone();
         c.add( Calendar.DATE, 1 );
         Date tourDate = c.getTime();
         
         // Kallað á leitir fyrir dagsferðir.  
-        ArrayList<DayTour> dayTours = dayTourSearcher.searchDayTours( dest, tourDate );
+        ArrayList<DayTour> dayTours = dayTourSearcher.searchDayTours( dest, tourDate, paxCount );
 
         // Kom í veg fyrir að eitthvað sé null
         if(

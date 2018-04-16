@@ -1,7 +1,7 @@
 package triphop.control;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.Random;
 
 import triphop.model.Hotel;
@@ -13,8 +13,8 @@ import triphop.model.Hotel;
 public class MockRandomHotelSearcher implements HotelSearcher {
     public ArrayList<Hotel> searchHotels(
             String location
-            ,Date checkInDate
-            ,Date checkOutDate
+            ,Calendar checkInDate
+            ,Calendar checkOutDate
     ) {
         String[] locations = new String[]{
             "Reykjavík", "Akureyri", "New York", "Milano", "Alicante", "Tokyo", 

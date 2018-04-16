@@ -1,7 +1,7 @@
 package triphop.control;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import triphop.model.Hotel;
 
 /**
@@ -13,11 +13,11 @@ public class HotelSearcherAdapter implements HotelSearcher {
      /* Adapter fall til að leita af hótel */
     public ArrayList<Hotel> searchHotels(
             String location
-            ,Date checkInDate
-            ,Date checkOutDate
+            ,Calendar checkInDate
+            ,Calendar checkOutDate
     ) {
         ArrayList<Hotel> hotels = new ArrayList<Hotel>();
-        
+            
         return hotels; 
     }
     
