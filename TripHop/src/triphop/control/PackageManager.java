@@ -77,7 +77,7 @@ public class PackageManager {
     }
     
     // Þrengir niðurstöður eftir verði
-    public ArrayList<Package> filterByPrice(int min, int max, ArrayList<Package> packages) {
+    public ArrayList<Package> filterByPrice(int min, int max) {
         
         if(max < min) return packages;
         ArrayList<Package> filteredPack = (ArrayList<Package>) packages.clone();
