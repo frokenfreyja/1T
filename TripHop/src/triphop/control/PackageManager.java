@@ -77,18 +77,21 @@ public class PackageManager {
     }
     
     // Þrengir niðurstöður eftir verði
-    public void filterByPrice(int min, int max) {
-        if(max < min) return;
-        for(int i = 0; i < packages.size(); i++) {
-            if(min > 0 && packages.get(i).getCost() < min) {
-                packages.remove(i);
-                i--;
+    public ArrayList<Package> filterByPrice(int min, int max) {
+        
+        if(max < min) return packages;
+        ArrayList<Package> filteredPack = (ArrayList<Package>) packages.clone();
+        Iterator<Package> iter = filteredPack.iterator();
+        while(iter.hasNext()){
+            Package pack = iter.next();
+            if(min > 0 && pack.getCost() < min) {
+                iter.remove();
             }
-            else if(max > 0 && packages.get(i).getCost() > max) {
-                packages.remove(i);
-                i--;
+            else if(max > 0 && pack.getCost() > max) {
+                iter.remove();
             }
         }
+        return filteredPack;
     }
 	
    /* Fall til að bóka pakka */
