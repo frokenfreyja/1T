@@ -75,6 +75,7 @@ public class PackageManager {
     public ArrayList<Package> sortPackages(String orderBy) {
         ArrayList<Package> packSorted = (ArrayList<Package>) packages.clone();
         Collections.sort(packSorted, CompPackage.compPackages(orderBy));
+        return packSorted;
     }
     
     // Þrengir niðurstöður eftir verði
