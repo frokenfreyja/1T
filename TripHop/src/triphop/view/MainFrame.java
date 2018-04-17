@@ -2473,7 +2473,7 @@ public class MainFrame extends javax.swing.JFrame {
         int passCount = jPassengers.getSelectedIndex();
         
         customer = new Customer(cal1,cal2,from,to,passCount,2,null);
-        pMan.sortPackages("cost");
+        ArrayList<triphop.model.Package> packages = pMan.sortPackages("cost");
 
         model = new DefaultTableModel();
         model.addColumn("Destination");
@@ -2493,7 +2493,7 @@ public class MainFrame extends javax.swing.JFrame {
         int year2=cal2.get(Calendar.YEAR);
         String date2 = (day2+". "+"0"+month2+", "+year2);    
         
-        for(triphop.model.Package pack : pMan.getPackages()) {
+        for(triphop.model.Package pack : packages) {
             model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
         }
         

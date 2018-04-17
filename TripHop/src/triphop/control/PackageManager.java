@@ -72,7 +72,7 @@ public class PackageManager {
     }
     
     /* Nota sort fall í Collections og Comparator frá CompPackage til að raða pökkunum */
-    public void sortPackages(String orderBy) {
+    public ArrayList<Package> sortPackages(String orderBy) {
         ArrayList<Package> packSorted = (ArrayList<Package>) packages.clone();
         Collections.sort(packSorted, CompPackage.compPackages(orderBy));
     }
