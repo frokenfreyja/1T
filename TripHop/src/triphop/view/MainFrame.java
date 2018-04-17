@@ -497,7 +497,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jOpenPackagePanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jPackDesc = new javax.swing.JTextArea();
         jBackToListButton = new javax.swing.JButton();
         jBookButton = new javax.swing.JButton();
         jBannerImg = new javax.swing.JLabel();
@@ -513,6 +513,7 @@ public class MainFrame extends javax.swing.JFrame {
         jEmailX = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jPanel39 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jButton149 = new javax.swing.JButton();
         jFinalPanel = new javax.swing.JPanel();
@@ -1819,10 +1820,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         jOpenPackagePanel.setBackground(new java.awt.Color(255, 225, 255));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Hér verður texti fyrir pakkann\n");
-        jScrollPane3.setViewportView(jTextArea1);
+        jPackDesc.setColumns(20);
+        jPackDesc.setRows(5);
+        jPackDesc.setText("\n");
+        jScrollPane3.setViewportView(jPackDesc);
 
         jBackToListButton.setText(bundle.getString("Tilbaka")); // NOI18N
         jBackToListButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1944,15 +1945,19 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel39.setBackground(new java.awt.Color(255, 255, 255));
         jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTextField1.setText("jTextField1");
+
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jTextField1)
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jButton8.setText(bundle.getString("Staðfesta")); // NOI18N
@@ -2298,6 +2303,28 @@ public class MainFrame extends javax.swing.JFrame {
     private void jOpenPackageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOpenPackageActionPerformed
         jResultPanel.setVisible(false);
         jOpenPackagePanel.setVisible(true);
+        
+        int columncity = 0;
+        int columndepart = 1;
+        int columnarrive = 2;
+        int columnhotel = 3;
+        int columndaytour = 4;
+        int row = jResultTable.getSelectedRow();
+        String borg = jResultTable.getModel().getValueAt(row, columncity).toString();
+        String depart = jResultTable.getModel().getValueAt(row, columndepart).toString();
+        String arrive = jResultTable.getModel().getValueAt(row, columnarrive).toString();
+        String hotel = jResultTable.getModel().getValueAt(row, columnhotel).toString();
+        String daytour = jResultTable.getModel().getValueAt(row, columndaytour).toString();
+        System.out.println("Borgin er:" + borg);
+        System.out.println("Hótelið er:" + hotel);
+        System.out.println("Dagtúrinn er:" + daytour);
+        
+        jPackDesc.setText("Pakkinn inniheldur ferð til " + borg + '\n' + '\n' +
+                "þar sem gist er á " + hotel + '\n' + '\n'+ 
+                "og farið í dagsferðina " + daytour + '\n' + '\n' +
+                "Brottför er " + depart + '\n' + '\n' +
+                "Heimkoma er " + arrive);
+
     }//GEN-LAST:event_jOpenPackageActionPerformed
 
     private void jMoreInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMoreInformationActionPerformed
@@ -2599,6 +2626,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jOk;
     private javax.swing.JPanel jOpenPackagePanel;
     private javax.swing.JPanel jOutdoorPanel;
+    private javax.swing.JTextArea jPackDesc;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -2652,7 +2680,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jSearch;
     private javax.swing.JPanel jSkiPanel;
     private javax.swing.JPanel jSunPanel;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTo;
     private javax.swing.JPanel jTop;
     private javax.swing.JTextField jZip;
