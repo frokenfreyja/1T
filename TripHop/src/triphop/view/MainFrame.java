@@ -46,6 +46,7 @@ public class MainFrame extends javax.swing.JFrame {
     private Customer customer;
 
     private PackageManager pMan;
+    private DefaultTableModel model;
 
     /**
      * Creates new form MainFrame
@@ -225,7 +226,6 @@ public class MainFrame extends javax.swing.JFrame {
             jRegResultsPanel,jFinalPanel};
         
         
-        //pMan = new PackageManager(customer);
 
       
     }
@@ -2217,13 +2217,11 @@ public class MainFrame extends javax.swing.JFrame {
         
         int passCount = jPassengers.getSelectedIndex();
         
-        customer = new Customer(cal1,cal2,from,to,passCount,2,"Ski");
+        customer = new Customer(cal1,cal2,from,to,passCount,2,null);
         pMan = new PackageManager(customer);
-        //ArrayList<triphop.model.Package> pakkar = pMan.getPackages();
-        //System.out.println(pakkar);
         
 
-        DefaultTableModel model = new DefaultTableModel();
+        model = new DefaultTableModel();
         model.addColumn("Destination");
         model.addColumn("Departure date");
         model.addColumn("Return date");
@@ -2460,7 +2458,46 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jToFocusGained
 
     private void jPriceFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPriceFilterActionPerformed
-        pMan.filterByPrice(0, 100000);
+        String from = jFrom.getText();
+        String to = jTo.getText();
+        
+        LocalDate d1 = departureDate.getDate();
+        Calendar cal1 = Calendar.getInstance(); 
+        cal1.set( d1.getYear(), d1.getMonthValue(), d1.getDayOfMonth() );
+        
+        LocalDate d2 = arrivalDate.getDate();
+        Calendar cal2 = Calendar.getInstance();
+        cal2.set( d2.getYear(), d2.getMonthValue(), d2.getDayOfMonth() );
+        String cal2Str = cal2.toString();
+        
+        int passCount = jPassengers.getSelectedIndex();
+        
+        customer = new Customer(cal1,cal2,from,to,passCount,2,null);
+        pMan.sortPackages("cost");
+
+        model = new DefaultTableModel();
+        model.addColumn("Destination");
+        model.addColumn("Departure date");
+        model.addColumn("Return date");
+        model.addColumn("Hotel");
+        model.addColumn("Day Tour");
+        model.addColumn("Total amount");
+     
+        
+        int day1 = cal1.get(Calendar.DAY_OF_MONTH);
+        int month1=cal1.get(Calendar.MONTH);
+        int year1=cal1.get(Calendar.YEAR);
+        String date1= (day1+". "+"0"+month1+", "+year1);
+        int day2 = cal2.get(Calendar.DAY_OF_MONTH);
+        int month2=cal2.get(Calendar.MONTH);
+        int year2=cal2.get(Calendar.YEAR);
+        String date2 = (day2+". "+"0"+month2+", "+year2);    
+        
+        for(triphop.model.Package pack : pMan.getPackages()) {
+            model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
+        }
+        
+        jResultTable.setModel(model);
     }//GEN-LAST:event_jPriceFilterActionPerformed
 
     private void jFromFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jFromFocusGained
