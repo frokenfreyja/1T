@@ -25,7 +25,7 @@ public class MockRandomHotelSearcher implements HotelSearcher {
         for( int i = 0; i < 5000; i++ ) {
             int x = rand.nextInt( locations.length );
 
-            Hotel hotel = new Hotel( locations[x] );
+            Hotel hotel = new Hotel( null, null, null );
             arr.add( hotel );
         }
         

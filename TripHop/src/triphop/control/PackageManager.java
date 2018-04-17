@@ -12,9 +12,9 @@ import triphop.model.Package;
 public class PackageManager {
     
     // Controllerar fyrir hinar þrjár leitarvélarnar
-    private FlightSearcher flightSearcher;
-    private HotelSearcher hotelSearcher;
-    private DayTourSearcher dayTourSearcher;
+    private FlightSearcher flightSearcher = new FlightSearcherAdapter();
+    private HotelSearcher hotelSearcher = new FakeHotelSearcherAdapter();
+    private DayTourSearcher dayTourSearcher = new DayTourSearcherAdapter();
     
     // Object sem mun innihalda leitarupplýsingar
     private Customer customer;
@@ -25,14 +25,8 @@ public class PackageManager {
     /* Smiðurinn fyrir PackageManager */
     public PackageManager(
             Customer customerInfo
-            ,FlightSearcher inFlightSearcher
-            ,HotelSearcher inHotelSearcher
-            ,DayTourSearcher inDayTourSearcher
     ) {
         customer = customerInfo;
-        flightSearcher = inFlightSearcher;
-        hotelSearcher = inHotelSearcher;
-        dayTourSearcher = inDayTourSearcher;
         packages = searchPackages();
     }
 	

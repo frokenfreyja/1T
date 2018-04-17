@@ -61,6 +61,7 @@ public class DayTourSearcherAdapter implements DayTourSearcher {
             System.out.println( dayTour.getName() );
             System.out.println( "Location: "+dayTour.getLocation() );
             System.out.println( "Cost: "+dayTour.getCost() );
+            System.out.println( (new Date()).getTime()%250000 );
         }
     }
 }

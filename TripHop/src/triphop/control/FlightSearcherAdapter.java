@@ -1,7 +1,6 @@
 package triphop.control;
 
 import java.util.ArrayList;
-import java.util.Date;
 import is.hi.hbv401g.flightsearch.controller.FlightSearchController;
 import java.util.Calendar;
 import java.util.List;

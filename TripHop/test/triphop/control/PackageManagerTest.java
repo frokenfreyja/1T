@@ -42,11 +42,8 @@ public class PackageManagerTest {
     public void testNull() {
         pManager = new PackageManager(
             customer
-            ,new MockRandomFlightSearcher()
-            ,new MockNullHotelSearcher()
-            ,new MockRandomDayTourSearcher()
         );
-        ArrayList<Package> packages = pManager.searchPackages();
+        ArrayList<Package> packages = pManager.getPackages();
       
         assertNull(packages);
     };
@@ -56,11 +53,8 @@ public class PackageManagerTest {
     public void testEmpty() {
         pManager = new PackageManager(
             customer
-            ,new MockRandomFlightSearcher()
-            ,new MockEmptyHotelSearcher()
-            ,new MockRandomDayTourSearcher()
         );
-        ArrayList<Package> packages = pManager.searchPackages(); 
+        ArrayList<Package> packages = pManager.getPackages(); 
         
         assertNotNull(packages);
         assertTrue( packages.isEmpty() );
@@ -71,11 +65,8 @@ public class PackageManagerTest {
     public void testEqualCity() {
         pManager = new PackageManager(
             customer
-            ,new MockRandomFlightSearcher()
-            ,new MockRandomHotelSearcher()
-            ,new MockRandomDayTourSearcher()
         );
-        ArrayList<Package> packages = pManager.searchPackages();
+        ArrayList<Package> packages = pManager.getPackages();
       
         assertNotNull(packages);
         for(Package pack : packages ) {
