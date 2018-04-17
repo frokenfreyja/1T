@@ -836,6 +836,7 @@
                                 <Column editable="true" title="Title 4" type="java.lang.Object"/>
                               </Table>
                             </Property>
+                            <Property name="rowHeight" type="int" value="30"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -866,6 +867,9 @@
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Ver&#xf0;i" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPriceFilterActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel10">
                       <Properties>
