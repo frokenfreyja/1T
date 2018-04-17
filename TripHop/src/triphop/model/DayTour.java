@@ -15,6 +15,14 @@ public class DayTour {
         daytrip = inDaytrip;
         cost = daytrip.getPrice() * passengerCount;
     }
+    
+    public String getActivity() {
+        return daytrip.getActivity();
+    }
+    
+    public String getDescription() {
+        return daytrip.getDescription();
+    }
           
     public Daytrip getDaytrip() {
         return daytrip;
