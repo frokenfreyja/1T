@@ -227,7 +227,7 @@ public class MainFrame extends javax.swing.JFrame {
             jRegResultsPanel,jFinalPanel};
         
         
-        //pMan = new PackageManager(customer,flightSearcher,hotelSearcher,dayTourSearcher);
+        //pMan = new PackageManager(customer);
 
       
     }
@@ -715,6 +715,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jFrom.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jFrom.setText(bundle.getString("Reykjavík")); // NOI18N
+        jFrom.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jFromFocusGained(evt);
+            }
+        });
         jPanel6.add(jFrom);
 
         jTo.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -2138,10 +2143,14 @@ public class MainFrame extends javax.swing.JFrame {
         
         int passCount = jPassengers.getSelectedIndex();
         
-        //customer = new Customer(cal1,cal2,from,to,passCount,2,"Ski");
-        //pMan = new PackageManager(customer,flightSearcher,hotelSearcher,dayTourSearcher);
+        customer = new Customer(cal1,cal2,from,to,passCount,2,"Ski");
+        pMan = new PackageManager(customer);
         //ArrayList<triphop.model.Package> pakkar = pMan.getPackages();
-        //System.out.println(pakkar.get(2));
+        //System.out.println(pakkar);
+        for(triphop.model.Package pack : pMan.getPackages()) {
+            System.out.println("PRENTA UT");
+            System.out.println(pack.getFlight()[0].getDeparture());
+        }
 
         
         System.out.println("Heimaland: "+ from);
@@ -2325,11 +2334,15 @@ public class MainFrame extends javax.swing.JFrame {
         pMan.filterByPrice(0, 100000);
     }//GEN-LAST:event_jPriceFilterActionPerformed
 
+    private void jFromFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jFromFocusGained
+        jFrom.setText("");
+    }//GEN-LAST:event_jFromFocusGained
+
     /**
      * Kallar á showPackages í PackageManager og birtir niðurstöður
      * @param packages 
      */
-    public void showPackage(ArrayList<String[]> packages) {  
+    public void bookPackage(ArrayList<String[]> packages) {  
         
       //  packages = pMan.getPackages();
     }
