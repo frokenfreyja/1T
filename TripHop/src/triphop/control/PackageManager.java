@@ -102,4 +102,33 @@ public class PackageManager {
     public ArrayList<Package> getPackages() {
         return packages;
     }
+    
+    public static void main( String[] args ) {
+        Calendar depDate = Calendar.getInstance();
+        depDate.set( 2018, 4, 20 );
+        
+        Calendar arrDate = Calendar.getInstance();
+        arrDate.set( 2018, 4, 20 ); 
+        
+        Customer customer = new Customer( depDate, arrDate, "Keflavik", "Paris", 2, 0, "None" );
+        PackageManager packagemanager = new PackageManager( customer );
+        for( Package pack : packagemanager.getPackages() ) {
+            
+            System.out.println( "--Flight 1--" );
+            System.out.println( pack.getFlight()[0].getDeparture() );
+            System.out.println( pack.getFlight()[0].getArrival() );
+            System.out.println( pack.getFlight()[0].getCost() );
+            System.out.println( "--Flight 2--" );
+            System.out.println( pack.getFlight()[1].getDeparture() );
+            System.out.println( pack.getFlight()[1].getArrival() );
+            System.out.println( "--Hotel--" );
+            System.out.println( pack.getHotel().getName() );
+            System.out.println( pack.getHotel().getLocation() );
+            System.out.println( pack.getHotel().getCost() );
+            System.out.println( "--DayTour--" );
+            System.out.println( pack.getDayTour().getName() );
+            System.out.println( pack.getDayTour().getLocation() );
+            System.out.println( pack.getDayTour().getCost() );
+        }
+    }
 }

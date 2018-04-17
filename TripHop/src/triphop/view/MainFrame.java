@@ -2129,17 +2129,13 @@ public class MainFrame extends javax.swing.JFrame {
         String to = jTo.getText();
         
         LocalDate d1 = departureDate.getDate();
-        Date date1  = Date.from(d1.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
-        Calendar cal1 = toCalendar(date1);
-        String strDepDate =cal1.getTime().toString();
-        System.out.println(cal1.getTime());
+        Calendar cal1 = Calendar.getInstance(); 
+        cal1.set( d1.getYear(), d1.getMonthValue(), d1.getDayOfMonth() );
        
         
         LocalDate d2 = arrivalDate.getDate();
-        Date date2  = Date.from(d2.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
-        Calendar cal2 = toCalendar(date2);
-        String strArrDate =cal2.getTime().toString();
-        System.out.println(cal2.getTime());
+        Calendar cal2 = Calendar.getInstance();
+        cal2.set( d2.getYear(), d2.getMonthValue(), d2.getDayOfMonth() );
         
         int passCount = jPassengers.getSelectedIndex();
         
@@ -2155,8 +2151,6 @@ public class MainFrame extends javax.swing.JFrame {
         
         System.out.println("Heimaland: "+ from);
         System.out.println("Komuland: "+ to);
-        System.out.println("Brottför-dagsetning: " +strDepDate);
-        System.out.println("Koma-dagsetning: " + strArrDate);
         System.out.println("Fjöldi farþega: " + passCount);
         
 
@@ -2168,11 +2162,11 @@ public class MainFrame extends javax.swing.JFrame {
         model.addColumn("Number of day tours");
         model.addColumn("Total amount");
         
-        
+        /*
         model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,3,150000});
         model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,20000000});
         model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,50000000});
-        
+        */
         jResultTable.setModel(model);
         
         jFrontPanel.setVisible(false); 

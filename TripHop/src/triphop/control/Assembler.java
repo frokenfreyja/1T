@@ -17,6 +17,7 @@ public class Assembler {
     ) {
         ArrayList<Flight[]> flights = new ArrayList<Flight[]>();
         
+        System.out.println(outboundFlights.get(0).getArrival());
         for( Flight outboundFlight : outboundFlights ) {
             for( Flight returnFlight : returnFlights ) {
                 if( 
