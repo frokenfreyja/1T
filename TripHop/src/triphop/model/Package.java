@@ -27,9 +27,13 @@ public class Package {
         return daytour;
     }; 
     
-    public int getPrice() {
-        int price = 0;
+    public int getCost() {
+        int cost = 0;
         // Hér vantar aðferðir þar sem verð eru lögð saman
-        return price;
+        int fCost = flight[0].getCost() + flight[1].getCost();
+        int hCost = hotel.getCost();
+        int dCost = daytour.getCost();
+        cost = fCost + hCost + dCost;
+        return cost;
     }
 }

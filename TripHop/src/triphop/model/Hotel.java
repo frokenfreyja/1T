@@ -14,4 +14,8 @@ public class Hotel {
     public String getLocation() {
         return location;
     }
+    
+    public Integer getCost() {
+        return 0;
+    }
 }
