@@ -16,19 +16,21 @@ public class DayTourSearcherAdapter implements DayTourSearcher {
         
     private TripSearch dayTourSearcher; // Searcher
     private ArrayList<Daytrip> trips = new ArrayList<Daytrip>(); // Möguleikar
-    private Basket basket = new Basket(); // Bókar aðeins
-    private int passengerCount;
+    private final Basket basket = new Basket(); // Bókar aðeins
+    private Integer passengerCount;
     
     /* Adapter fall til að leita af dagferð */
     public ArrayList<DayTour> searchDayTours(
             String location
             ,Date date
+            ,String activity
             ,Integer inPassengerCount
     ) {
         ArrayList<DayTour> dayTours = new ArrayList<DayTour>();
         passengerCount = inPassengerCount;
 
-        dayTourSearcher = new TripSearch( null, location, null, 0, 100000, -1, -1 );
+        dayTourSearcher = new TripSearch( null, location, activity, 0, 100000, -1, -1 );
+        
         try {
             dayTourSearcher.updateTrips();
         }
@@ -54,12 +56,13 @@ public class DayTourSearcherAdapter implements DayTourSearcher {
     public static void main( String[] args ) {
         DayTourSearcher dts = new DayTourSearcherAdapter();
 
-        ArrayList<DayTour> dayTours = dts.searchDayTours( "Paris", null, 3);
+        ArrayList<DayTour> dayTours = dts.searchDayTours( "Paris", null, "Games", 3);
         
         for( DayTour dayTour : dayTours ) {
             System.out.println( "--DayTour--" );
             System.out.println( dayTour.getName() );
             System.out.println( "Location: "+dayTour.getLocation() );
+            System.out.println( "Activity: "+dayTour.getActivity() );
             System.out.println( "Cost: "+dayTour.getCost() );
             System.out.println( (new Date()).getTime()%250000 );
         }

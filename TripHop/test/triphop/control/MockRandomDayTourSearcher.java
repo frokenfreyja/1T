@@ -13,6 +13,7 @@ public class MockRandomDayTourSearcher implements DayTourSearcher {
     public ArrayList<DayTour> searchDayTours(
             String location
             ,Date date
+            ,String hj
             ,Integer passengerCount
     ) {
         String[] locations = new String[]{

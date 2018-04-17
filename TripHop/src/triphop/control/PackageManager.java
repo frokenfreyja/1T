@@ -56,7 +56,7 @@ public class PackageManager {
         Date tourDate = c.getTime();
         
         // Kallað á leitir fyrir dagsferðir.  
-        ArrayList<DayTour> dayTours = dayTourSearcher.searchDayTours( dest, tourDate, paxCount );
+        ArrayList<DayTour> dayTours = dayTourSearcher.searchDayTours( dest, tourDate, customer.getTheme(), paxCount );
 
         // Kom í veg fyrir að eitthvað sé null
         if(
@@ -110,7 +110,7 @@ public class PackageManager {
         Calendar arrDate = Calendar.getInstance();
         arrDate.set( 2018, 4, 20 ); 
         
-        Customer customer = new Customer( depDate, arrDate, "Keflavik", "Paris", 2, 0, "None" );
+        Customer customer = new Customer( depDate, arrDate, "Keflavik", "Paris", 2, 0, "Museums" );
         PackageManager packagemanager = new PackageManager( customer );
         for( Package pack : packagemanager.getPackages() ) {
             
@@ -121,6 +121,7 @@ public class PackageManager {
             System.out.println( "--Flight 2--" );
             System.out.println( pack.getFlight()[1].getDeparture() );
             System.out.println( pack.getFlight()[1].getArrival() );
+            System.out.println( pack.getFlight()[1].getCost() );
             System.out.println( "--Hotel--" );
             System.out.println( pack.getHotel().getName() );
             System.out.println( pack.getHotel().getLocation() );
@@ -129,6 +130,7 @@ public class PackageManager {
             System.out.println( pack.getDayTour().getName() );
             System.out.println( pack.getDayTour().getLocation() );
             System.out.println( pack.getDayTour().getCost() );
+            System.out.println( pack.getDayTour().getActivity() );
         }
     }
 }
