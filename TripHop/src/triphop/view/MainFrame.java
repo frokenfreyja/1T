@@ -2131,11 +2131,20 @@ public class MainFrame extends javax.swing.JFrame {
         LocalDate d1 = departureDate.getDate();
         Calendar cal1 = Calendar.getInstance(); 
         cal1.set( d1.getYear(), d1.getMonthValue(), d1.getDayOfMonth() );
-       
         
         LocalDate d2 = arrivalDate.getDate();
         Calendar cal2 = Calendar.getInstance();
         cal2.set( d2.getYear(), d2.getMonthValue(), d2.getDayOfMonth() );
+        String cal2Str = cal2.toString();
+        
+        int day1 = cal1.get(Calendar.DAY_OF_MONTH);
+        int month1=cal1.get(Calendar.MONTH);
+        int year1=cal1.get(Calendar.YEAR);
+        String date1= (day1+". "+"0"+month1+", "+year1);
+        int day2 = cal2.get(Calendar.DAY_OF_MONTH);
+        int month2=cal2.get(Calendar.MONTH);
+        int year2=cal2.get(Calendar.YEAR);
+        String date2 = (day2+". "+"0"+month2+", "+year2);
         
         int passCount = jPassengers.getSelectedIndex();
         
@@ -2143,30 +2152,27 @@ public class MainFrame extends javax.swing.JFrame {
         pMan = new PackageManager(customer);
         //ArrayList<triphop.model.Package> pakkar = pMan.getPackages();
         //System.out.println(pakkar);
-        for(triphop.model.Package pack : pMan.getPackages()) {
-            System.out.println("PRENTA UT");
-            System.out.println(pack.getFlight()[0].getDeparture());
-        }
-
-        
-        System.out.println("Heimaland: "+ from);
-        System.out.println("Komuland: "+ to);
-        System.out.println("Fjöldi farþega: " + passCount);
         
 
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("Destination");
         model.addColumn("Departure date");
         model.addColumn("Return date");
-        model.addColumn("Number of passengers");
-        model.addColumn("Number of day tours");
+        model.addColumn("Hotel");
+        model.addColumn("Day Tour");
         model.addColumn("Total amount");
-        
+     
         /*
         model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,3,150000});
         model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,20000000});
         model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,50000000});
         */
+        
+        for(triphop.model.Package pack : pMan.getPackages()) {
+            model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
+        }
+
+        
         jResultTable.setModel(model);
         
         jFrontPanel.setVisible(false); 
