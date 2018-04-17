@@ -73,7 +73,8 @@ public class PackageManager {
     
     /* Nota sort fall í Collections og Comparator frá CompPackage til að raða pökkunum */
     public void sortPackages(String orderBy) {
-        Collections.sort(packages, CompPackage.compPackages(orderBy));
+        ArrayList<Package> packSorted = (ArrayList<Package>) packages.clone();
+        Collections.sort(packSorted, CompPackage.compPackages(orderBy));
     }
     
     // Þrengir niðurstöður eftir verði
