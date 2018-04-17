@@ -15,10 +15,10 @@ public class CompPackage {
         if(orderBy.equalsIgnoreCase("location")) {
             return getCompByLoc();
         }
-        else if(orderBy.equalsIgnoreCase("price")) {
-            return getCompByPrice();
+        else if(orderBy.equalsIgnoreCase("cost")) {
+            return getCompByCost();
         }
-        return getCompByPrice();                
+        return getCompByCost();                
     }
     
     private static Comparator<Package> getCompByLoc() {
@@ -33,14 +33,14 @@ public class CompPackage {
         return comp;
     }
     
-    private static Comparator<Package> getCompByPrice() {
+    private static Comparator<Package> getCompByCost() {
         Comparator comp = new Comparator<Package>() {
             @Override
             public int compare(Package p1, Package p2) {
-                if(p1.getPrice() < p2.getPrice()) {
+                if(p1.getCost() < p2.getCost()) {
                     return -1;
                 }
-                else if(p1.getPrice() > p2.getPrice()) {
+                else if(p1.getCost() > p2.getCost()) {
                     return 1;
                 }
                 else {

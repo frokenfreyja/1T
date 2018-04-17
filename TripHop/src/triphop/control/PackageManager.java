@@ -86,11 +86,11 @@ public class PackageManager {
     public void filterByPrice(int min, int max) {
         if(max < min) return;
         for(int i = 0; i < packages.size(); i++) {
-            if(min > 0 && packages.get(i).getPrice() < min) {
+            if(min > 0 && packages.get(i).getCost() < min) {
                 packages.remove(i);
                 i--;
             }
-            else if(max > 0 && packages.get(i).getPrice() > max) {
+            else if(max > 0 && packages.get(i).getCost() > max) {
                 packages.remove(i);
                 i--;
             }
