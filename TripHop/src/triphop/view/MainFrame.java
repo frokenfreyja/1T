@@ -13,6 +13,7 @@ import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import javax.swing.ImageIcon;
@@ -225,8 +226,8 @@ public class MainFrame extends javax.swing.JFrame {
             jEventPanel,jFamilyPanel,jOutdoorPanel,jCityPanel,jOpenPackagePanel,
             jRegResultsPanel,jFinalPanel};
         
-        Customer customerInfo=customer;
-        pMan = new PackageManager(customerInfo,flightSearcher,hotelSearcher,dayTourSearcher);
+        
+        //pMan = new PackageManager(customer,flightSearcher,hotelSearcher,dayTourSearcher);
 
       
     }
@@ -923,6 +924,7 @@ public class MainFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jResultTable.setRowHeight(30);
         jScrollPane2.setViewportView(jResultTable);
 
         jButton5.setText(bundle.getString("Tilbaka")); // NOI18N
@@ -940,6 +942,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jCheckBox1.setText(bundle.getString("Verði")); // NOI18N
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPriceFilterActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText(bundle.getString("Raða eftir")); // NOI18N
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
@@ -2118,13 +2125,24 @@ public class MainFrame extends javax.swing.JFrame {
         
         LocalDate d1 = departureDate.getDate();
         Date date1  = Date.from(d1.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
-        String strDepDate = DateFormat.getDateInstance().format(date1);
+        Calendar cal1 = toCalendar(date1);
+        String strDepDate =cal1.getTime().toString();
+        System.out.println(cal1.getTime());
+       
         
         LocalDate d2 = arrivalDate.getDate();
         Date date2  = Date.from(d2.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
-        String strArrDate = DateFormat.getDateInstance().format(date2);
+        Calendar cal2 = toCalendar(date2);
+        String strArrDate =cal2.getTime().toString();
+        System.out.println(cal2.getTime());
         
         int passCount = jPassengers.getSelectedIndex();
+        
+        //customer = new Customer(cal1,cal2,from,to,passCount,2,"Ski");
+        //pMan = new PackageManager(customer,flightSearcher,hotelSearcher,dayTourSearcher);
+        //ArrayList<triphop.model.Package> pakkar = pMan.getPackages();
+        //System.out.println(pakkar.get(2));
+
         
         System.out.println("Heimaland: "+ from);
         System.out.println("Komuland: "+ to);
@@ -2134,13 +2152,17 @@ public class MainFrame extends javax.swing.JFrame {
         
 
         DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Origin");
         model.addColumn("Destination");
         model.addColumn("Departure date");
         model.addColumn("Return date");
         model.addColumn("Number of passengers");
+        model.addColumn("Number of day tours");
+        model.addColumn("Total amount");
         
-        model.addRow(new Object[]{from,to,strDepDate,strArrDate,passCount});
+        
+        model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,3,150000});
+        model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,20000000});
+        model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,50000000});
         
         jResultTable.setModel(model);
         
@@ -2299,13 +2321,23 @@ public class MainFrame extends javax.swing.JFrame {
         jTo.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jToFocusGained
 
+    private void jPriceFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPriceFilterActionPerformed
+        pMan.filterByPrice(0, 100000);
+    }//GEN-LAST:event_jPriceFilterActionPerformed
+
     /**
      * Kallar á showPackages í PackageManager og birtir niðurstöður
      * @param packages 
      */
     public void showPackage(ArrayList<String[]> packages) {  
         
-        packages = pMan.showPackages();
+      //  packages = pMan.getPackages();
+    }
+    
+    public static Calendar toCalendar(Date date){ 
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal;
     }
     /**
      * @param args the command line arguments
