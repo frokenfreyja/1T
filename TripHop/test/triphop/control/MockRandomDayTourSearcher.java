@@ -13,6 +13,7 @@ public class MockRandomDayTourSearcher implements DayTourSearcher {
     public ArrayList<DayTour> searchDayTours(
             String location
             ,Date date
+            ,Integer passengerCount
     ) {
         String[] locations = new String[]{
             "Reykjavík", "Akureyri", "New York", "Milano", "Alicante", "Tokyo", 
@@ -23,7 +24,7 @@ public class MockRandomDayTourSearcher implements DayTourSearcher {
         for( int i = 0; i < 5000; i++ ) {
             int x = rand.nextInt( locations.length );
 
-            DayTour daytour = new DayTour( locations[x] );
+            DayTour daytour = new DayTour( null, null );
             arr.add( daytour );
         }
         

@@ -33,10 +33,11 @@ public class PackageManager {
         flightSearcher = inFlightSearcher;
         hotelSearcher = inHotelSearcher;
         dayTourSearcher = inDayTourSearcher;
+        packages = searchPackages();
     }
 	
     /* Leitar af pökkunum og skilar þeim */
-    public ArrayList<Package> searchPackages() {
+    private ArrayList<Package> searchPackages() {
         // Upplýsingum sem notaðar eru gefnar sér breytur til að minnka clutter.
         String orig = customer.getOrigin();
         String dest = customer.getDestination();
@@ -106,11 +107,5 @@ public class PackageManager {
     
     public ArrayList<Package> getPackages() {
         return packages;
-    }
-	
-    /* Eyða */
-    public ArrayList<String[]> showPackages() {
-        // Ekkert enn.
-        return new ArrayList<String[]>();
     }
 }
