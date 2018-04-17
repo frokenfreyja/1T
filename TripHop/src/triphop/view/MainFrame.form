@@ -117,12 +117,12 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="72" max="32767" attributes="0"/>
+                              <EmptySpace pref="79" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jSearch" min="-2" pref="125" max="-2" attributes="0"/>
                                   <Component id="jPanel6" min="-2" pref="963" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="97" max="32767" attributes="0"/>
+                              <EmptySpace pref="104" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
@@ -598,7 +598,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="359" max="32767" attributes="0"/>
+                              <EmptySpace pref="377" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -607,52 +607,52 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jFirstName" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                   <Component id="JLabel1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLastName" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="jLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jAddress" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCity" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jZip" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jZip" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jCountry" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCountry" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jPhone" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPhone" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jEmail" alignment="3" pref="27" max="32767" attributes="0"/>
                                   <Component id="JLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jReset" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jOk" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jOk" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jReset" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="437" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="429" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -662,6 +662,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="S&#xed;man&#xfa;mer:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -678,6 +681,9 @@
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Fornafn:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jZip">
@@ -686,6 +692,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Eftirnafn:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -696,6 +705,9 @@
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Heimilisfang:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jPhone">
@@ -704,6 +716,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Borg:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -722,6 +737,9 @@
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="P&#xf3;stn&#xfa;mer:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="jOk">
@@ -738,6 +756,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Land:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -756,6 +777,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="triphop/view/resources/lang.properties" key="Netfang:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="16" style="0"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -779,7 +803,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="33" max="32767" attributes="0"/>
+                              <EmptySpace pref="51" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -910,7 +934,7 @@
                                   <Component id="jPanel7" pref="820" max="32767" attributes="0"/>
                                   <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1154,7 +1178,7 @@
                                   <Component id="jPanel10" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1398,7 +1422,7 @@
                                   <Component id="jPanel11" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jPanel12" alignment="0" pref="820" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1643,7 +1667,7 @@
                                   <Component id="jPanel14" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jLabel13" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1887,7 +1911,7 @@
                                   <Component id="jPanel15" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jPanel16" alignment="0" pref="820" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2131,7 +2155,7 @@
                                   <Component id="jPanel18" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2378,7 +2402,7 @@
                                   <Component id="jPanel19" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jPanel20" alignment="0" pref="820" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2622,7 +2646,7 @@
                                   <Component id="jPanel22" alignment="0" pref="820" max="32767" attributes="0"/>
                                   <Component id="jLabel17" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2855,7 +2879,7 @@
                                   <Component id="jScrollPane3" min="-2" pref="663" max="-2" attributes="0"/>
                                   <Component id="jBannerImg" alignment="0" min="-2" pref="663" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="246" max="32767" attributes="0"/>
+                              <EmptySpace pref="260" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2872,7 +2896,7 @@
                                   <Component id="jBookButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jBackToListButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="401" max="32767" attributes="0"/>
+                              <EmptySpace pref="404" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2964,7 +2988,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="266" max="32767" attributes="0"/>
+                              <EmptySpace pref="280" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2981,7 +3005,7 @@
                                   <Component id="jPanel5" max="32767" attributes="0"/>
                                   <Component id="jPanel39" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="25" max="32767" attributes="0"/>
+                              <EmptySpace pref="81" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jButton149" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3018,34 +3042,30 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jPhoneX" alignment="0" pref="284" max="32767" attributes="0"/>
-                                      <Component id="jCountryX" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jZipCityX" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jAddressX" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jFirstLastNameX" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jEmailX" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jFirstLastNameX" max="32767" attributes="0"/>
+                              <Component id="jAddressX" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jZipCityX" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jCountryX" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jPhoneX" max="32767" attributes="0"/>
+                              <Component id="jEmailX" alignment="1" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jFirstLastNameX" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <Component id="jFirstLastNameX" min="-2" pref="26" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jAddressX" min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="jAddressX" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jZipCityX" min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="jZipCityX" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jCountryX" min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="jCountryX" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jPhoneX" min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="jPhoneX" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jEmailX" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <EmptySpace pref="69" max="32767" attributes="0"/>
+                                  <Component id="jEmailX" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3057,6 +3077,9 @@
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
                             </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jAddressX">
@@ -3064,6 +3087,9 @@
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3073,6 +3099,9 @@
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
                             </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jCountryX">
@@ -3080,6 +3109,9 @@
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3089,6 +3121,9 @@
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
                             </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jEmailX">
@@ -3096,6 +3131,9 @@
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3127,23 +3165,113 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittHotel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittDaytour" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittDepart" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittArrive" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittPrice" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittAfanga" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jKvittBrottfor" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField1" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <Component id="jKvittBrottfor" min="-2" pref="26" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jKvittAfanga" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jKvittHotel" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jKvittDaytour" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jKvittDepart" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jKvittArrive" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jKvittPrice" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JTextField" name="jTextField1">
+                        <Component class="javax.swing.JTextField" name="jKvittAfanga">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="jTextField1"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
                           </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jKvittHotel">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jKvittHotelActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jKvittDaytour">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jKvittDepart">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jKvittArrive">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jKvittPrice">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jKvittBrottfor">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="14" style="0"/>
+                            </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jKvittBrottforActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -3200,7 +3328,7 @@
                                       <Component id="jButton150" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="252" max="32767" attributes="0"/>
+                              <EmptySpace pref="266" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3213,7 +3341,7 @@
                               <Component id="jLabel19" min="-2" pref="75" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jButton150" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="521" max="32767" attributes="0"/>
+                              <EmptySpace pref="525" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
