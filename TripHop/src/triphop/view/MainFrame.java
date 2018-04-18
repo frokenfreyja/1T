@@ -52,6 +52,7 @@ public class MainFrame extends javax.swing.JFrame {
     private DefaultTableModel model;
     private String[] lond;
     private InformationDialog info;
+    private int index;
 
     /**
      * Creates new form MainFrame
@@ -233,6 +234,7 @@ public class MainFrame extends javax.swing.JFrame {
         lond = new String[]{"London","Paris"};
         
         info = new InformationDialog(this,false);
+        
 
       
     }
@@ -509,24 +511,13 @@ public class MainFrame extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jRegResultsPanel = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jFirstLastNameX = new javax.swing.JTextField();
-        jAddressX = new javax.swing.JTextField();
-        jZipCityX = new javax.swing.JTextField();
-        jCountryX = new javax.swing.JTextField();
-        jPhoneX = new javax.swing.JTextField();
-        jEmailX = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jPanel39 = new javax.swing.JPanel();
-        jKvittAfanga = new javax.swing.JTextField();
-        jKvittHotel = new javax.swing.JTextField();
-        jKvittDaytour = new javax.swing.JTextField();
-        jKvittDepart = new javax.swing.JTextField();
-        jKvittArrive = new javax.swing.JTextField();
-        jKvittPrice = new javax.swing.JTextField();
-        jKvittBrottfor = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jButton149 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jPackReceipt = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jCustReceipt = new javax.swing.JTextArea();
         jFinalPanel = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jButton150 = new javax.swing.JButton();
@@ -783,7 +774,7 @@ public class MainFrame extends javax.swing.JFrame {
         jFrontPanelLayout.setVerticalGroup(
             jFrontPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrontPanelLayout.createSequentialGroup()
-                .addGap(0, 30, Short.MAX_VALUE)
+                .addGap(0, 33, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -795,7 +786,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 257, Short.MAX_VALUE))
+                .addGap(0, 254, Short.MAX_VALUE))
         );
 
         jBottom.add(jFrontPanel, "card2");
@@ -2475,6 +2466,7 @@ public class MainFrame extends javax.swing.JFrame {
         jOpenPackagePanel.setBackground(new java.awt.Color(255, 225, 255));
 
         jPackDesc.setColumns(20);
+        jPackDesc.setEditable(false);
         jPackDesc.setRows(5);
         jPackDesc.setText("\n");
         jScrollPane3.setViewportView(jPackDesc);
@@ -2529,7 +2521,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton7)
                     .addComponent(jBookButton)
                     .addComponent(jBackToListButton))
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(401, Short.MAX_VALUE))
         );
 
         jBottom.add(jOpenPackagePanel, "card13");
@@ -2540,134 +2532,9 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel8.setText(bundle.getString("Upplýsingar um viðskiptavin:")); // NOI18N
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jFirstLastNameX.setEditable(false);
-        jFirstLastNameX.setBorder(null);
-        jFirstLastNameX.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jAddressX.setEditable(false);
-        jAddressX.setBorder(null);
-        jAddressX.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jZipCityX.setEditable(false);
-        jZipCityX.setBorder(null);
-        jZipCityX.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jCountryX.setEditable(false);
-        jCountryX.setBorder(null);
-        jCountryX.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jPhoneX.setEditable(false);
-        jPhoneX.setBorder(null);
-        jPhoneX.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jEmailX.setEditable(false);
-        jEmailX.setBorder(null);
-        jEmailX.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jFirstLastNameX)
-            .addComponent(jAddressX, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jZipCityX, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jCountryX, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jPhoneX)
-            .addComponent(jEmailX, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jFirstLastNameX, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jAddressX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jZipCityX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCountryX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPhoneX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jEmailX, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText(bundle.getString("Upplýsingar um pakka:")); // NOI18N
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-
-        jPanel39.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jKvittAfanga.setBorder(null);
-        jKvittAfanga.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jKvittHotel.setBorder(null);
-        jKvittHotel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jKvittHotel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jKvittHotelActionPerformed(evt);
-            }
-        });
-
-        jKvittDaytour.setBorder(null);
-        jKvittDaytour.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jKvittDepart.setBorder(null);
-        jKvittDepart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jKvittArrive.setBorder(null);
-        jKvittArrive.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jKvittPrice.setBorder(null);
-        jKvittPrice.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jKvittBrottfor.setBorder(null);
-        jKvittBrottfor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jKvittBrottfor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jKvittBrottforActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
-        jPanel39.setLayout(jPanel39Layout);
-        jPanel39Layout.setHorizontalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jKvittArrive)
-            .addComponent(jKvittPrice)
-            .addComponent(jKvittAfanga)
-            .addComponent(jKvittBrottfor)
-            .addGroup(jPanel39Layout.createSequentialGroup()
-                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jKvittHotel, javax.swing.GroupLayout.DEFAULT_SIZE, 18, Short.MAX_VALUE)
-                    .addComponent(jKvittDaytour)
-                    .addComponent(jKvittDepart))
-                .addGap(272, 272, 272))
-        );
-        jPanel39Layout.setVerticalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel39Layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jKvittBrottfor, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jKvittAfanga, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jKvittHotel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jKvittDaytour, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jKvittDepart, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(jKvittArrive, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jKvittPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
 
         jButton8.setText(bundle.getString("Staðfesta")); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -2683,27 +2550,42 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jPackReceipt.setEditable(false);
+        jPackReceipt.setColumns(20);
+        jPackReceipt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        jPackReceipt.setRows(5);
+        jScrollPane4.setViewportView(jPackReceipt);
+
+        jScrollPane5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane5.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+
+        jCustReceipt.setColumns(20);
+        jCustReceipt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        jCustReceipt.setRows(5);
+        jScrollPane5.setViewportView(jCustReceipt);
+
         javax.swing.GroupLayout jRegResultsPanelLayout = new javax.swing.GroupLayout(jRegResultsPanel);
         jRegResultsPanel.setLayout(jRegResultsPanelLayout);
         jRegResultsPanelLayout.setHorizontalGroup(
             jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jRegResultsPanelLayout.createSequentialGroup()
-                .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGap(213, 213, 213)
+                .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jRegResultsPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton149)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton8))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jRegResultsPanelLayout.createSequentialGroup()
-                        .addGap(213, 213, 213)
+                    .addGroup(jRegResultsPanelLayout.createSequentialGroup()
                         .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(65, 65, 65)
                         .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))))
-                .addContainerGap(280, Short.MAX_VALUE))
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE))))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
         jRegResultsPanelLayout.setVerticalGroup(
             jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2714,13 +2596,13 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton149)
-                    .addComponent(jButton8))
-                .addGap(496, 496, 496))
+                    .addComponent(jButton8)
+                    .addComponent(jButton149))
+                .addContainerGap(491, Short.MAX_VALUE))
         );
 
         jBottom.add(jRegResultsPanel, "card14");
@@ -2765,7 +2647,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton150)
-                .addContainerGap(525, Short.MAX_VALUE))
+                .addContainerGap(521, Short.MAX_VALUE))
         );
 
         jBottom.add(jFinalPanel, "card15");
@@ -2876,7 +2758,6 @@ public class MainFrame extends javax.swing.JFrame {
         
         for(triphop.model.Package pack : pMan.getPackages()) {
             model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
-            
         }
         
         jResultTable.setModel(model);
@@ -2918,38 +2799,54 @@ public class MainFrame extends javax.swing.JFrame {
         String country = jCountry.getText();
         String phone = jPhone.getText();
         String email = jEmail.getText();
+        int passCount = jPassengers.getSelectedIndex();
         
-        System.out.println(jFirstName.getText());
         jRegistrationPanel.setVisible(false);
         jRegResultsPanel.setVisible(true);
-        jFirstLastNameX.setText("  Nafn: " + firstname +" " + lastname);
-        jAddressX.setText("  Heimilisfang: " + address);
-        jZipCityX.setText("  Borg: " + zip + " " + city);
-        jCountryX.setText("  Land: " + country);
-        jPhoneX.setText("  Símanúmer: " + phone);
-        jEmailX.setText("  Netfang: " + email);
         
-        int columncity = 0;
-        int columndepart = 1;
-        int columnarrive = 2;
-        int columnhotel = 3;
-        int columndaytour = 4;
-        int columnprice = 5;
+        jCustReceipt.setLineWrap(true);
+        jCustReceipt.setWrapStyleWord(true);
+        jCustReceipt.setText(" Nafn: "+firstname+" "+lastname+'\n'+'\n'+" Heimilisfang: "+address+'\n'+'\n'+
+                " Borg: "+zip+", "+city+'\n'+'\n'+" Land: "+country+'\n'+'\n'+" Símanúmer: "+phone
+                + '\n'+'\n' + " Netfang: " + email
+                
+        );
+        
         int row = jResultTable.getSelectedRow();
-        String borg = jResultTable.getModel().getValueAt(row, columncity).toString();
-        String depart = jResultTable.getModel().getValueAt(row, columndepart).toString();
-        String arrive = jResultTable.getModel().getValueAt(row, columnarrive).toString();
-        String hotel = jResultTable.getModel().getValueAt(row, columnhotel).toString();
-        String daytour = jResultTable.getModel().getValueAt(row, columndaytour).toString();
-        String price = jResultTable.getModel().getValueAt(row, columnprice).toString();
+        triphop.model.Package pakk = pMan.getPackages().get(row);
         
-        jKvittBrottfor.setText("  Brottfararstaður: " + jFrom.getText());
-        jKvittAfanga.setText("  Áfangastaður: " + borg);
-        jKvittHotel.setText("  Brottfararstaður: " + borg);
-        jKvittDaytour.setText("  Dagsferð: " + daytour);
-        jKvittDepart.setText("  Brottför: " + depart);
-        jKvittArrive.setText("  Heimkoma: " + arrive);
-        jKvittPrice.setText("  Verð samtals: " + price);
+        String depInfo=pakk.getFlight()[0].getDeparture();
+        String arrInfo=pakk.getFlight()[0].getArrival();
+        String flightCost = pakk.getFlight()[0].getCost().toString();
+            
+        String dtInfo = pakk.getDayTour().getDescription();
+        String dtAct = pakk.getDayTour().getActivity();
+        String dtCost = pakk.getDayTour().getCost().toString();
+        String dtLoc = pakk.getDayTour().getLocation();
+        String dtName = pakk.getDayTour().getName();
+            
+        String hLoc = pakk.getHotel().getLocation();
+        String hName = pakk.getHotel().getName();
+        String hCost = pakk.getHotel().getCost().toString();
+        
+        String depart = jResultTable.getModel().getValueAt(row, 1).toString();
+        String arrive = jResultTable.getModel().getValueAt(row, 2).toString();
+        String price = jResultTable.getModel().getValueAt(row, 5).toString();
+           
+        jPackReceipt.setLineWrap(true);
+        jPackReceipt.setWrapStyleWord(true);
+        jPackReceipt.setText(" Brottfararstaður: "+depInfo+'\n'+" Áfangastaður: "+arrInfo+'\n'+
+                " Brottför: "+depart+'\n'+" Heimkoma: "+arrive+'\n'+" Fjöldi farþega: "+passCount+
+                '\n'+" Flugkostnaður: "+flightCost+
+                '\n'+'\n'+  
+                " Dagsferð: "+dtName+'\n'+" Staðsetning: "
+                +dtLoc+'\n'+" Dagsferðarkostnaður: "+dtCost+'\n'+'\n'+ 
+                " Hótel: "+hName+'\n'+" Staðsetning: "+hLoc+'\n'+
+                " Hótelkostnaður: "+hCost+'\n'+'\n'+" Heildarkostnaður pakka: "+price
+                
+        );
+        
+        
     }//GEN-LAST:event_jOkActionPerformed
 
     private void jBackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBackButtonMouseClicked
@@ -3027,19 +2924,15 @@ public class MainFrame extends javax.swing.JFrame {
         jResultPanel.setVisible(false);
         jOpenPackagePanel.setVisible(true);
         
-        int columncity = 0;
-        int columndepart = 1;
-        int columnarrive = 2;
-        int columnhotel = 3;
-        int columndaytour = 4;
-        int columnprice = 5;
         int row = jResultTable.getSelectedRow();
-        String borg = jResultTable.getModel().getValueAt(row, columncity).toString();
-        String depart = jResultTable.getModel().getValueAt(row, columndepart).toString();
-        String arrive = jResultTable.getModel().getValueAt(row, columnarrive).toString();
-        String hotel = jResultTable.getModel().getValueAt(row, columnhotel).toString();
-        String daytour = jResultTable.getModel().getValueAt(row, columndaytour).toString();
-        String price = jResultTable.getModel().getValueAt(row, columnprice).toString();
+        triphop.model.Package pakk = pMan.getPackages().get(row);
+        
+        String borg = pakk.getFlight()[0].getArrival();
+        String depart = jResultTable.getModel().getValueAt(row, 1).toString();
+        String arrive = jResultTable.getModel().getValueAt(row, 2).toString();
+        String hotel = pakk.getHotel().getName();
+        String daytour = pakk.getDayTour().getName();
+        String price = jResultTable.getModel().getValueAt(row, 5).toString();
       
         StretchIcon londonbanner = createImg("img/london.png");
         StretchIcon parisbanner = createImg("img/paris.png");
@@ -3048,19 +2941,18 @@ public class MainFrame extends javax.swing.JFrame {
         
         if(borg.equals(London)) 
         {
-            System.out.println("London virkar");
             jBannerImg.setIcon(londonbanner);
         }
         else if(borg.equals(Paris))
         {
-            System.out.println("Paris virkar");
             jBannerImg.setIcon(parisbanner);
         }
    
-        
-        jPackDesc.setText("Pakkinn inniheldur ferð til " + borg + '\n' + '\n' +
-                "þar sem gist er á " + hotel + '\n' + '\n'+ 
-                "og farið í dagsferðina " + daytour + '\n' + '\n' +
+        jPackDesc.setLineWrap(true);
+        jPackDesc.setWrapStyleWord(true);
+        jPackDesc.setText("Pakkinn inniheldur ferð til " + borg +
+                " þar sem gist er á " + hotel+ 
+                " og farið í dagsferðina " + daytour+'\n' + '\n'+
                 "Brottför er " + depart + '\n' + '\n' +
                 "Heimkoma er " + arrive);
 
@@ -3068,47 +2960,32 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jOpenPackageActionPerformed
 
     private void jMoreInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMoreInformationActionPerformed
-        String depInfo=new String();
-        String arrInfo=new String();
-        String flightCost = new String();
-        String dtInfo=new String();
-        String dtAct = new String();
-        String dtCost = new String();
-        String dtLoc = new String();
-        String dtName = new String();
-        String hLoc = new String();
-        String hName = new String();
-        String hCost = new String();
-        int totalCost=new Integer(0);
-        
-        for(triphop.model.Package pakk : pMan.getPackages()) {
-            depInfo=pakk.getFlight()[0].getDeparture();
-            arrInfo=pakk.getFlight()[0].getArrival();
-            flightCost = pakk.getFlight()[0].getCost().toString();
-            
-            dtInfo = pakk.getDayTour().getDescription();
-            dtAct = pakk.getDayTour().getActivity();
-            dtCost = pakk.getDayTour().getCost().toString();
-            dtLoc = pakk.getDayTour().getLocation();
-            dtName = pakk.getDayTour().getName();
-            
-            hLoc = pakk.getHotel().getLocation();
-            hName = pakk.getHotel().getName();
-            hCost = pakk.getHotel().getCost().toString();
-            
-            totalCost=pakk.getCost();
-        }      
         int row = jResultTable.getSelectedRow();
+        triphop.model.Package pakk = pMan.getPackages().get(row);
+        String depInfo=pakk.getFlight()[0].getDeparture();
+        String arrInfo=pakk.getFlight()[0].getArrival();
+        String flightCost = pakk.getFlight()[0].getCost().toString();
+            
+        String dtInfo = pakk.getDayTour().getDescription();
+        String dtAct = pakk.getDayTour().getActivity();
+        String dtCost = pakk.getDayTour().getCost().toString();
+        String dtLoc = pakk.getDayTour().getLocation();
+        String dtName = pakk.getDayTour().getName();
+            
+        String hLoc = pakk.getHotel().getLocation();
+        String hName = pakk.getHotel().getName();
+        String hCost = pakk.getHotel().getCost().toString();
         
-        System.out.println(totalCost);
-        
+        String depart = jResultTable.getModel().getValueAt(row, 1).toString();
+        String arrive = jResultTable.getModel().getValueAt(row, 2).toString();
         String price = jResultTable.getModel().getValueAt(row, 5).toString();
 
            
         info.getjTextArea1().setLineWrap(true);
         info.getjTextArea1().setWrapStyleWord(true);
         info.getjTextArea1().setText("Flugupplýsingar:"+'\n'+"Brottfararstaður: "
-                +depInfo+'\n'+"Áfangastaður: "+arrInfo+'\n'+"Flugkostnaður: "+flightCost+
+                +depInfo+'\n'+"Áfangastaður: "+arrInfo+'\n'+"Brottför: "+depart+
+                '\n'+"Heimkoma: "+arrive+"Flugkostnaður: "+flightCost+
                 '\n'+'\n'+  
                 "Dagsferðarupplýsingar: "+'\n'+"Heiti: "+dtName+'\n'+"Staðsetning: "
                 +dtLoc+'\n'+"Þema: "+dtAct+'\n'+"Innihaldslýsing dagsferðar: "+dtInfo+'\n'
@@ -3177,12 +3054,12 @@ public class MainFrame extends javax.swing.JFrame {
         int month2=cal2.get(Calendar.MONTH);
         int year2=cal2.get(Calendar.YEAR);
         String date2 = (day2+". "+"0"+month2+", "+year2);    
-        
-        
+
         for(triphop.model.Package pack : packages) {
             model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,
                 date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
         }
+        
         
         jResultTable.setModel(model);
     }//GEN-LAST:event_jPriceFilterActionPerformed
@@ -3190,14 +3067,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void jFromFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jFromFocusGained
         jFrom.setText("");
     }//GEN-LAST:event_jFromFocusGained
-
-    private void jKvittHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jKvittHotelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jKvittHotelActionPerformed
-
-    private void jKvittBrottforActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jKvittBrottforActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jKvittBrottforActionPerformed
 
     private void jThemePackagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jThemePackagesActionPerformed
         for(int i=0; i<panelar.length;i++) {
@@ -3293,7 +3162,6 @@ public class MainFrame extends javax.swing.JFrame {
     private com.github.lgooddatepicker.components.DatePicker arrivalDate;
     private com.github.lgooddatepicker.components.DatePicker departureDate;
     private javax.swing.JTextField jAddress;
-    private javax.swing.JTextField jAddressX;
     private javax.swing.JLabel jBackButton;
     private javax.swing.JButton jBackToListButton;
     private javax.swing.JLabel jBannerImg;
@@ -3453,25 +3321,16 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jCity;
     private javax.swing.JPanel jCityPanel;
     private javax.swing.JTextField jCountry;
-    private javax.swing.JTextField jCountryX;
+    private javax.swing.JTextArea jCustReceipt;
     private javax.swing.JTextField jEmail;
-    private javax.swing.JTextField jEmailX;
     private javax.swing.JPanel jEventPanel;
     private javax.swing.JPanel jFamilyPanel;
     private javax.swing.JPanel jFinalPanel;
     private javax.swing.JLabel jFinalPic;
-    private javax.swing.JTextField jFirstLastNameX;
     private javax.swing.JTextField jFirstName;
     private javax.swing.JTextField jFrom;
     private javax.swing.JPanel jFrontPanel;
     private javax.swing.JPanel jGolfPanel;
-    private javax.swing.JTextField jKvittAfanga;
-    private javax.swing.JTextField jKvittArrive;
-    private javax.swing.JTextField jKvittBrottfor;
-    private javax.swing.JTextField jKvittDaytour;
-    private javax.swing.JTextField jKvittDepart;
-    private javax.swing.JTextField jKvittHotel;
-    private javax.swing.JTextField jKvittPrice;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3500,6 +3359,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jOpenPackagePanel;
     private javax.swing.JPanel jOutdoorPanel;
     private javax.swing.JTextArea jPackDesc;
+    private javax.swing.JTextArea jPackReceipt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -3532,16 +3392,13 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel36;
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
-    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JComboBox<String> jPassengers;
     private javax.swing.JTextField jPhone;
-    private javax.swing.JTextField jPhoneX;
     private javax.swing.JPanel jRegResultsPanel;
     private javax.swing.JPanel jRegistrationPanel;
     private javax.swing.JButton jReset;
@@ -3550,12 +3407,13 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JButton jSearch;
     private javax.swing.JPanel jSkiPanel;
     private javax.swing.JPanel jSunPanel;
     private javax.swing.JTextField jTo;
     private javax.swing.JPanel jTop;
     private javax.swing.JTextField jZip;
-    private javax.swing.JTextField jZipCityX;
     // End of variables declaration//GEN-END:variables
 }
