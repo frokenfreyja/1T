@@ -2954,7 +2954,8 @@ public class MainFrame extends javax.swing.JFrame {
                 " þar sem gist er á " + hotel+ 
                 " og farið í dagsferðina " + daytour+'\n' + '\n'+
                 "Brottför er " + depart + '\n' + '\n' +
-                "Heimkoma er " + arrive);
+                "Heimkoma er " + arrive + '\n' + '\n' +
+                "Heildarverð pakkans er " + price);
 
         
     }//GEN-LAST:event_jOpenPackageActionPerformed
@@ -2991,7 +2992,7 @@ public class MainFrame extends javax.swing.JFrame {
                 +dtLoc+'\n'+"Þema: "+dtAct+'\n'+"Innihaldslýsing dagsferðar: "+dtInfo+'\n'
                 +"Dagsferðarkostnaður: "+dtCost+'\n'+'\n'+ 
                 "Hótelupplýsingar: "+'\n'+"Heiti: "+hName+'\n'+"Staðsetning: "+hLoc+'\n'+
-                "Hótelkostnaður: "+hCost+'\n'+'\n'+'\n'+"Heildarkostnaður pakka: "+price
+                "Hótelkostnaður: "+hCost+'\n'+'\n'+'\n'+"Heildarverð pakka: "+price
                 
         );
  
