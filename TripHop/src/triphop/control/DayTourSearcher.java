@@ -12,6 +12,7 @@ public interface DayTourSearcher {
     public ArrayList<DayTour> searchDayTours(
             String location
             ,Date date
+            ,String activity
             ,Integer inPassengerCount
     );
     public void bookDayTour( DayTour daytour );
