@@ -15,7 +15,9 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -47,6 +49,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private PackageManager pMan;
     private DefaultTableModel model;
+    private String[] lond;
 
     /**
      * Creates new form MainFrame
@@ -60,7 +63,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
         JTable jResultTable = new JTable();
         flagLang = true;
-        
+
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
         
         StretchIcon backImg = createImg("img/back3.png");
@@ -225,7 +228,7 @@ public class MainFrame extends javax.swing.JFrame {
             jEventPanel,jFamilyPanel,jOutdoorPanel,jCityPanel,jOpenPackagePanel,
             jRegResultsPanel,jFinalPanel};
         
-        
+        lond = new String[]{"London","Paris"};
 
       
     }
@@ -1015,30 +1018,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton17.setBackground(new java.awt.Color(255, 255, 255));
         jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton17.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton17);
 
         jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton18);
 
         jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton19);
 
         jButton20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton20);
 
         jPanel7.setBackground(new java.awt.Color(255, 225, 255));
         jPanel7.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton81.setText(bundle.getString("Austurríki")); // NOI18N
+        jButton81.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton81);
 
         jButton21.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton21);
 
         jButton22.setText(bundle.getString("Ítalía")); // NOI18N
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton22);
 
         jButton23.setText(bundle.getString("Sviss")); // NOI18N
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton23);
 
         jPanel23.setBackground(new java.awt.Color(255, 225, 255));
@@ -1047,30 +1090,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton29.setBackground(new java.awt.Color(255, 255, 255));
         jButton29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton29.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel23.add(jButton29);
 
         jButton30.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel23.add(jButton30);
 
         jButton31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel23.add(jButton31);
 
         jButton32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel23.add(jButton32);
 
         jPanel24.setBackground(new java.awt.Color(255, 225, 255));
         jPanel24.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton109.setText(bundle.getString("Svíþjóð")); // NOI18N
+        jButton109.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel24.add(jButton109);
 
         jButton37.setText(bundle.getString("Noregur")); // NOI18N
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel24.add(jButton37);
 
         jButton38.setText(bundle.getString("Ísland")); // NOI18N
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel24.add(jButton38);
 
         jButton39.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel24.add(jButton39);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1117,30 +1200,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton25.setBackground(new java.awt.Color(255, 255, 255));
         jButton25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton25.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel9.add(jButton25);
 
         jButton26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel9.add(jButton26);
 
         jButton27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel9.add(jButton27);
 
         jButton28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel9.add(jButton28);
 
         jPanel10.setBackground(new java.awt.Color(255, 225, 255));
         jPanel10.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton24.setText(bundle.getString("Grikkland")); // NOI18N
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel10.add(jButton24);
 
         jButton82.setText(bundle.getString("Ítalía")); // NOI18N
+        jButton82.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel10.add(jButton82);
 
         jButton83.setText(bundle.getString("Portúgal")); // NOI18N
+        jButton83.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel10.add(jButton83);
 
         jButton84.setText(bundle.getString("Spánn")); // NOI18N
+        jButton84.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel10.add(jButton84);
 
         jPanel25.setBackground(new java.awt.Color(255, 225, 255));
@@ -1149,30 +1272,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton40.setBackground(new java.awt.Color(255, 255, 255));
         jButton40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton40.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel25.add(jButton40);
 
         jButton45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel25.add(jButton45);
 
         jButton46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton46.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel25.add(jButton46);
 
         jButton47.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel25.add(jButton47);
 
         jPanel26.setBackground(new java.awt.Color(255, 225, 255));
         jPanel26.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton48.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel26.add(jButton48);
 
         jButton110.setText(bundle.getString("Mexico")); // NOI18N
+        jButton110.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel26.add(jButton110);
 
         jButton111.setText(bundle.getString("Tyrkland")); // NOI18N
+        jButton111.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel26.add(jButton111);
 
         jButton112.setText(bundle.getString("Indonesía")); // NOI18N
+        jButton112.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel26.add(jButton112);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1219,30 +1382,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton33.setBackground(new java.awt.Color(255, 255, 255));
         jButton33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton33.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel11.add(jButton33);
 
         jButton34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel11.add(jButton34);
 
         jButton35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel11.add(jButton35);
 
         jButton36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel11.add(jButton36);
 
         jPanel12.setBackground(new java.awt.Color(255, 225, 255));
         jPanel12.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton85.setText(bundle.getString("Austurríki")); // NOI18N
+        jButton85.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton85);
 
         jButton86.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton86.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton86);
 
         jButton87.setText(bundle.getString("Ítalía")); // NOI18N
+        jButton87.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton87);
 
         jButton88.setText(bundle.getString("Sviss")); // NOI18N
+        jButton88.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton88);
 
         jPanel27.setBackground(new java.awt.Color(255, 225, 255));
@@ -1251,31 +1454,71 @@ public class MainFrame extends javax.swing.JFrame {
         jButton53.setBackground(new java.awt.Color(255, 255, 255));
         jButton53.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton53.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel27.add(jButton53);
 
         jButton54.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel27.add(jButton54);
 
         jButton55.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel27.add(jButton55);
 
         jButton56.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel27.add(jButton56);
 
         jPanel28.setBackground(new java.awt.Color(255, 225, 255));
         jPanel28.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton113.setText(bundle.getString("Mexico")); // NOI18N
+        jButton113.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel28.add(jButton113);
 
         jButton114.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton114.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel28.add(jButton114);
 
         jButton115.setText(bundle.getString("Tyrkland")); // NOI18N
         jButton115.setToolTipText("");
+        jButton115.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel28.add(jButton115);
 
         jButton116.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton116.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel28.add(jButton116);
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1322,30 +1565,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton41.setBackground(new java.awt.Color(255, 255, 255));
         jButton41.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton41.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel13.add(jButton41);
 
         jButton42.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel13.add(jButton42);
 
         jButton43.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel13.add(jButton43);
 
         jButton44.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel13.add(jButton44);
 
         jPanel14.setBackground(new java.awt.Color(255, 225, 255));
         jPanel14.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton89.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton89.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel14.add(jButton89);
 
         jButton90.setText(bundle.getString("England")); // NOI18N
+        jButton90.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel14.add(jButton90);
 
         jButton91.setText(bundle.getString("Skotland")); // NOI18N
+        jButton91.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel14.add(jButton91);
 
         jButton92.setText(bundle.getString("Spánn")); // NOI18N
+        jButton92.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel14.add(jButton92);
 
         jPanel29.setBackground(new java.awt.Color(255, 225, 255));
@@ -1354,30 +1637,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton61.setBackground(new java.awt.Color(255, 255, 255));
         jButton61.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton61.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton61.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel29.add(jButton61);
 
         jButton62.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel29.add(jButton62);
 
         jButton63.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel29.add(jButton63);
 
         jButton64.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton64.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel29.add(jButton64);
 
         jPanel30.setBackground(new java.awt.Color(255, 225, 255));
         jPanel30.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton117.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton117.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel30.add(jButton117);
 
         jButton118.setText(bundle.getString("Svíþjóð")); // NOI18N
+        jButton118.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel30.add(jButton118);
 
         jButton119.setText(bundle.getString("Grikkland")); // NOI18N
+        jButton119.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel30.add(jButton119);
 
         jButton120.setText(bundle.getString("Portúgal")); // NOI18N
+        jButton120.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel30.add(jButton120);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1424,30 +1747,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton49.setBackground(new java.awt.Color(255, 255, 255));
         jButton49.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton49.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton49.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel15.add(jButton49);
 
         jButton50.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel15.add(jButton50);
 
         jButton51.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel15.add(jButton51);
 
         jButton52.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel15.add(jButton52);
 
         jPanel16.setBackground(new java.awt.Color(255, 225, 255));
         jPanel16.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton93.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton93.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel16.add(jButton93);
 
         jButton94.setText(bundle.getString("Danmörk")); // NOI18N
+        jButton94.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel16.add(jButton94);
 
         jButton95.setText(bundle.getString("Skotland")); // NOI18N
+        jButton95.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel16.add(jButton95);
 
         jButton96.setText(bundle.getString("Svíþjóð")); // NOI18N
+        jButton96.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel16.add(jButton96);
 
         jPanel31.setBackground(new java.awt.Color(255, 225, 255));
@@ -1456,30 +1819,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton69.setBackground(new java.awt.Color(255, 255, 255));
         jButton69.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton69.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton69.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel31.add(jButton69);
 
         jButton70.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton70.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel31.add(jButton70);
 
         jButton71.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton71.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel31.add(jButton71);
 
         jButton72.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton72.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel31.add(jButton72);
 
         jPanel32.setBackground(new java.awt.Color(255, 225, 255));
         jPanel32.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton121.setText(bundle.getString("Noregur")); // NOI18N
+        jButton121.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel32.add(jButton121);
 
         jButton122.setText(bundle.getString("Spánn")); // NOI18N
+        jButton122.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel32.add(jButton122);
 
         jButton123.setText(bundle.getString("England")); // NOI18N
+        jButton123.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel32.add(jButton123);
 
         jButton124.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton124.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel32.add(jButton124);
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1526,33 +1929,68 @@ public class MainFrame extends javax.swing.JFrame {
         jButton57.setBackground(new java.awt.Color(255, 255, 255));
         jButton57.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton57.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel17.add(jButton57);
 
         jButton58.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton58.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel17.add(jButton58);
 
         jButton59.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton59.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel17.add(jButton59);
 
         jButton60.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton60.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel17.add(jButton60);
 
         jPanel18.setBackground(new java.awt.Color(255, 225, 255));
         jPanel18.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton97.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton97.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel18.add(jButton97);
 
         jButton98.setText(bundle.getString("England")); // NOI18N
+        jButton98.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel18.add(jButton98);
 
         jButton99.setText(bundle.getString("Danmörk")); // NOI18N
+        jButton99.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel18.add(jButton99);
 
         jButton100.setText(bundle.getString("Frakkland")); // NOI18N
         jButton100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton100ActionPerformed(evt);
+                jThemePackagesActionPerformed(evt);
             }
         });
         jPanel18.add(jButton100);
@@ -1563,30 +2001,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton77.setBackground(new java.awt.Color(255, 255, 255));
         jButton77.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton77.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton77.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel33.add(jButton77);
 
         jButton78.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton78.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel33.add(jButton78);
 
         jButton79.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton79.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel33.add(jButton79);
 
         jButton80.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton80.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel33.add(jButton80);
 
         jPanel34.setBackground(new java.awt.Color(255, 225, 255));
         jPanel34.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton125.setText(bundle.getString("Svíþjóð")); // NOI18N
+        jButton125.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel34.add(jButton125);
 
         jButton126.setText(bundle.getString("Portúgal")); // NOI18N
+        jButton126.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel34.add(jButton126);
 
         jButton127.setText(bundle.getString("Spánn")); // NOI18N
+        jButton127.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel34.add(jButton127);
 
         jButton128.setText(bundle.getString("Austurríki")); // NOI18N
+        jButton128.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel34.add(jButton128);
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1633,30 +2111,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton65.setBackground(new java.awt.Color(255, 255, 255));
         jButton65.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton65.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton65.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel19.add(jButton65);
 
         jButton66.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton66.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel19.add(jButton66);
 
         jButton67.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton67.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel19.add(jButton67);
 
         jButton68.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton68.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel19.add(jButton68);
 
         jPanel20.setBackground(new java.awt.Color(255, 225, 255));
         jPanel20.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton101.setText(bundle.getString("Bandaríkin")); // NOI18N
+        jButton101.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel20.add(jButton101);
 
         jButton102.setText(bundle.getString("Danmörk")); // NOI18N
+        jButton102.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel20.add(jButton102);
 
         jButton103.setText(bundle.getString("Ítalía")); // NOI18N
+        jButton103.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel20.add(jButton103);
 
         jButton104.setText(bundle.getString("Frakkland")); // NOI18N
+        jButton104.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel20.add(jButton104);
 
         jPanel35.setBackground(new java.awt.Color(255, 225, 255));
@@ -1665,30 +2183,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton129.setBackground(new java.awt.Color(255, 255, 255));
         jButton129.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton129.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton129.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel35.add(jButton129);
 
         jButton130.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton130.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel35.add(jButton130);
 
         jButton131.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton131.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel35.add(jButton131);
 
         jButton132.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton132.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel35.add(jButton132);
 
         jPanel36.setBackground(new java.awt.Color(255, 225, 255));
         jPanel36.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton133.setText(bundle.getString("England")); // NOI18N
+        jButton133.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel36.add(jButton133);
 
         jButton134.setText(bundle.getString("Tyrkland")); // NOI18N
+        jButton134.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel36.add(jButton134);
 
         jButton135.setText(bundle.getString("Grikkland")); // NOI18N
+        jButton135.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel36.add(jButton135);
 
         jButton136.setText(bundle.getString("Spánn")); // NOI18N
+        jButton136.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel36.add(jButton136);
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1735,30 +2293,70 @@ public class MainFrame extends javax.swing.JFrame {
         jButton73.setBackground(new java.awt.Color(255, 255, 255));
         jButton73.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton73.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel21.add(jButton73);
 
         jButton74.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton74.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel21.add(jButton74);
 
         jButton75.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel21.add(jButton75);
 
         jButton76.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton76.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel21.add(jButton76);
 
         jPanel22.setBackground(new java.awt.Color(255, 225, 255));
         jPanel22.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton105.setText("Danmörk");
+        jButton105.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel22.add(jButton105);
 
         jButton106.setText("Frakkland");
+        jButton106.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel22.add(jButton106);
 
         jButton107.setText("Tyrkland");
+        jButton107.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel22.add(jButton107);
 
         jButton108.setText("Grikkland");
+        jButton108.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel22.add(jButton108);
 
         jPanel37.setBackground(new java.awt.Color(255, 225, 255));
@@ -1767,31 +2365,71 @@ public class MainFrame extends javax.swing.JFrame {
         jButton137.setBackground(new java.awt.Color(255, 255, 255));
         jButton137.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton137.setFont(new java.awt.Font("Rosewood Std", 0, 48)); // NOI18N
+        jButton137.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel37.add(jButton137);
 
         jButton138.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton138.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel37.add(jButton138);
 
         jButton139.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton139.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel37.add(jButton139);
 
         jButton140.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton140.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel37.add(jButton140);
 
         jPanel38.setBackground(new java.awt.Color(255, 225, 255));
         jPanel38.setLayout(new java.awt.GridLayout(1, 4, 16, 0));
 
         jButton141.setText("England");
+        jButton141.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel38.add(jButton141);
 
         jButton142.setText("Austurríki");
+        jButton142.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel38.add(jButton142);
 
         jButton143.setText("Bandaríkin");
         jButton143.setToolTipText("");
+        jButton143.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel38.add(jButton143);
 
         jButton144.setText("Noregur");
+        jButton144.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jThemePackagesActionPerformed(evt);
+            }
+        });
         jPanel38.add(jButton144);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1887,7 +2525,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton7)
                     .addComponent(jBookButton)
                     .addComponent(jBackToListButton))
-                .addContainerGap(407, Short.MAX_VALUE))
+                .addContainerGap(404, Short.MAX_VALUE))
         );
 
         jBottom.add(jOpenPackagePanel, "card13");
@@ -1961,31 +2599,31 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel39.setBackground(new java.awt.Color(255, 255, 255));
         jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jKvittAfanga.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittAfanga.setBorder(null);
+        jKvittAfanga.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jKvittHotel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittHotel.setBorder(null);
+        jKvittHotel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittHotel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jKvittHotelActionPerformed(evt);
             }
         });
 
-        jKvittDaytour.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittDaytour.setBorder(null);
+        jKvittDaytour.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jKvittDepart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittDepart.setBorder(null);
+        jKvittDepart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jKvittArrive.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittArrive.setBorder(null);
+        jKvittArrive.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jKvittPrice.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittPrice.setBorder(null);
+        jKvittPrice.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jKvittBrottfor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittBrottfor.setBorder(null);
+        jKvittBrottfor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jKvittBrottfor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jKvittBrottforActionPerformed(evt);
@@ -1996,13 +2634,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jKvittHotel)
-            .addComponent(jKvittDaytour)
-            .addComponent(jKvittDepart)
             .addComponent(jKvittArrive)
             .addComponent(jKvittPrice)
             .addComponent(jKvittAfanga)
             .addComponent(jKvittBrottfor)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jKvittHotel, javax.swing.GroupLayout.DEFAULT_SIZE, 18, Short.MAX_VALUE)
+                    .addComponent(jKvittDaytour)
+                    .addComponent(jKvittDepart))
+                .addGap(272, 272, 272))
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2017,7 +2658,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jKvittDaytour, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jKvittDepart, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(72, 72, 72)
                 .addComponent(jKvittArrive, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jKvittPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2071,7 +2712,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton149)
                     .addComponent(jButton8))
@@ -2120,7 +2761,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton150)
-                .addContainerGap(528, Short.MAX_VALUE))
+                .addContainerGap(525, Short.MAX_VALUE))
         );
 
         jBottom.add(jFinalPanel, "card15");
@@ -2228,17 +2869,10 @@ public class MainFrame extends javax.swing.JFrame {
         model.addColumn("Hotel");
         model.addColumn("Day Tour");
         model.addColumn("Total amount");
-     
-        /*
-        model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,3,150000});
-        model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,20000000});
-        model.addRow(new Object[]{to,strDepDate,strArrDate,passCount,5,50000000});
-        */
         
         for(triphop.model.Package pack : pMan.getPackages()) {
             model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
         }
-
         
         jResultTable.setModel(model);
         
@@ -2449,10 +3083,6 @@ public class MainFrame extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_jConfirmBookActionPerformed
 
-    private void jButton100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton100ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton100ActionPerformed
-
     private void jToFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jToFocusGained
         jTo.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jToFocusGained
@@ -2511,6 +3141,52 @@ public class MainFrame extends javax.swing.JFrame {
     private void jKvittBrottforActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jKvittBrottforActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jKvittBrottforActionPerformed
+
+    private void jThemePackagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jThemePackagesActionPerformed
+        for(int i=0; i<panelar.length;i++) {
+            if(panelar[i].isVisible()==true) {
+                panelar[i].setVisible(false);
+                jResultPanel.setVisible(true);
+            }
+        }  
+        String from = "Keflavik";
+        Random ran = new Random();
+        String to = lond[ran.nextInt(2)];
+           
+        Calendar cal1 = new GregorianCalendar();	
+        Calendar cal2 = new GregorianCalendar();
+        
+        cal1.set(2018, 4, 20);
+        cal2.set(2018,4,21);
+        
+        int day1 = cal1.get(Calendar.DAY_OF_MONTH);
+        int month1=cal1.get(Calendar.MONTH);
+        int year1=cal1.get(Calendar.YEAR);
+        String date1= (day1+". "+"0"+month1+", "+year1);
+        int day2 = cal2.get(Calendar.DAY_OF_MONTH);
+        int month2=cal2.get(Calendar.MONTH);
+        int year2=cal2.get(Calendar.YEAR);
+        String date2 = (day2+". "+"0"+month2+", "+year2);
+        
+        
+        customer = new Customer(cal1,cal2,from,to,2,2,null);
+        pMan = new PackageManager(customer);
+        
+
+        model = new DefaultTableModel();
+        model.addColumn("Destination");
+        model.addColumn("Departure date");
+        model.addColumn("Return date");
+        model.addColumn("Hotel");
+        model.addColumn("Day Tour");
+        model.addColumn("Total amount");
+        
+        for(triphop.model.Package pack : pMan.getPackages()) {         
+            model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
+        }
+        
+        jResultTable.setModel(model);
+    }//GEN-LAST:event_jThemePackagesActionPerformed
 
     /**
      * Kallar á showPackages í PackageManager og birtir niðurstöður
