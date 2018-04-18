@@ -24,6 +24,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
@@ -50,6 +51,7 @@ public class MainFrame extends javax.swing.JFrame {
     private PackageManager pMan;
     private DefaultTableModel model;
     private String[] lond;
+    private InformationDialog info;
 
     /**
      * Creates new form MainFrame
@@ -229,6 +231,8 @@ public class MainFrame extends javax.swing.JFrame {
             jRegResultsPanel,jFinalPanel};
         
         lond = new String[]{"London","Paris"};
+        
+        info = new InformationDialog(this,false);
 
       
     }
@@ -2872,6 +2876,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         for(triphop.model.Package pack : pMan.getPackages()) {
             model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
+            
         }
         
         jResultTable.setModel(model);
@@ -3059,10 +3064,60 @@ public class MainFrame extends javax.swing.JFrame {
                 "Brottför er " + depart + '\n' + '\n' +
                 "Heimkoma er " + arrive);
 
+        
     }//GEN-LAST:event_jOpenPackageActionPerformed
 
     private void jMoreInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMoreInformationActionPerformed
-        InformationDialog info = new InformationDialog(this,false);
+        String depInfo=new String();
+        String arrInfo=new String();
+        String flightCost = new String();
+        String dtInfo=new String();
+        String dtAct = new String();
+        String dtCost = new String();
+        String dtLoc = new String();
+        String dtName = new String();
+        String hLoc = new String();
+        String hName = new String();
+        String hCost = new String();
+        int totalCost=new Integer(0);
+        
+        for(triphop.model.Package pakk : pMan.getPackages()) {
+            depInfo=pakk.getFlight()[0].getDeparture();
+            arrInfo=pakk.getFlight()[0].getArrival();
+            flightCost = pakk.getFlight()[0].getCost().toString();
+            
+            dtInfo = pakk.getDayTour().getDescription();
+            dtAct = pakk.getDayTour().getActivity();
+            dtCost = pakk.getDayTour().getCost().toString();
+            dtLoc = pakk.getDayTour().getLocation();
+            dtName = pakk.getDayTour().getName();
+            
+            hLoc = pakk.getHotel().getLocation();
+            hName = pakk.getHotel().getName();
+            hCost = pakk.getHotel().getCost().toString();
+            
+            totalCost=pakk.getCost();
+        }      
+        int row = jResultTable.getSelectedRow();
+        
+        System.out.println(totalCost);
+        
+        String price = jResultTable.getModel().getValueAt(row, 5).toString();
+
+           
+        info.getjTextArea1().setLineWrap(true);
+        info.getjTextArea1().setWrapStyleWord(true);
+        info.getjTextArea1().setText("Flugupplýsingar:"+'\n'+"Brottfararstaður: "
+                +depInfo+'\n'+"Áfangastaður: "+arrInfo+'\n'+"Flugkostnaður: "+flightCost+
+                '\n'+'\n'+  
+                "Dagsferðarupplýsingar: "+'\n'+"Heiti: "+dtName+'\n'+"Staðsetning: "
+                +dtLoc+'\n'+"Þema: "+dtAct+'\n'+"Innihaldslýsing dagsferðar: "+dtInfo+'\n'
+                +"Dagsferðarkostnaður: "+dtCost+'\n'+'\n'+ 
+                "Hótelupplýsingar: "+'\n'+"Heiti: "+hName+'\n'+"Staðsetning: "+hLoc+'\n'+
+                "Hótelkostnaður: "+hCost+'\n'+'\n'+'\n'+"Heildarkostnaður pakka: "+price
+                
+        );
+ 
         info.setVisible(true);
     }//GEN-LAST:event_jMoreInformationActionPerformed
 
@@ -3123,8 +3178,10 @@ public class MainFrame extends javax.swing.JFrame {
         int year2=cal2.get(Calendar.YEAR);
         String date2 = (day2+". "+"0"+month2+", "+year2);    
         
+        
         for(triphop.model.Package pack : packages) {
-            model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
+            model.addRow(new Object[]{pack.getFlight()[0].getArrival(),date1,
+                date2,pack.getHotel().getName(),pack.getDayTour().getName(),pack.getCost()});
         }
         
         jResultTable.setModel(model);
@@ -3188,20 +3245,6 @@ public class MainFrame extends javax.swing.JFrame {
         jResultTable.setModel(model);
     }//GEN-LAST:event_jThemePackagesActionPerformed
 
-    /**
-     * Kallar á showPackages í PackageManager og birtir niðurstöður
-     * @param packages 
-     */
-    public void bookPackage(ArrayList<String[]> packages) {  
-        
-      //  packages = pMan.getPackages();
-    }
-    
-    public static Calendar toCalendar(Date date){ 
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(date);
-        return cal;
-    }
     /**
      * @param args the command line arguments
      */

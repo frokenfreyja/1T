@@ -1,6 +1,7 @@
 package triphop.view;
 
 import java.awt.Color;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -18,7 +19,19 @@ public class InformationDialog extends javax.swing.JDialog {
         initComponents();
         Color color = new Color(255,225,255);
         this.getContentPane().setBackground(color);
+        this.setLocationRelativeTo(mainFrame);
+      
     }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public void setjTextArea1(JTextArea jTextArea1) {
+        this.jTextArea1 = jTextArea1;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,6 +53,7 @@ public class InformationDialog extends javax.swing.JDialog {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Ítarlegar upplýsingar");
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
