@@ -462,7 +462,7 @@
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                              <ResourceString bundle="triphop/view/resources/lang.properties" key="Reykjav&#xed;k" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                              <ResourceString bundle="triphop/view/resources/lang.properties" key="Keflavik" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -3277,7 +3277,7 @@
                                   <Component id="jBookButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jBackToListButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="401" max="32767" attributes="0"/>
+                              <EmptySpace pref="407" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3391,7 +3391,7 @@
                                   <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton149" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="491" max="32767" attributes="0"/>
+                              <EmptySpace pref="498" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3455,12 +3455,12 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="jPackReceipt">
                           <Properties>
-                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
+                            <Property name="editable" type="boolean" value="false"/>
+                            <Property name="rows" type="int" value="5"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Lucida Grande" size="15" style="0"/>
                             </Property>
-                            <Property name="rows" type="int" value="5"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -3539,7 +3539,7 @@
                               <Component id="jLabel19" min="-2" pref="75" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jButton150" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="521" max="32767" attributes="0"/>
+                              <EmptySpace pref="528" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

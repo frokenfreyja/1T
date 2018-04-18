@@ -717,7 +717,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel6.add(jLabel6);
 
         jFrom.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jFrom.setText(bundle.getString("Reykjavík")); // NOI18N
+        jFrom.setText(bundle.getString("Keflavik")); // NOI18N
         jFrom.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jFromFocusGained(evt);
@@ -2521,7 +2521,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton7)
                     .addComponent(jBookButton)
                     .addComponent(jBackToListButton))
-                .addContainerGap(401, Short.MAX_VALUE))
+                .addContainerGap(407, Short.MAX_VALUE))
         );
 
         jBottom.add(jOpenPackagePanel, "card13");
@@ -2552,10 +2552,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         jScrollPane4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jPackReceipt.setEditable(false);
         jPackReceipt.setColumns(20);
-        jPackReceipt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        jPackReceipt.setEditable(false);
         jPackReceipt.setRows(5);
+        jPackReceipt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jScrollPane4.setViewportView(jPackReceipt);
 
         jScrollPane5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2602,7 +2602,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jRegResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton149))
-                .addContainerGap(491, Short.MAX_VALUE))
+                .addContainerGap(498, Short.MAX_VALUE))
         );
 
         jBottom.add(jRegResultsPanel, "card14");
@@ -2647,7 +2647,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton150)
-                .addContainerGap(521, Short.MAX_VALUE))
+                .addContainerGap(528, Short.MAX_VALUE))
         );
 
         jBottom.add(jFinalPanel, "card15");
@@ -2986,7 +2986,7 @@ public class MainFrame extends javax.swing.JFrame {
         info.getjTextArea1().setWrapStyleWord(true);
         info.getjTextArea1().setText("Flugupplýsingar:"+'\n'+"Brottfararstaður: "
                 +depInfo+'\n'+"Áfangastaður: "+arrInfo+'\n'+"Brottför: "+depart+
-                '\n'+"Heimkoma: "+arrive+"Flugkostnaður: "+flightCost+
+                '\n'+"Heimkoma: "+arrive+'\n'+"Flugkostnaður: "+flightCost+
                 '\n'+'\n'+  
                 "Dagsferðarupplýsingar: "+'\n'+"Heiti: "+dtName+'\n'+"Staðsetning: "
                 +dtLoc+'\n'+"Þema: "+dtAct+'\n'+"Innihaldslýsing dagsferðar: "+dtInfo+'\n'
