@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import triphop.model.Hotel;
 import search.API;
 
@@ -13,7 +15,7 @@ import search.API;
  * @author Elvar Árni Sturluson
  */
 public class HotelSearcherAdapter implements HotelSearcher {
-    private static API apakottur = new API();
+    private static final API apakottur = new API();
     private Calendar checkInDate;
     private Calendar checkOutDate;
     
@@ -69,15 +71,15 @@ public class HotelSearcherAdapter implements HotelSearcher {
     }
     public static void main( String[] args ) {
         HotelSearcher hs = new HotelSearcherAdapter();
-        
+
         Calendar checkInDate = Calendar.getInstance();
         checkInDate.set( 2018, 4, 20 );
         Calendar checkOutDate = Calendar.getInstance();
-        checkOutDate.set( 2018, 4, 20 ); 
-        
+        checkOutDate.set( 2018, 4, 20 );
+
 
         ArrayList<Hotel> hotels = hs.searchHotels( "Keflavik", checkInDate, checkOutDate );
-        
+
         for( Hotel hotel : hotels ) {
             System.out.println( "--DayTour--" );
             System.out.println( hotel.getName() );

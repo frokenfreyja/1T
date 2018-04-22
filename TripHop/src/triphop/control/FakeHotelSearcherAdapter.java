@@ -7,12 +7,15 @@ import java.util.concurrent.ThreadLocalRandom;
 import triphop.model.Hotel;
 
 import search.generator.Factory;
+import triphop.control.HotelSearcher;
+import triphop.control.HotelSearcher;
 
 /**
  *
  * @author Elvar Árni Sturluson
  */
 public class FakeHotelSearcherAdapter implements HotelSearcher {
+    /* Mock object fyrir hotelsercher ef database er niðri */
     public ArrayList<Hotel> searchHotels(
             String location
             ,Calendar inCheckInDate

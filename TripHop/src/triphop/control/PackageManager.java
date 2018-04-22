@@ -13,7 +13,7 @@ public class PackageManager {
     
     // Controllerar fyrir hinar þrjár leitarvélarnar
     private FlightSearcher flightSearcher = new FlightSearcherAdapter();
-    private HotelSearcher hotelSearcher = new FakeHotelSearcherAdapter();
+    private HotelSearcher hotelSearcher = new HotelSearcherAdapter();
     private DayTourSearcher dayTourSearcher = new DayTourSearcherAdapter();
     
     // Object sem mun innihalda leitarupplýsingar
