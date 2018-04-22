@@ -11,4 +11,4 @@ Semsagt, breyta þarf línu 16 í PackageManager.java frá:
 í
 #####	private HotelSearcher hotelSearcher = new FakeHotelSearcherAdapter(); 
 
-Database-inn frá 1F er aðeins með flug frá 20.04.2018 til 29.04.2018 svo aðeins nota það þær dagsetningar.
+Database-inn frá 1F er aðeins með flug frá 20.04.2018 til 29.04.2018 svo aðeins nota dagsetningar þar á milli.
